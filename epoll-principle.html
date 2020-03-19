@@ -1,0 +1,966 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Epoll原理与实现 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="process-management.html">
+            
+                <a href="process-management.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="process-schedule.html">
+            
+                <a href="process-schedule.html">
+            
+                    
+                    进程调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="concurrency-synchronize.html">
+            
+                <a href="concurrency-synchronize.html">
+            
+                    
+                    并发同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="waitqueue.html">
+            
+                <a href="waitqueue.html">
+            
+                    
+                    等待队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    内存管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="physical-memory-managemen-1.html">
+            
+                <a href="physical-memory-managemen-1.html">
+            
+                    
+                    物理内存管理(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="physical-memory-managemen-2.html">
+            
+                <a href="physical-memory-managemen-2.html">
+            
+                    
+                    物理内存管理(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="physical-memory-managemen-3.html">
+            
+                <a href="physical-memory-managemen-3.html">
+            
+                    
+                    物理内存管理(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="virtual_memory_address_manager.html">
+            
+                <a href="virtual_memory_address_manager.html">
+            
+                    
+                    虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="memory_mmap.html">
+            
+                <a href="memory_mmap.html">
+            
+                    
+                    mmap完全剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="memory_swap.html">
+            
+                <a href="memory_swap.html">
+            
+                    
+                    内存交换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    中断机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="interrupt_hardware.html">
+            
+                <a href="interrupt_hardware.html">
+            
+                    
+                    硬件相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="interrupt_softward.html">
+            
+                <a href="interrupt_softward.html">
+            
+                    
+                    中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    系统调用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="syscall.html">
+            
+                <a href="syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="virtual_file_system.html">
+            
+                <a href="virtual_file_system.html">
+            
+                    
+                    虚拟文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="minix_file_system.html">
+            
+                <a href="minix_file_system.html">
+            
+                    
+                    MINIX文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    进程间通信
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="signal.html">
+            
+                <a href="signal.html">
+            
+                    
+                    信号处理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ipc-shm.html">
+            
+                <a href="ipc-shm.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="socket_interface.html">
+            
+                <a href="socket_interface.html">
+            
+                    
+                    Socket接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="unix-domain-sockets.html">
+            
+                <a href="unix-domain-sockets.html">
+            
+                    
+                    Unix Domain Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="kernel-timer.html">
+            
+                <a href="kernel-timer.html">
+            
+                    
+                    定时器实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="multiplexing-io.html">
+            
+                <a href="multiplexing-io.html">
+            
+                    
+                    多路复用I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    docker实现原理之 - namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    2.6+内核分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.10.1" data-path="epoll-principle.html">
+            
+                <a href="epoll-principle.html">
+            
+                    
+                    Epoll原理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Epoll原理与实现</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="epoll-&#x5B9E;&#x73B0;&#x539F;&#x7406;">Epoll &#x5B9E;&#x73B0;&#x539F;&#x7406;</h2>
+<p><code>epoll</code> &#x662F;Linux&#x5E73;&#x53F0;&#x4E0B;&#x7684;&#x4E00;&#x79CD;&#x7279;&#x6709;&#x7684;&#x591A;&#x8DEF;&#x590D;&#x7528;IO&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#xFF0C;&#x4E0E;&#x4F20;&#x7EDF;&#x7684; <code>select</code> &#x76F8;&#x6BD4;&#xFF0C;<code>epoll</code> &#x5728;&#x6027;&#x80FD;&#x4E0A;&#x6709;&#x5F88;&#x5927;&#x7684;&#x63D0;&#x5347;&#x3002;&#x672C;&#x6587;&#x4E3B;&#x8981;&#x8BB2;&#x89E3; <code>epoll</code> &#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E; <code>epoll</code> &#x7684;&#x4F7F;&#x7528;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x76F8;&#x5173;&#x7684;&#x4E66;&#x7C4D;&#x6216;&#x6587;&#x7AE0;&#x3002;</p>
+<h3 id="epoll-&#x7684;&#x521B;&#x5EFA;">epoll &#x7684;&#x521B;&#x5EFA;</h3>
+<p>&#x8981;&#x4F7F;&#x7528; <code>epoll</code> &#x9996;&#x5148;&#x9700;&#x8981;&#x8C03;&#x7528; <code>epoll_create()</code> &#x51FD;&#x6570;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>epoll</code> &#x7684;&#x53E5;&#x67C4;&#xFF0C;<code>epoll_create()</code> &#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">epoll_create</span><span class="hljs-params">(<span class="hljs-keyword">int</span> size)</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570; <code>size</code> &#x662F;&#x7531;&#x4E8E;&#x5386;&#x53F2;&#x539F;&#x56E0;&#x9057;&#x7559;&#x4E0B;&#x6765;&#x7684;&#xFF0C;&#x73B0;&#x5728;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;&#x5F53;&#x7528;&#x6237;&#x8C03;&#x7528; <code>epoll_create()</code> &#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x4F1A;&#x8FDB;&#x5165;&#x5230;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#xFF0C;&#x5E76;&#x4E14;&#x8C03;&#x7528; <code>sys_epoll_create()</code> &#x5185;&#x6838;&#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA; <code>epoll</code> &#x53E5;&#x67C4;&#xFF0C;<code>sys_epoll_create()</code> &#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage <span class="hljs-keyword">long</span> <span class="hljs-title">sys_epoll_create</span><span class="hljs-params">(<span class="hljs-keyword">int</span> size)</span>
+</span>{
+    <span class="hljs-keyword">int</span> error, fd = <span class="hljs-number">-1</span>;
+    <span class="hljs-keyword">struct</span> eventpoll *ep;
+
+    error = -EINVAL;
+    <span class="hljs-keyword">if</span> (size &lt;= <span class="hljs-number">0</span> || (error = ep_alloc(&amp;ep)) &lt; <span class="hljs-number">0</span>) {
+        fd = error;
+        <span class="hljs-keyword">goto</span> error_return;
+    }
+
+    fd = anon_inode_getfd(<span class="hljs-string">&quot;[eventpoll]&quot;</span>, &amp;eventpoll_fops, ep);
+    <span class="hljs-keyword">if</span> (fd &lt; <span class="hljs-number">0</span>)
+        ep_free(ep);
+
+error_return:
+    <span class="hljs-keyword">return</span> fd;
+}
+</code></pre>
+<p><code>sys_epoll_create()</code> &#x4E3B;&#x8981;&#x505A;&#x4E24;&#x4EF6;&#x4E8B;&#x60C5;&#xFF1A;</p>
+<ol>
+<li>&#x8C03;&#x7528; <code>ep_alloc()</code> &#x51FD;&#x6570;&#x521B;&#x5EFA;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A; <code>eventpoll</code> &#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x8C03;&#x7528; <code>anon_inode_getfd()</code> &#x51FD;&#x6570;&#x628A; <code>eventpoll</code> &#x5BF9;&#x8C61;&#x6620;&#x5C04;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x3002;</li>
+</ol>
+<p>&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x770B; <code>eventpoll</code> &#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;<code>eventpoll</code> &#x5BF9;&#x8C61;&#x7528;&#x4E8E;&#x7BA1;&#x7406; <code>epoll</code> &#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> eventpoll {
+    ...
+    <span class="hljs-keyword">wait_queue_head_t</span> wq;
+    ...
+    <span class="hljs-keyword">struct</span> list_head rdllist;
+    <span class="hljs-keyword">struct</span> rb_root rbr;
+    ...
+};
+</code></pre>
+<p>&#x5148;&#x6765;&#x8BF4;&#x660E;&#x4E00;&#x4E0B; <code>eventpoll</code> &#x5BF9;&#x8C61;&#x5404;&#x4E2A;&#x6210;&#x5458;&#x7684;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ol>
+<li><code>wq</code>: &#x7B49;&#x5F85;&#x961F;&#x5217;&#xFF0C;&#x5F53;&#x8C03;&#x7528; <code>epoll_wait(fd)</code> &#x65F6;&#x4F1A;&#x628A;&#x8FDB;&#x7A0B;&#x6DFB;&#x52A0;&#x5230; <code>eventpoll</code> &#x5BF9;&#x8C61;&#x7684; <code>wq</code> &#x7B49;&#x5F85;&#x961F;&#x5217;&#x4E2D;&#x3002;</li>
+<li><code>rdllist</code>: &#x4FDD;&#x5B58;&#x5DF2;&#x7ECF;&#x5C31;&#x7EEA;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;&#x3002;</li>
+<li><code>rbr</code>: &#x4F7F;&#x7528;&#x7EA2;&#x9ED1;&#x6811;&#x6765;&#x7BA1;&#x7406;&#x6240;&#x6709;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x3002;</li>
+</ol>
+<p>&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86; <code>eventpoll</code> &#x5BF9;&#x8C61;&#x4E0E;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x5173;&#x7CFB;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/epoll-eventpoll.jpg" alt="epoll-eventpoll"></p>
+<p>&#x7531;&#x4E8E;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x901A;&#x8FC7; <code>epitem</code> &#x5BF9;&#x8C61;&#x6765;&#x7BA1;&#x7406;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E0A;&#x56FE;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x90FD;&#x662F;&#x4EE5; <code>epitem</code> &#x5BF9;&#x8C61;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x5728;&#x7684;&#x3002;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x7528;&#x7EA2;&#x9ED1;&#x6811;&#x6765;&#x7BA1;&#x7406;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x5462;&#xFF1F;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x5230;&#x5176;&#x5BF9;&#x5E94;&#x7684; <code>epitem</code> &#x5BF9;&#x8C61;&#x3002;&#x7EA2;&#x9ED1;&#x6811;&#x662F;&#x4E00;&#x79CD;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x5176;&#x4E0D;&#x4E86;&#x89E3;&#x53EF;&#x4EE5;&#x67E5;&#x9605;&#x76F8;&#x5173;&#x7684;&#x6587;&#x6863;&#x3002;</p>
+<h3 id="&#x5411;-epoll-&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x53E5;&#x67C4;">&#x5411; epoll &#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x53E5;&#x67C4;</h3>
+<p>&#x524D;&#x9762;&#x4ECB;&#x7ECD;&#x4E86;&#x600E;&#x4E48;&#x521B;&#x5EFA; <code>epoll</code>&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x600E;&#x4E48;&#x5411; <code>epoll</code> &#x6DFB;&#x52A0;&#x8981;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>epoll_ctl()</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5411; <code>epoll</code> &#x6DFB;&#x52A0;&#x8981;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x539F;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-title">epoll_ctl</span><span class="hljs-params">(<span class="hljs-keyword">int</span> epfd, <span class="hljs-keyword">int</span> op, <span class="hljs-keyword">int</span> fd,<span class="hljs-keyword">struct</span> epoll_event *event)</span></span>;
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#x5404;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ol>
+<li><code>epfd</code>: &#x901A;&#x8FC7;&#x8C03;&#x7528; <code>epoll_create()</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x3002;</li>
+<li><code>op</code>: &#x8981;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6709;3&#x4E2A;&#x9009;&#x9879;&#xFF1A;<ul>
+<li><code>EPOLL_CTL_ADD</code>&#xFF1A;&#x8868;&#x793A;&#x8981;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;&#x64CD;&#x4F5C;&#x3002;</li>
+<li><code>EPOLL_CTL_DEL</code>&#xFF1A;&#x8868;&#x793A;&#x8981;&#x8FDB;&#x884C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x3002;</li>
+<li><code>EPOLL_CTL_MOD</code>&#xFF1A;&#x8868;&#x793A;&#x8981;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x3002;</li>
+</ul>
+</li>
+<li><code>fd</code>: &#x8981;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x3002;</li>
+<li><code>event</code>: &#x544A;&#x8BC9;&#x5185;&#x6838;&#x9700;&#x8981;&#x76D1;&#x542C;&#x4EC0;&#x4E48;&#x4E8B;&#x3002;&#x5176;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> epoll_event {
+ <span class="hljs-keyword">__uint32_t</span> events;  <span class="hljs-comment">/* Epoll events */</span>
+ <span class="hljs-keyword">epoll_data_t</span> data;  <span class="hljs-comment">/* User data variable */</span>
+};
+</code></pre>
+<code>events</code> &#x53EF;&#x4EE5;&#x662F;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x5B8F;&#x7684;&#x96C6;&#x5408;&#xFF1A;</li>
+<li><code>EPOLLIN</code> &#xFF1A;&#x8868;&#x793A;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x53EF;&#x4EE5;&#x8BFB;&#xFF08;&#x5305;&#x62EC;&#x5BF9;&#x7AEF;SOCKET&#x6B63;&#x5E38;&#x5173;&#x95ED;&#xFF09;&#xFF1B;</li>
+<li><code>EPOLLOUT</code>&#xFF1A;&#x8868;&#x793A;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x53EF;&#x4EE5;&#x5199;&#xFF1B;</li>
+<li><code>EPOLLPRI</code>&#xFF1A;&#x8868;&#x793A;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x6709;&#x7D27;&#x6025;&#x7684;&#x6570;&#x636E;&#x53EF;&#x8BFB;&#xFF08;&#x8FD9;&#x91CC;&#x5E94;&#x8BE5;&#x8868;&#x793A;&#x6709;&#x5E26;&#x5916;&#x6570;&#x636E;&#x5230;&#x6765;&#xFF09;&#xFF1B;</li>
+<li><code>EPOLLERR</code>&#xFF1A;&#x8868;&#x793A;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF1B;</li>
+<li><code>EPOLLHUP</code>&#xFF1A;&#x8868;&#x793A;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x88AB;&#x6302;&#x65AD;&#xFF1B;</li>
+<li><code>EPOLLET</code>&#xFF1A;&#x5C06;EPOLL&#x8BBE;&#x4E3A;&#x8FB9;&#x7F18;&#x89E6;&#x53D1;(Edge Triggered)&#x6A21;&#x5F0F;&#xFF0C;&#x8FD9;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x6C34;&#x5E73;&#x89E6;&#x53D1;(Level Triggered)&#x6765;&#x8BF4;&#x7684;&#x3002;</li>
+<li><code>EPOLLONESHOT</code>&#xFF1A;&#x53EA;&#x76D1;&#x542C;&#x4E00;&#x6B21;&#x4E8B;&#x4EF6;&#xFF0C;&#x5F53;&#x76D1;&#x542C;&#x5B8C;&#x8FD9;&#x6B21;&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x8FD8;&#x9700;&#x8981;&#x7EE7;&#x7EED;&#x76D1;&#x542C;&#x8FD9;&#x4E2A;socket&#x7684;&#x8BDD;&#xFF0C;&#x9700;&#x8981;&#x518D;&#x6B21;&#x628A;&#x8FD9;&#x4E2A;socket&#x52A0;&#x5165;&#x5230;EPOLL&#x961F;&#x5217;&#x91CC;&#x3002;</li>
+</ol>
+<p><code>data</code> &#x7528;&#x6765;&#x4FDD;&#x5B58;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x3002;</p>
+<p><code>epoll_ctl()</code> &#x51FD;&#x6570;&#x4F1A;&#x8C03;&#x7528; <code>sys_epoll_ctl()</code> &#x5185;&#x6838;&#x51FD;&#x6570;&#xFF0C;<code>sys_epoll_ctl()</code> &#x5185;&#x6838;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage <span class="hljs-keyword">long</span> <span class="hljs-title">sys_epoll_ctl</span><span class="hljs-params">(<span class="hljs-keyword">int</span> epfd, <span class="hljs-keyword">int</span> op, 
+    <span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">struct</span> epoll_event __user *event)</span>
+</span>{
+    ...
+    file = fget(epfd);
+    tfile = fget(fd);
+    ...
+    ep = file-&gt;private_data;
+
+    mutex_lock(&amp;ep-&gt;mtx);
+
+    epi = ep_find(ep, tfile, fd);
+
+    error = -EINVAL;
+    <span class="hljs-keyword">switch</span> (op) {
+    <span class="hljs-keyword">case</span> EPOLL_CTL_ADD:
+        <span class="hljs-keyword">if</span> (!epi) {
+            epds.events |= POLLERR | POLLHUP;
+
+            error = ep_insert(ep, &amp;epds, tfile, fd);
+        } <span class="hljs-keyword">else</span>
+            error = -EEXIST;
+        <span class="hljs-keyword">break</span>;
+    ...
+    }
+    mutex_unlock(&amp;ep-&gt;mtx);
+
+    ...
+    <span class="hljs-keyword">return</span> error;
+}
+</code></pre>
+<p><code>sys_epoll_ctl()</code> &#x51FD;&#x6570;&#x4F1A;&#x6839;&#x636E;&#x4F20;&#x5165;&#x4E0D;&#x540C; <code>op</code> &#x7684;&#x503C;&#x6765;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x4F20;&#x5165; <code>EPOLL_CTL_ADD</code> &#x8868;&#x793A;&#x8981;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;&#x64CD;&#x4F5C;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8C03;&#x7528; <code>ep_insert()</code> &#x51FD;&#x6570;&#x6765;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x7EE7;&#x7EED;&#x6765;&#x5206;&#x6790;&#x6DFB;&#x52A0;&#x64CD;&#x4F5C; <code>ep_insert()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">ep_insert</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> eventpoll *ep, <span class="hljs-keyword">struct</span> epoll_event *event,
+             <span class="hljs-keyword">struct</span> file *tfile, <span class="hljs-keyword">int</span> fd)</span>
+</span>{
+    ...
+    error = -ENOMEM;
+    <span class="hljs-comment">// &#x7533;&#x8BF7;&#x4E00;&#x4E2A; epitem &#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">if</span> (!(epi = kmem_cache_alloc(epi_cache, GFP_KERNEL)))
+        <span class="hljs-keyword">goto</span> error_return;
+
+    <span class="hljs-comment">// &#x521D;&#x59CB;&#x5316; epitem &#x5BF9;&#x8C61;</span>
+    INIT_LIST_HEAD(&amp;epi-&gt;rdllink);
+    INIT_LIST_HEAD(&amp;epi-&gt;fllink);
+    INIT_LIST_HEAD(&amp;epi-&gt;pwqlist);
+    epi-&gt;ep = ep;
+    ep_set_ffd(&amp;epi-&gt;ffd, tfile, fd);
+    epi-&gt;event = *event;
+    epi-&gt;nwait = <span class="hljs-number">0</span>;
+    epi-&gt;next = EP_UNACTIVE_PTR;
+
+    epq.epi = epi;
+    <span class="hljs-comment">// &#x7B49;&#x4EF7;&#x4E8E;: epq.pt-&gt;qproc = ep_ptable_queue_proc</span>
+    init_poll_funcptr(&amp;epq.pt, ep_ptable_queue_proc);
+
+    <span class="hljs-comment">// &#x8C03;&#x7528;&#x88AB;&#x76D1;&#x542C;&#x6587;&#x4EF6;&#x7684; poll &#x63A5;&#x53E3;. </span>
+    <span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x53C8;&#x5404;&#x81EA;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5B9E;&#x73B0;, &#x5982;socket&#x7684;&#x8BDD;, &#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x5C31;&#x662F; tcp_poll().</span>
+    revents = tfile-&gt;f_op-&gt;poll(tfile, &amp;epq.pt);
+    ...
+    ep_rbtree_insert(ep, epi); <span class="hljs-comment">// &#x628A; epitem &#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;epoll&#x7684;&#x7EA2;&#x9ED1;&#x6811;&#x4E2D;&#x8FDB;&#x884C;&#x7BA1;&#x7406;</span>
+
+    spin_lock_irqsave(&amp;ep-&gt;lock, flags);
+
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5BF9;&#x5E94;&#x7684;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;</span>
+    <span class="hljs-comment">// &#x90A3;&#x4E48;&#x5C31;&#x628A;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;epoll&#x7684;&#x5C31;&#x7EEA;&#x961F;&#x5217; rdllink &#x4E2D;, &#x5E76;&#x4E14;&#x5524;&#x9192;&#x8C03;&#x7528; epoll_wait() &#x7684;&#x8FDB;&#x7A0B;.</span>
+    <span class="hljs-keyword">if</span> ((revents &amp; event-&gt;events) &amp;&amp; !ep_is_linked(&amp;epi-&gt;rdllink)) {
+        list_add_tail(&amp;epi-&gt;rdllink, &amp;ep-&gt;rdllist);
+
+        <span class="hljs-keyword">if</span> (waitqueue_active(&amp;ep-&gt;wq))
+            wake_up_locked(&amp;ep-&gt;wq);
+        <span class="hljs-keyword">if</span> (waitqueue_active(&amp;ep-&gt;poll_wait))
+            pwake++;
+    }
+
+    spin_unlock_irqrestore(&amp;ep-&gt;lock, flags);
+    ...
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    ...
+}
+</code></pre>
+<p>&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x901A;&#x8FC7; <code>epitem</code> &#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x4F1A;&#x88AB;&#x5C01;&#x88C5;&#x6210; <code>epitem</code> &#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x4F1A;&#x88AB;&#x6DFB;&#x52A0;&#x5230; <code>eventpoll</code> &#x5BF9;&#x8C61;&#x7684;&#x7EA2;&#x9ED1;&#x6811;&#x4E2D;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF08;&#x5982;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4E2D;&#x7684; <code>ep_rbtree_insert(ep, epi)</code>&#xFF09;&#x3002;</p>
+<p><code>tfile-&gt;f_op-&gt;poll(tfile, &amp;epq.pt)</code> &#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x8C03;&#x7528;&#x88AB;&#x76D1;&#x542C;&#x6587;&#x4EF6;&#x7684; <code>poll()</code> &#x63A5;&#x53E3;&#xFF0C;&#x5982;&#x679C;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;socket&#x53E5;&#x67C4;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x8C03;&#x7528; <code>tcp_poll()</code>&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B; <code>tcp_poll()</code> &#x505A;&#x4E86;&#x4EC0;&#x4E48;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> <span class="hljs-title">tcp_poll</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> file *file, <span class="hljs-keyword">struct</span> socket *sock, poll_table *wait)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> sock *sk = sock-&gt;sk;
+    ...
+    poll_wait(file, sk-&gt;sk_sleep, wait);
+    ...
+    <span class="hljs-keyword">return</span> mask;
+}
+</code></pre>
+<p>&#x6BCF;&#x4E2A; <code>socket</code> &#x5BF9;&#x8C61;&#x90FD;&#x6709;&#x4E2A;&#x7B49;&#x5F85;&#x961F;&#x5217;&#xFF08;<code>waitqueue</code>, &#x5173;&#x4E8E;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x6587;&#x7AE0;: <a href="https://github.com/liexusong/linux-source-code-analyze/blob/master/waitqueue.md" target="_blank">&#x7B49;&#x5F85;&#x961F;&#x5217;&#x539F;&#x7406;&#x4E0E;&#x5B9E;&#x73B0;</a>&#xFF09;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x7B49;&#x5F85; socket &#x72B6;&#x6001;&#x66F4;&#x6539;&#x7684;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>&#x4ECE;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C;<code>tcp_poll()</code> &#x8C03;&#x7528;&#x4E86; <code>poll_wait()</code> &#x51FD;&#x6570;&#xFF0C;&#x800C; <code>poll_wait()</code> &#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528; <code>ep_ptable_queue_proc()</code> &#x51FD;&#x6570;&#xFF0C;<code>ep_ptable_queue_proc()</code> &#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ep_ptable_queue_proc</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> file *file, 
+    wait_queue_head_t *whead, poll_table *pt)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> epitem *epi = ep_item_from_epqueue(pt);
+    <span class="hljs-keyword">struct</span> eppoll_entry *pwq;
+
+    <span class="hljs-keyword">if</span> (epi-&gt;nwait &gt;= <span class="hljs-number">0</span> &amp;&amp; (pwq = kmem_cache_alloc(pwq_cache, GFP_KERNEL))) {
+        init_waitqueue_func_entry(&amp;pwq-&gt;wait, ep_poll_callback);
+        pwq-&gt;whead = whead;
+        pwq-&gt;base = epi;
+        add_wait_queue(whead, &amp;pwq-&gt;wait);
+        list_add_tail(&amp;pwq-&gt;llink, &amp;epi-&gt;pwqlist);
+        epi-&gt;nwait++;
+    } <span class="hljs-keyword">else</span> {
+        epi-&gt;nwait = <span class="hljs-number">-1</span>;
+    }
+}
+</code></pre>
+<p><code>ep_ptable_queue_proc()</code> &#x51FD;&#x6570;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x662F;&#x628A;&#x5F53;&#x524D; <code>epitem</code> &#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230; socket &#x5BF9;&#x8C61;&#x7684;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x8BBE;&#x7F6E;&#x5524;&#x9192;&#x51FD;&#x6570;&#x4E3A; <code>ep_poll_callback()</code>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5F53;socket&#x72B6;&#x6001;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;&#x8C03;&#x7528; <code>ep_poll_callback()</code> &#x51FD;&#x6570;&#x3002;<code>ep_poll_callback()</code> &#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">ep_poll_callback</span><span class="hljs-params">(wait_queue_t *wait, <span class="hljs-keyword">unsigned</span> mode, <span class="hljs-keyword">int</span> sync, <span class="hljs-keyword">void</span> *key)</span>
+</span>{
+    ...
+    <span class="hljs-comment">// &#x628A;&#x5C31;&#x7EEA;&#x7684;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x5C31;&#x7EEA;&#x961F;&#x5217;&#x4E2D;</span>
+    list_add_tail(&amp;epi-&gt;rdllink, &amp;ep-&gt;rdllist);
+
+is_linked:
+    <span class="hljs-comment">// &#x5524;&#x9192;&#x8C03;&#x7528; epoll_wait() &#x800C;&#x88AB;&#x963B;&#x585E;&#x7684;&#x8FDB;&#x7A0B;</span>
+    <span class="hljs-keyword">if</span> (waitqueue_active(&amp;ep-&gt;wq))
+        wake_up_locked(&amp;ep-&gt;wq);
+    ...
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p><code>ep_poll_callback()</code> &#x51FD;&#x6570;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x662F;&#x628A;&#x5C31;&#x7EEA;&#x7684;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230; <code>eventepoll</code> &#x5BF9;&#x8C61;&#x7684;&#x5C31;&#x7EEA;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x5524;&#x9192;&#x8C03;&#x7528; <code>epoll_wait()</code> &#x88AB;&#x963B;&#x585E;&#x7684;&#x8FDB;&#x7A0B;&#x3002;</p>
+<h3 id="&#x7B49;&#x5F85;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x6539;&#x53D8;">&#x7B49;&#x5F85;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x6539;&#x53D8;</h3>
+<p>&#x628A;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x6DFB;&#x52A0;&#x5230;epoll&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>epoll_wait()</code> &#x7B49;&#x5F85;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x3002;<code>epoll_wait()</code> &#x8C03;&#x7528;&#x4F1A;&#x963B;&#x585E;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#xFF0C;&#x5F53;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF0C;<code>epoll_wait()</code> &#x8C03;&#x7528;&#x4FBF;&#x4F1A;&#x8FD4;&#x56DE;&#x3002;</p>
+<p><code>epoll_wait()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x539F;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-title">epoll_wait</span><span class="hljs-params">(<span class="hljs-keyword">int</span> epfd, <span class="hljs-keyword">struct</span> epoll_event *events, <span class="hljs-keyword">int</span> maxevents, <span class="hljs-keyword">int</span> timeout)</span></span>;
+</code></pre>
+<p>&#x5404;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x610F;&#x4E49;&#xFF1A;</p>
+<ol>
+<li><code>epfd</code>: &#x8C03;&#x7528; <code>epoll_create()</code> &#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7684;epoll&#x53E5;&#x67C4;&#x3002;</li>
+<li><code>events</code>: &#x7528;&#x6765;&#x5B58;&#x653E;&#x5C31;&#x7EEA;&#x6587;&#x4EF6;&#x5217;&#x8868;&#x3002;</li>
+<li><code>maxevents</code>: <code>events</code> &#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#x3002;</li>
+<li><code>timeout</code>: &#x8BBE;&#x7F6E;&#x7B49;&#x5F85;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x3002;</li>
+</ol>
+<p><code>epoll_wait()</code> &#x51FD;&#x6570;&#x4F1A;&#x8C03;&#x7528; <code>sys_epoll_wait()</code> &#x5185;&#x6838;&#x51FD;&#x6570;&#xFF0C;&#x800C; <code>sys_epoll_wait()</code> &#x51FD;&#x6570;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528; <code>ep_poll()</code> &#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B; <code>ep_poll()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">ep_poll</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> eventpoll *ep, 
+    <span class="hljs-keyword">struct</span> epoll_event __user *events, <span class="hljs-keyword">int</span> maxevents, <span class="hljs-keyword">long</span> timeout)</span>
+</span>{
+    ...
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x5C31;&#x7EEA;&#x6587;&#x4EF6;&#x5217;&#x8868;&#x4E3A;&#x7A7A;</span>
+    <span class="hljs-keyword">if</span> (list_empty(&amp;ep-&gt;rdllist)) {
+        <span class="hljs-comment">// &#x628A;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x6DFB;&#x52A0;&#x5230;epoll&#x7684;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x4E2D;</span>
+        init_waitqueue_entry(&amp;wait, current);
+        wait.flags |= WQ_FLAG_EXCLUSIVE;
+        __add_wait_queue(&amp;ep-&gt;wq, &amp;wait);
+
+        <span class="hljs-keyword">for</span> (;;) {
+            set_current_state(TASK_INTERRUPTIBLE); <span class="hljs-comment">// &#x628A;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x8BBE;&#x7F6E;&#x4E3A;&#x7761;&#x7720;&#x72B6;&#x6001;</span>
+            <span class="hljs-keyword">if</span> (!list_empty(&amp;ep-&gt;rdllist) || !jtimeout) <span class="hljs-comment">// &#x5982;&#x679C;&#x6709;&#x5C31;&#x7EEA;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x8D85;&#x65F6;, &#x9000;&#x51FA;&#x5FAA;&#x73AF;</span>
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">if</span> (signal_pending(current)) { <span class="hljs-comment">// &#x63A5;&#x6536;&#x5230;&#x4FE1;&#x53F7;&#x4E5F;&#x8981;&#x9000;&#x51FA;</span>
+                res = -EINTR;
+                <span class="hljs-keyword">break</span>;
+            }
+
+            spin_unlock_irqrestore(&amp;ep-&gt;lock, flags);
+            jtimeout = schedule_timeout(jtimeout); <span class="hljs-comment">// &#x8BA9;&#x51FA;CPU, &#x5207;&#x6362;&#x5230;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#x6267;&#x884C;</span>
+            spin_lock_irqsave(&amp;ep-&gt;lock, flags);
+        }
+        <span class="hljs-comment">// &#x6709;3&#x79CD;&#x60C5;&#x51B5;&#x4F1A;&#x6267;&#x884C;&#x5230;&#x8FD9;&#x91CC;:</span>
+        <span class="hljs-comment">// 1. &#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x96C6;&#x5408;&#x4E2D;&#x6709;&#x5C31;&#x7EEA;&#x7684;&#x6587;&#x4EF6;</span>
+        <span class="hljs-comment">// 2. &#x8BBE;&#x7F6E;&#x4E86;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x5E76;&#x4E14;&#x8D85;&#x65F6;&#x4E86;</span>
+        <span class="hljs-comment">// 3. &#x63A5;&#x6536;&#x5230;&#x4FE1;&#x53F7;</span>
+        __remove_wait_queue(&amp;ep-&gt;wq, &amp;wait);
+
+        set_current_state(TASK_RUNNING);
+    }
+    <span class="hljs-comment">/* &#x662F;&#x5426;&#x6709;&#x5C31;&#x7EEA;&#x7684;&#x6587;&#x4EF6;? */</span>
+    eavail = !list_empty(&amp;ep-&gt;rdllist);
+
+    spin_unlock_irqrestore(&amp;ep-&gt;lock, flags);
+
+    <span class="hljs-keyword">if</span> (!res &amp;&amp; eavail 
+        &amp;&amp; !(res = ep_send_events(ep, events, maxevents)) &amp;&amp; jtimeout)
+        <span class="hljs-keyword">goto</span> retry;
+
+    <span class="hljs-keyword">return</span> res;
+}
+</code></pre>
+<p><code>ep_poll()</code> &#x51FD;&#x6570;&#x4E3B;&#x8981;&#x505A;&#x4EE5;&#x4E0B;&#x51E0;&#x4EF6;&#x4E8B;&#xFF1A;</p>
+<ol>
+<li>&#x5224;&#x65AD;&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x96C6;&#x5408;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x5C31;&#x7EEA;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5C31;&#x8FD4;&#x56DE;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5C31;&#x628A;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x6DFB;&#x52A0;&#x5230;epoll&#x7684;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x8FDB;&#x5165;&#x7761;&#x7720;&#x3002;</li>
+<li>&#x8FDB;&#x7A0B;&#x4F1A;&#x4E00;&#x76F4;&#x7761;&#x7720;&#x76F4;&#x5230;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#xFF1A;<ol>
+<li>&#x88AB;&#x76D1;&#x542C;&#x7684;&#x6587;&#x4EF6;&#x96C6;&#x5408;&#x4E2D;&#x6709;&#x5C31;&#x7EEA;&#x7684;&#x6587;&#x4EF6;</li>
+<li>&#x8BBE;&#x7F6E;&#x4E86;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x5E76;&#x4E14;&#x8D85;&#x65F6;&#x4E86;</li>
+<li>&#x63A5;&#x6536;&#x5230;&#x4FE1;&#x53F7;</li>
+</ol>
+</li>
+<li>&#x5982;&#x679C;&#x6709;&#x5C31;&#x7EEA;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8C03;&#x7528; <code>ep_send_events()</code> &#x51FD;&#x6570;&#x628A;&#x5C31;&#x7EEA;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230; <code>events</code> &#x53C2;&#x6570;&#x4E2D;&#x3002;</li>
+<li>&#x8FD4;&#x56DE;&#x5C31;&#x7EEA;&#x6587;&#x4EF6;&#x7684;&#x4E2A;&#x6570;&#x3002;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Epoll原理与实现","level":"1.10.1","depth":2,"previous":{"title":"2.6+内核分析","level":"1.10","depth":1,"ref":"","articles":[{"title":"Epoll原理与实现","level":"1.10.1","depth":2,"path":"epoll-principle.md","ref":"epoll-principle.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"epoll-principle.md","mtime":"2020-02-28T05:18:57.399Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T03:48:37.225Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

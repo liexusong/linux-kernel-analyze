@@ -1,0 +1,788 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>等待队列 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="concurrency-synchronize.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="process-management.html">
+            
+                <a href="process-management.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="process-schedule.html">
+            
+                <a href="process-schedule.html">
+            
+                    
+                    进程调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="concurrency-synchronize.html">
+            
+                <a href="concurrency-synchronize.html">
+            
+                    
+                    并发同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="waitqueue.html">
+            
+                <a href="waitqueue.html">
+            
+                    
+                    等待队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    内存管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="physical-memory-managemen-1.html">
+            
+                <a href="physical-memory-managemen-1.html">
+            
+                    
+                    物理内存管理(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="physical-memory-managemen-2.html">
+            
+                <a href="physical-memory-managemen-2.html">
+            
+                    
+                    物理内存管理(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="physical-memory-managemen-3.html">
+            
+                <a href="physical-memory-managemen-3.html">
+            
+                    
+                    物理内存管理(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="virtual_memory_address_manager.html">
+            
+                <a href="virtual_memory_address_manager.html">
+            
+                    
+                    虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="memory_mmap.html">
+            
+                <a href="memory_mmap.html">
+            
+                    
+                    mmap完全剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="memory_swap.html">
+            
+                <a href="memory_swap.html">
+            
+                    
+                    内存交换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    中断机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="interrupt_hardware.html">
+            
+                <a href="interrupt_hardware.html">
+            
+                    
+                    硬件相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="interrupt_softward.html">
+            
+                <a href="interrupt_softward.html">
+            
+                    
+                    中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    系统调用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="syscall.html">
+            
+                <a href="syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="virtual_file_system.html">
+            
+                <a href="virtual_file_system.html">
+            
+                    
+                    虚拟文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="minix_file_system.html">
+            
+                <a href="minix_file_system.html">
+            
+                    
+                    MINIX文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    进程间通信
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="signal.html">
+            
+                <a href="signal.html">
+            
+                    
+                    信号处理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ipc-shm.html">
+            
+                <a href="ipc-shm.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="socket_interface.html">
+            
+                <a href="socket_interface.html">
+            
+                    
+                    Socket接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="unix-domain-sockets.html">
+            
+                <a href="unix-domain-sockets.html">
+            
+                    
+                    Unix Domain Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="kernel-timer.html">
+            
+                <a href="kernel-timer.html">
+            
+                    
+                    定时器实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="multiplexing-io.html">
+            
+                <a href="multiplexing-io.html">
+            
+                    
+                    多路复用I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    docker实现原理之 - namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    2.6+内核分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="epoll-principle.html">
+            
+                <a href="epoll-principle.html">
+            
+                    
+                    Epoll原理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >等待队列</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x7B49;&#x5F85;&#x961F;&#x5217;&#x539F;&#x7406;&#x4E0E;&#x5B9E;&#x73B0;">&#x7B49;&#x5F85;&#x961F;&#x5217;&#x539F;&#x7406;&#x4E0E;&#x5B9E;&#x73B0;</h2>
+<p>&#x5F53;&#x8FDB;&#x7A0B;&#x8981;&#x83B7;&#x53D6;&#x67D0;&#x4E9B;&#x8D44;&#x6E90;&#xFF08;&#x4F8B;&#x5982;&#x4ECE;&#x7F51;&#x5361;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#xFF09;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F46;&#x8D44;&#x6E90;&#x5E76;&#x6CA1;&#x6709;&#x51C6;&#x5907;&#x597D;&#xFF08;&#x4F8B;&#x5982;&#x7F51;&#x5361;&#x8FD8;&#x6CA1;&#x63A5;&#x6536;&#x5230;&#x6570;&#x636E;&#xFF09;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5185;&#x6838;&#x5FC5;&#x987B;&#x5207;&#x6362;&#x5230;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#xFF0C;&#x76F4;&#x5230;&#x8D44;&#x6E90;&#x51C6;&#x5907;&#x597D;&#x518D;&#x5524;&#x9192;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p><code>waitqueue (&#x7B49;&#x5F85;&#x961F;&#x5217;)</code> &#x5C31;&#x662F;&#x5185;&#x6838;&#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x7B49;&#x5F85;&#x8D44;&#x6E90;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x5F53;&#x67D0;&#x4E2A;&#x8FDB;&#x7A0B;&#x83B7;&#x53D6;&#x7684;&#x8D44;&#x6E90;&#x6CA1;&#x6709;&#x51C6;&#x5907;&#x597D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>add_wait_queue()</code> &#x51FD;&#x6570;&#x628A;&#x8FDB;&#x7A0B;&#x6DFB;&#x52A0;&#x5230; <code>waitqueue</code> &#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x5207;&#x6362;&#x5230;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x3002;&#x5F53;&#x8D44;&#x6E90;&#x51C6;&#x5907;&#x597D;&#xFF0C;&#x7531;&#x8D44;&#x6E90;&#x63D0;&#x4F9B;&#x65B9;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>wake_up()</code> &#x51FD;&#x6570;&#x6765;&#x5524;&#x9192;&#x7B49;&#x5F85;&#x7684;&#x8FDB;&#x7A0B;&#x3002;</p>
+<h3 id="&#x7B49;&#x5F85;&#x961F;&#x5217;&#x521D;&#x59CB;&#x5316;">&#x7B49;&#x5F85;&#x961F;&#x5217;&#x521D;&#x59CB;&#x5316;</h3>
+<p>&#x8981;&#x4F7F;&#x7528; <code>waitqueue</code> &#x9996;&#x5148;&#x9700;&#x8981;&#x58F0;&#x660E;&#x4E00;&#x4E2A; <code>wait_queue_head_t</code> &#x7ED3;&#x6784;&#x7684;&#x53D8;&#x91CF;&#xFF0C;<code>wait_queue_head_t</code> &#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> __wait_queue_head {
+    <span class="hljs-keyword">spinlock_t</span> lock;
+    <span class="hljs-keyword">struct</span> list_head task_list;
+};
+</code></pre>
+<p><code>waitqueue</code> &#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x800C; <code>wait_queue_head_t</code> &#x7ED3;&#x6784;&#x662F; <code>waitqueue</code> &#x7684;&#x5934;&#x90E8;&#xFF0C;<code>lock</code> &#x5B57;&#x6BB5;&#x7528;&#x4E8E;&#x4FDD;&#x62A4;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x5728;&#x591A;&#x6838;&#x73AF;&#x5883;&#x4E0B;&#x6570;&#x636E;&#x88AB;&#x7834;&#x574F;&#xFF0C;&#x800C; <code>task_list</code> &#x5B57;&#x6BB5;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x7B49;&#x5F85;&#x8D44;&#x6E90;&#x7684;&#x8FDB;&#x7A0B;&#x5217;&#x8868;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>init_waitqueue_head()</code> &#x51FD;&#x6570;&#x6765;&#x521D;&#x59CB;&#x5316; <code>wait_queue_head_t</code> &#x7ED3;&#x6784;&#xFF0C;&#x5176;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init_waitqueue_head</span><span class="hljs-params">(wait_queue_head_t *q)</span>
+</span>{
+    spin_lock_init(&amp;q-&gt;lock);
+    INIT_LIST_HEAD(&amp;q-&gt;task_list);
+}
+</code></pre>
+<p>&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x9996;&#x5148;&#x8C03;&#x7528; <code>spin_lock_init()</code> &#x6765;&#x521D;&#x59CB;&#x5316;&#x81EA;&#x65CB;&#x9501; <code>lock</code>&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; <code>INIT_LIST_HEAD()</code> &#x6765;&#x521D;&#x59CB;&#x5316;&#x8FDB;&#x7A0B;&#x94FE;&#x8868;&#x3002;</p>
+<h3 id="&#x5411;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x6DFB;&#x52A0;&#x7B49;&#x5F85;&#x8FDB;&#x7A0B;">&#x5411;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x6DFB;&#x52A0;&#x7B49;&#x5F85;&#x8FDB;&#x7A0B;</h3>
+<p>&#x8981;&#x5411; <code>waitqueue</code> &#x6DFB;&#x52A0;&#x7B49;&#x5F85;&#x8FDB;&#x7A0B;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x58F0;&#x660E;&#x4E00;&#x4E2A; <code>wait_queue_t</code> &#x7ED3;&#x6784;&#x7684;&#x53D8;&#x91CF;&#xFF0C;<code>wait_queue_t</code> &#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">int</span> <span class="hljs-params">(*wait_queue_func_t)</span><span class="hljs-params">(wait_queue_t *wait, <span class="hljs-keyword">unsigned</span> mode, <span class="hljs-keyword">int</span> sync, <span class="hljs-keyword">void</span> *key)</span></span>;
+
+<span class="hljs-keyword">struct</span> __wait_queue {
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> flags;
+    <span class="hljs-keyword">void</span> *<span class="hljs-keyword">private</span>;
+    <span class="hljs-keyword">wait_queue_func_t</span> func;
+    <span class="hljs-keyword">struct</span> list_head task_list;
+};
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#x5404;&#x4E2A;&#x6210;&#x5458;&#x7684;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ol>
+<li><code>flags</code>: &#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A; <code>WQ_FLAG_EXCLUSIVE</code>&#xFF0C;&#x8868;&#x793A;&#x7B49;&#x5F85;&#x7684;&#x8FDB;&#x7A0B;&#x5E94;&#x8BE5;&#x72EC;&#x5360;&#x8D44;&#x6E90;&#xFF08;&#x89E3;&#x51B3;&#x60CA;&#x7FA4;&#x73B0;&#x8C61;&#xFF09;&#x3002;</li>
+<li><code>private</code>: &#x4E00;&#x822C;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x7B49;&#x5F85;&#x8FDB;&#x7A0B;&#x7684;&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26; <code>task_struct</code>&#x3002;</li>
+<li><code>func</code>: &#x5524;&#x9192;&#x51FD;&#x6570;&#xFF0C;&#x4E00;&#x822C;&#x8BBE;&#x7F6E;&#x4E3A; <code>default_wake_function()</code> &#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5524;&#x9192;&#x51FD;&#x6570;&#x3002;</li>
+<li><code>task_list</code>: &#x7528;&#x4E8E;&#x8FDE;&#x63A5;&#x5176;&#x4ED6;&#x7B49;&#x5F85;&#x8D44;&#x6E90;&#x7684;&#x8FDB;&#x7A0B;&#x3002;</li>
+</ol>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>init_waitqueue_entry()</code> &#x51FD;&#x6570;&#x6765;&#x521D;&#x59CB;&#x5316; <code>wait_queue_t</code> &#x7ED3;&#x6784;&#x53D8;&#x91CF;&#xFF0C;&#x5176;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">init_waitqueue_entry</span><span class="hljs-params">(wait_queue_t *q, <span class="hljs-keyword">struct</span> task_struct *p)</span>
+</span>{
+    q-&gt;flags = <span class="hljs-number">0</span>;
+    q-&gt;<span class="hljs-keyword">private</span> = p;
+    q-&gt;func = default_wake_function;
+}
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>init_waitqueue_func_entry()</code> &#x51FD;&#x6570;&#x6765;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5524;&#x9192;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">init_waitqueue_func_entry</span><span class="hljs-params">(wait_queue_t *q, wait_queue_func_t func)</span>
+</span>{
+    q-&gt;flags = <span class="hljs-number">0</span>;
+    q-&gt;<span class="hljs-keyword">private</span> = <span class="hljs-literal">NULL</span>;
+    q-&gt;func = func;
+}
+</code></pre>
+<p>&#x521D;&#x59CB;&#x5316;&#x5B8C; <code>wait_queue_t</code> &#x7ED3;&#x6784;&#x53D8;&#x91CF;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>add_wait_queue()</code> &#x51FD;&#x6570;&#x628A;&#x7B49;&#x5F85;&#x8FDB;&#x7A0B;&#x6DFB;&#x52A0;&#x5230;&#x7B49;&#x5F85;&#x961F;&#x5217;&#xFF0C;&#x5176;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add_wait_queue</span><span class="hljs-params">(wait_queue_head_t *q, wait_queue_t *wait)</span>
+</span>{
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> flags;
+
+    wait-&gt;flags &amp;= ~WQ_FLAG_EXCLUSIVE;
+    spin_lock_irqsave(&amp;q-&gt;lock, flags);
+    __add_wait_queue(q, wait);
+    spin_unlock_irqrestore(&amp;q-&gt;lock, flags);
+}
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> __add_wait_queue(<span class="hljs-keyword">wait_queue_head_t</span> *head, <span class="hljs-keyword">wait_queue_t</span> *<span class="hljs-keyword">new</span>)
+{
+    list_add(&amp;<span class="hljs-keyword">new</span>-&gt;task_list, &amp;head-&gt;task_list);
+}
+</code></pre>
+<p><code>add_wait_queue()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x9996;&#x5148;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>spin_lock_irqsave()</code> &#x4E0A;&#x9501;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; <code>list_add()</code> &#x51FD;&#x6570;&#x628A;&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x5230;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x5373;&#x53EF;&#x3002;</p>
+<p><code>wait_queue_head_t</code> &#x7ED3;&#x6784;&#x4E0E; <code>wait_queue_t</code> &#x7ED3;&#x6784;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/waitqueue.jpg" alt="waitqueue"></p>
+<h3 id="&#x4F11;&#x7720;&#x7B49;&#x5F85;&#x8FDB;&#x7A0B;">&#x4F11;&#x7720;&#x7B49;&#x5F85;&#x8FDB;&#x7A0B;</h3>
+<p>&#x5F53;&#x628A;&#x8FDB;&#x7A0B;&#x6DFB;&#x52A0;&#x5230;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F11;&#x7720;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#xFF0C;&#x8BA9;&#x51FA;CPU&#x7ED9;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#xFF0C;&#x8981;&#x4F11;&#x7720;&#x8FDB;&#x7A0B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E0B;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-cpp">set_current_state(TASK_INTERRUPTIBLE);
+schedule();
+</code></pre>
+<p>&#x4EE3;&#x7801; <code>set_current_state(TASK_INTERRUPTIBLE)</code> &#x53EF;&#x4EE5;&#x628A;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x8BBE;&#x7F6E;&#x4E3A; <code>&#x53EF;&#x4E2D;&#x65AD;&#x4F11;&#x7720;</code> &#x72B6;&#x6001;&#xFF0C;&#x8C03;&#x7528; <code>schedule()</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4F7F;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x8BA9;&#x51FA;CPU&#xFF0C;&#x5207;&#x6362;&#x5230;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x3002;</p>
+<h3 id="&#x5524;&#x9192;&#x7B49;&#x5F85;&#x961F;&#x5217;">&#x5524;&#x9192;&#x7B49;&#x5F85;&#x961F;&#x5217;</h3>
+<p>&#x5F53;&#x8D44;&#x6E90;&#x51C6;&#x5907;&#x597D;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5524;&#x9192;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>wake_up()</code> &#x51FD;&#x6570;&#x6765;&#x5524;&#x9192;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x8FDB;&#x7A0B;&#x3002;<code>wake_up()</code> &#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528; <code>__wake_up_common()</code>&#xFF0C;&#x5176;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> __wake_up_common(<span class="hljs-keyword">wait_queue_head_t</span> *q, 
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> mode, <span class="hljs-keyword">int</span> nr_exclusive, <span class="hljs-keyword">int</span> sync, <span class="hljs-keyword">void</span> *key)
+{
+    <span class="hljs-keyword">wait_queue_t</span> *curr, *next;
+
+    list_for_each_entry_safe(curr, next, &amp;q-&gt;task_list, task_list) {
+        <span class="hljs-keyword">unsigned</span> flags = curr-&gt;flags;
+
+        <span class="hljs-keyword">if</span> (curr-&gt;func(curr, mode, sync, key) &amp;&amp;
+                (flags &amp; WQ_FLAG_EXCLUSIVE) &amp;&amp; !--nr_exclusive)
+            <span class="hljs-keyword">break</span>;
+    }
+}
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x5524;&#x9192;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x5C31;&#x662F;&#x53D8;&#x91CF;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x7684;&#x7B49;&#x5F85;&#x8FDB;&#x7A0B;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x5524;&#x9192;&#x51FD;&#x6570;&#x6765;&#x5524;&#x9192;&#x5B83;&#x4EEC;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="concurrency-synchronize.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 并发同步">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"等待队列","level":"1.2.4","depth":2,"next":{"title":"内存管理","level":"1.3","depth":1,"ref":"","articles":[{"title":"物理内存管理(上)","level":"1.3.1","depth":2,"path":"physical-memory-managemen-1.md","ref":"physical-memory-managemen-1.md","articles":[]},{"title":"物理内存管理(中)","level":"1.3.2","depth":2,"path":"physical-memory-managemen-2.md","ref":"physical-memory-managemen-2.md","articles":[]},{"title":"物理内存管理(下)","level":"1.3.3","depth":2,"path":"physical-memory-managemen-3.md","ref":"physical-memory-managemen-3.md","articles":[]},{"title":"虚拟内存管理","level":"1.3.4","depth":2,"path":"virtual_memory_address_manager.md","ref":"virtual_memory_address_manager.md","articles":[]},{"title":"mmap完全剖析","level":"1.3.5","depth":2,"path":"memory_mmap.md","ref":"memory_mmap.md","articles":[]},{"title":"内存交换","level":"1.3.6","depth":2,"path":"memory_swap.md","ref":"memory_swap.md","articles":[]}]},"previous":{"title":"并发同步","level":"1.2.3","depth":2,"path":"concurrency-synchronize.md","ref":"concurrency-synchronize.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"waitqueue.md","mtime":"2020-02-28T05:18:57.399Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T03:48:37.225Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

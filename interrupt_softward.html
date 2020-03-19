@@ -1,0 +1,1052 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>中断处理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="interrupt_hardware.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="process-management.html">
+            
+                <a href="process-management.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="process-schedule.html">
+            
+                <a href="process-schedule.html">
+            
+                    
+                    进程调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="concurrency-synchronize.html">
+            
+                <a href="concurrency-synchronize.html">
+            
+                    
+                    并发同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="waitqueue.html">
+            
+                <a href="waitqueue.html">
+            
+                    
+                    等待队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    内存管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="physical-memory-managemen-1.html">
+            
+                <a href="physical-memory-managemen-1.html">
+            
+                    
+                    物理内存管理(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="physical-memory-managemen-2.html">
+            
+                <a href="physical-memory-managemen-2.html">
+            
+                    
+                    物理内存管理(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="physical-memory-managemen-3.html">
+            
+                <a href="physical-memory-managemen-3.html">
+            
+                    
+                    物理内存管理(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="virtual_memory_address_manager.html">
+            
+                <a href="virtual_memory_address_manager.html">
+            
+                    
+                    虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="memory_mmap.html">
+            
+                <a href="memory_mmap.html">
+            
+                    
+                    mmap完全剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="memory_swap.html">
+            
+                <a href="memory_swap.html">
+            
+                    
+                    内存交换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    中断机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="interrupt_hardware.html">
+            
+                <a href="interrupt_hardware.html">
+            
+                    
+                    硬件相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="interrupt_softward.html">
+            
+                <a href="interrupt_softward.html">
+            
+                    
+                    中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    系统调用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="syscall.html">
+            
+                <a href="syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="virtual_file_system.html">
+            
+                <a href="virtual_file_system.html">
+            
+                    
+                    虚拟文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="minix_file_system.html">
+            
+                <a href="minix_file_system.html">
+            
+                    
+                    MINIX文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    进程间通信
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="signal.html">
+            
+                <a href="signal.html">
+            
+                    
+                    信号处理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ipc-shm.html">
+            
+                <a href="ipc-shm.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="socket_interface.html">
+            
+                <a href="socket_interface.html">
+            
+                    
+                    Socket接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="unix-domain-sockets.html">
+            
+                <a href="unix-domain-sockets.html">
+            
+                    
+                    Unix Domain Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="kernel-timer.html">
+            
+                <a href="kernel-timer.html">
+            
+                    
+                    定时器实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="multiplexing-io.html">
+            
+                <a href="multiplexing-io.html">
+            
+                    
+                    多路复用I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    docker实现原理之 - namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    2.6+内核分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="epoll-principle.html">
+            
+                <a href="epoll-principle.html">
+            
+                    
+                    Epoll原理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >中断处理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4E2D;&#x65AD;&#x5904;&#x7406;---&#x4E0A;&#x534A;&#x90E8;&#xFF08;&#x786C;&#x4E2D;&#x65AD;&#xFF09;">&#x4E2D;&#x65AD;&#x5904;&#x7406; - &#x4E0A;&#x534A;&#x90E8;&#xFF08;&#x786C;&#x4E2D;&#x65AD;&#xFF09;</h2>
+<p>&#x7531;&#x4E8E; <code>APIC&#x4E2D;&#x65AD;&#x63A7;&#x5236;&#x5668;</code> &#x6709;&#x70B9;&#x5C0F;&#x590D;&#x6742;&#xFF0C;&#x6240;&#x4EE5;&#x672C;&#x6587;&#x4E3B;&#x8981;&#x901A;&#x8FC7; <code>8259A&#x4E2D;&#x65AD;&#x63A7;&#x5236;&#x5668;</code> &#x6765;&#x4ECB;&#x7ECD;Linux&#x5BF9;&#x4E2D;&#x65AD;&#x7684;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x3002;</p>
+<h3 id="&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x76F8;&#x5173;&#x7ED3;&#x6784;">&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x76F8;&#x5173;&#x7ED3;&#x6784;</h3>
+<p>&#x524D;&#x9762;&#x8BF4;&#x8FC7;&#xFF0C;<code>8259A&#x4E2D;&#x65AD;&#x63A7;&#x5236;&#x5668;</code> &#x7531;&#x4E24;&#x7247; 8259A &#x98CE;&#x683C;&#x7684;&#x5916;&#x90E8;&#x82AF;&#x7247;&#x4EE5; <code>&#x7EA7;&#x8054;</code> &#x7684;&#x65B9;&#x5F0F;&#x8FDE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x6BCF;&#x4E2A;&#x82AF;&#x7247;&#x53EF;&#x5904;&#x7406;&#x591A;&#x8FBE; 8 &#x4E2A;&#x4E0D;&#x540C;&#x7684; IRQ&#xFF08;&#x4E2D;&#x65AD;&#x8BF7;&#x6C42;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x7528; IRQ &#x7EBF;&#x7684;&#x4E2A;&#x6570;&#x8FBE;&#x5230; 15 &#x4E2A;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/8259A.png" alt="8259A"></p>
+<p>&#x5728;&#x5185;&#x6838;&#x4E2D;&#x6BCF;&#x6761;IRQ&#x7EBF;&#x7531;&#x7ED3;&#x6784;&#x4F53; <code>irq_desc_t</code> &#x6765;&#x63CF;&#x8FF0;&#xFF0C;<code>irq_desc_t</code> &#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> {
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> status;        <span class="hljs-comment">/* IRQ status */</span>
+    hw_irq_controller *handler;
+    <span class="hljs-keyword">struct</span> irqaction *action;   <span class="hljs-comment">/* IRQ action list */</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> depth;         <span class="hljs-comment">/* nested irq disables */</span>
+    <span class="hljs-keyword">spinlock_t</span> lock;
+} <span class="hljs-keyword">irq_desc_t</span>;
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B; <code>irq_desc_t</code> &#x7ED3;&#x6784;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ul>
+<li><code>status</code>: IRQ&#x7EBF;&#x7684;&#x72B6;&#x6001;&#x3002;</li>
+<li><code>handler</code>: &#x7C7B;&#x578B;&#x4E3A; <code>hw_interrupt_type</code> &#x7ED3;&#x6784;&#xFF0C;&#x8868;&#x793A;IRQ&#x7EBF;&#x5BF9;&#x5E94;&#x7684;&#x786C;&#x4EF6;&#x76F8;&#x5173;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982; <code>8259A&#x4E2D;&#x65AD;&#x63A7;&#x5236;&#x5668;</code> &#x63A5;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x4E2D;&#x65AD;&#x4FE1;&#x53F7;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x786E;&#x8BA4;&#x4FE1;&#x53F7;&#x624D;&#x4F1A;&#x7EE7;&#x7EED;&#x63A5;&#x6536;&#x4E2D;&#x65AD;&#x4FE1;&#x53F7;&#x7684;&#xFF0C;&#x53D1;&#x9001;&#x786E;&#x8BA4;&#x4FE1;&#x53F7;&#x7684;&#x51FD;&#x6570;&#x5C31;&#x662F; <code>hw_interrupt_type</code> &#x4E2D;&#x7684; <code>ack</code> &#x51FD;&#x6570;&#x3002;</li>
+<li><code>action</code>: &#x7C7B;&#x578B;&#x4E3A; <code>irqaction</code> &#x7ED3;&#x6784;&#xFF0C;&#x4E2D;&#x65AD;&#x4FE1;&#x53F7;&#x7684;&#x5904;&#x7406;&#x5165;&#x53E3;&#x3002;&#x7531;&#x4E8E;&#x4E00;&#x6761;IRQ&#x7EBF;&#x53EF;&#x4EE5;&#x88AB;&#x591A;&#x4E2A;&#x786C;&#x4EF6;&#x5171;&#x4EAB;&#xFF0C;&#x6240;&#x4EE5; <code>action</code> &#x662F;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x6BCF;&#x4E2A; <code>action</code> &#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x786C;&#x4EF6;&#x7684;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5165;&#x53E3;&#x3002;</li>
+<li><code>depth</code>: &#x9632;&#x6B62;&#x591A;&#x6B21;&#x5F00;&#x542F;&#x548C;&#x5173;&#x95ED;IRQ&#x7EBF;&#x3002;</li>
+<li><code>lock</code>: &#x9632;&#x6B62;&#x591A;&#x6838;CPU&#x540C;&#x65F6;&#x5BF9;IRQ&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x7684;&#x81EA;&#x65CB;&#x9501;&#x3002;</li>
+</ul>
+<p><code>hw_interrupt_type</code> &#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x4E0E;&#x786C;&#x4EF6;&#x76F8;&#x5173;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x4F5C;&#x4ECB;&#x7ECD;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B; <code>irqaction</code> &#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> irqaction {
+    <span class="hljs-keyword">void</span> (*handler)(<span class="hljs-keyword">int</span>, <span class="hljs-keyword">void</span> *, <span class="hljs-keyword">struct</span> pt_regs *);
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> flags;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> mask;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *name;
+    <span class="hljs-keyword">void</span> *dev_id;
+    <span class="hljs-keyword">struct</span> irqaction *next;
+};
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x8BF4;&#x8BF4; <code>irqaction</code> &#x7ED3;&#x6784;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ul>
+<li><code>handler</code>: &#x4E2D;&#x65AD;&#x5904;&#x7406;&#x7684;&#x5165;&#x53E3;&#x51FD;&#x6570;&#xFF0C;<code>handler</code> &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E2D;&#x65AD;&#x53F7;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x8BBE;&#x5907;&#x5BF9;&#x5E94;&#x7684;ID&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E2D;&#x65AD;&#x53D1;&#x751F;&#x65F6;&#x7531;&#x5185;&#x6838;&#x4FDD;&#x5B58;&#x7684;&#x5404;&#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x3002;</li>
+<li><code>flags</code>: &#x6807;&#x5FD7;&#x4F4D;&#xFF0C;&#x7528;&#x4E8E;&#x8868;&#x793A; <code>irqaction</code> &#x7684;&#x4E00;&#x4E9B;&#x884C;&#x4E3A;&#xFF0C;&#x4F8B;&#x5982;&#x662F;&#x5426;&#x80FD;&#x591F;&#x4E0E;&#x5176;&#x4ED6;&#x786C;&#x4EF6;&#x5171;&#x4EAB;IRQ&#x7EBF;&#x3002;</li>
+<li><code>name</code>: &#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x7684;&#x540D;&#x5B57;&#x3002;</li>
+<li><code>dev_id</code>: &#x8BBE;&#x5907;ID&#x3002;</li>
+<li><code>next</code>: &#x6BCF;&#x4E2A;&#x786C;&#x4EF6;&#x7684;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5165;&#x53E3;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A; <code>irqaction</code> &#x7ED3;&#x6784;&#xFF0C;&#x7531;&#x4E8E;&#x591A;&#x4E2A;&#x786C;&#x4EF6;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x6761;IRQ&#x7EBF;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x901A;&#x8FC7; <code>next</code> &#x5B57;&#x6BB5;&#x6765;&#x8FDE;&#x63A5;&#x4E0D;&#x540C;&#x7684;&#x786C;&#x4EF6;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5165;&#x53E3;&#x3002;</li>
+</ul>
+<p><code>irq_desc_t</code> &#x7ED3;&#x6784;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/irq_desc_t.jpg" alt="irq_desc_t"></p>
+<h3 id="&#x6CE8;&#x518C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5165;&#x53E3;">&#x6CE8;&#x518C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5165;&#x53E3;</h3>
+<p>&#x5728;&#x5185;&#x6838;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>setup_irq()</code> &#x51FD;&#x6570;&#x6765;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5165;&#x53E3;&#x3002;<code>setup_irq()</code> &#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">setup_irq</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> irq, <span class="hljs-keyword">struct</span> irqaction * new)</span>
+</span>{
+    <span class="hljs-keyword">int</span> shared = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> flags;
+    <span class="hljs-keyword">struct</span> irqaction *old, **p;
+    <span class="hljs-keyword">irq_desc_t</span> *desc = irq_desc + irq;
+    ...
+    spin_lock_irqsave(&amp;desc-&gt;lock,flags);
+    p = &amp;desc-&gt;action;
+    <span class="hljs-keyword">if</span> ((old = *p) != <span class="hljs-literal">NULL</span>) {
+        <span class="hljs-keyword">if</span> (!(old-&gt;flags &amp; <span class="hljs-keyword">new</span>-&gt;flags &amp; SA_SHIRQ)) {
+            spin_unlock_irqrestore(&amp;desc-&gt;lock,flags);
+            <span class="hljs-keyword">return</span> -EBUSY;
+        }
+
+        <span class="hljs-keyword">do</span> {
+            p = &amp;old-&gt;next;
+            old = *p;
+        } <span class="hljs-keyword">while</span> (old);
+        shared = <span class="hljs-number">1</span>;
+    }
+
+    *p = <span class="hljs-keyword">new</span>;
+
+    <span class="hljs-keyword">if</span> (!shared) {
+        desc-&gt;depth = <span class="hljs-number">0</span>;
+        desc-&gt;status &amp;= ~(IRQ_DISABLED | IRQ_AUTODETECT | IRQ_WAITING);
+        desc-&gt;handler-&gt;startup(irq);
+    }
+    spin_unlock_irqrestore(&amp;desc-&gt;lock,flags);
+
+    register_irq_proc(irq); <span class="hljs-comment">// &#x6CE8;&#x518C;proc&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p><code>setup_irq()</code> &#x51FD;&#x6570;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x901A;&#x8FC7; <code>irq</code> &#x53F7;&#x6765;&#x67E5;&#x627E;&#x5BF9;&#x5E94;&#x7684; <code>irq_desc_t</code> &#x7ED3;&#x6784;&#xFF0C;&#x5E76;&#x628A;&#x65B0;&#x7684; <code>irqaction</code> &#x8FDE;&#x63A5;&#x5230; <code>irq_desc_t</code> &#x7ED3;&#x6784;&#x7684; <code>action</code> &#x94FE;&#x8868;&#x4E2D;&#x3002;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x5907;&#x4E0D;&#x652F;&#x6301;&#x5171;&#x4EAB;IRQ&#x7EBF;&#xFF08;&#x4E5F;&#x5373;&#x662F; <code>flags</code> &#x5B57;&#x6BB5;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E; <code>SA_SHIRQ</code> &#x6807;&#x5FD7;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8FD4;&#x56DE; <code>EBUSY</code> &#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x770B;&#x770B; <code>&#x65F6;&#x949F;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5165;&#x53E3;</code> &#x7684;&#x6CE8;&#x518C;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">static</span> <span class="hljs-keyword">struct</span> irqaction irq0  = { timer_interrupt, SA_INTERRUPT, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;timer&quot;</span>, <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>};
+
+<span class="hljs-keyword">void</span> __<span class="hljs-function">init <span class="hljs-title">time_init</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    ...
+    setup_irq(<span class="hljs-number">0</span>, &amp;irq0);
+}
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x65F6;&#x949F;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5165;&#x53E3;&#x7684;IRQ&#x53F7;&#x4E3A;0&#xFF0C;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E3A; <code>timer_interrupt()</code>&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x652F;&#x6301;&#x5171;&#x4EAB;IRQ&#x7EBF;&#xFF08;<code>flags</code> &#x5B57;&#x6BB5;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E; <code>SA_SHIRQ</code> &#x6807;&#x5FD7;&#xFF09;&#x3002;</p>
+<h3 id="&#x5904;&#x7406;&#x4E2D;&#x65AD;&#x8BF7;&#x6C42;">&#x5904;&#x7406;&#x4E2D;&#x65AD;&#x8BF7;&#x6C42;</h3>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x4E2D;&#x65AD;&#x53D1;&#x751F;&#x65F6;&#xFF0C;&#x4E2D;&#x65AD;&#x63A7;&#x5236;&#x5C42;&#x4F1A;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7ED9;CPU&#xFF0C;CPU&#x6536;&#x5230;&#x4FE1;&#x53F7;&#x4F1A;&#x4E2D;&#x65AD;&#x5F53;&#x524D;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x8F6C;&#x800C;&#x6267;&#x884C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x3002;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x9996;&#x5148;&#x4F1A;&#x4FDD;&#x5B58;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x5230;&#x6808;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; <code>do_IRQ()</code> &#x51FD;&#x6570;&#x8FDB;&#x884C;&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x5904;&#x7406;&#xFF0C;<code>do_IRQ()</code> &#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function">asmlinkage <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> <span class="hljs-title">do_IRQ</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> pt_regs regs)</span>
+</span>{
+    <span class="hljs-keyword">int</span> irq = regs.orig_eax &amp; <span class="hljs-number">0xff</span>; <span class="hljs-comment">/* &#x83B7;&#x53D6;IRQ&#x53F7;  */</span>
+    <span class="hljs-keyword">int</span> cpu = smp_processor_id();
+    <span class="hljs-keyword">irq_desc_t</span> *desc = irq_desc + irq;
+    <span class="hljs-keyword">struct</span> irqaction * action;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> status;
+
+    kstat.irqs[cpu][irq]++;
+    spin_lock(&amp;desc-&gt;lock);
+    desc-&gt;handler-&gt;ack(irq);
+
+    status = desc-&gt;status &amp; ~(IRQ_REPLAY | IRQ_WAITING);
+    status |= IRQ_PENDING; <span class="hljs-comment">/* we _want_ to handle it */</span>
+
+    action = <span class="hljs-literal">NULL</span>;
+    <span class="hljs-keyword">if</span> (!(status &amp; (IRQ_DISABLED | IRQ_INPROGRESS))) { <span class="hljs-comment">// &#x5F53;&#x524D;IRQ&#x4E0D;&#x5728;&#x5904;&#x7406;&#x4E2D;</span>
+        action = desc-&gt;action;    <span class="hljs-comment">// &#x83B7;&#x53D6; action &#x94FE;&#x8868;</span>
+        status &amp;= ~IRQ_PENDING;   <span class="hljs-comment">// &#x53BB;&#x9664;IRQ_PENDING&#x6807;&#x5FD7;, &#x8FD9;&#x4E2A;&#x6807;&#x5FD7;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x662F;&#x5426;&#x5728;&#x5904;&#x7406;IRQ&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#x53C8;&#x53D1;&#x751F;&#x4E86;&#x4E2D;&#x65AD;</span>
+        status |= IRQ_INPROGRESS; <span class="hljs-comment">// &#x8BBE;&#x7F6E;IRQ_INPROGRESS&#x6807;&#x5FD7;, &#x8868;&#x793A;&#x6B63;&#x5728;&#x5904;&#x7406;IRQ</span>
+    }
+    desc-&gt;status = status;
+
+    <span class="hljs-keyword">if</span> (!action)  <span class="hljs-comment">// &#x5982;&#x679C;&#x4E0A;&#x4E00;&#x6B21;IRQ&#x8FD8;&#x6CA1;&#x5B8C;&#x6210;, &#x76F4;&#x63A5;&#x9000;&#x51FA;</span>
+        <span class="hljs-keyword">goto</span> out;
+
+    <span class="hljs-keyword">for</span> (;;) {
+        spin_unlock(&amp;desc-&gt;lock);
+        handle_IRQ_event(irq, &amp;regs, action); <span class="hljs-comment">// &#x5904;&#x7406;IRQ&#x8BF7;&#x6C42;</span>
+        spin_lock(&amp;desc-&gt;lock);
+
+        <span class="hljs-keyword">if</span> (!(desc-&gt;status &amp; IRQ_PENDING)) <span class="hljs-comment">// &#x5982;&#x679C;&#x5728;&#x5904;&#x7406;IRQ&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#x53C8;&#x53D1;&#x751F;&#x4E86;&#x4E2D;&#x65AD;, &#x7EE7;&#x7EED;&#x5904;&#x7406;IRQ&#x8BF7;&#x6C42;</span>
+            <span class="hljs-keyword">break</span>;
+        desc-&gt;status &amp;= ~IRQ_PENDING;
+    }
+    desc-&gt;status &amp;= ~IRQ_INPROGRESS;
+out:
+
+    desc-&gt;handler-&gt;end(irq);
+    spin_unlock(&amp;desc-&gt;lock);
+
+    <span class="hljs-keyword">if</span> (softirq_active(cpu) &amp; softirq_mask(cpu))
+        do_softirq(); <span class="hljs-comment">// &#x4E2D;&#x65AD;&#x4E0B;&#x534A;&#x90E8;&#x5904;&#x7406;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p><code>do_IRQ()</code> &#x51FD;&#x6570;&#x9996;&#x5148;&#x901A;&#x8FC7;IRQ&#x53F7;&#x83B7;&#x53D6;&#x5230;&#x5176;&#x5BF9;&#x5E94;&#x7684; <code>irq_desc_t</code> &#x7ED3;&#x6784;&#xFF0C;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x4E2D;&#x65AD;&#x6709;&#x53EF;&#x80FD;&#x53D1;&#x751F;&#x591A;&#x6B21;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x5224;&#x65AD;&#x5F53;&#x524D;IRQ&#x662F;&#x5426;&#x6B63;&#x5728;&#x88AB;&#x5904;&#x7406;&#x5F53;&#x4E2D;&#xFF08;&#x5224;&#x65AD; <code>irq_desc_t</code> &#x7ED3;&#x6784;&#x7684; <code>status</code> &#x5B57;&#x6BB5;&#x662F;&#x5426;&#x8BBE;&#x7F6E;&#x4E86; <code>IRQ_INPROGRESS</code> &#x6807;&#x5FD7;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x5904;&#x7406;&#x5F53;&#x524D;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x83B7;&#x53D6;&#x5230; <code>action</code> &#x94FE;&#x8868;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>handle_IRQ_event()</code> &#x51FD;&#x6570;&#x6765;&#x6267;&#x884C; action &#x94FE;&#x8868;&#x4E2D;&#x7684;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5728;&#x5904;&#x7406;&#x4E2D;&#x65AD;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x53C8;&#x53D1;&#x751F;&#x4E86;&#x76F8;&#x540C;&#x7684;&#x4E2D;&#x65AD;&#xFF08;<code>irq_desc_t</code> &#x7ED3;&#x6784;&#x7684; <code>status</code> &#x5B57;&#x6BB5;&#x88AB;&#x8BBE;&#x7F6E;&#x4E86; <code>IRQ_INPROGRESS</code> &#x6807;&#x5FD7;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x7EE7;&#x7EED;&#x5BF9;&#x4E2D;&#x65AD;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;&#x5904;&#x7406;&#x5B8C;&#x4E2D;&#x65AD;&#x540E;&#xFF0C;&#x8C03;&#x7528; <code>do_softirq()</code> &#x51FD;&#x6570;&#x6765;&#x5BF9;&#x4E2D;&#x65AD;&#x4E0B;&#x534A;&#x90E8;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF08;&#x4E0B;&#x9762;&#x4F1A;&#x8BF4;&#xFF09;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x770B;&#x770B; <code>handle_IRQ_event()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">handle_IRQ_event</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> irq, <span class="hljs-keyword">struct</span> pt_regs * regs, <span class="hljs-keyword">struct</span> irqaction * action)</span>
+</span>{
+    <span class="hljs-keyword">int</span> status;
+    <span class="hljs-keyword">int</span> cpu = smp_processor_id();
+
+    irq_enter(cpu, irq);
+
+    status = <span class="hljs-number">1</span>; <span class="hljs-comment">/* Force the &quot;do bottom halves&quot; bit */</span>
+
+    <span class="hljs-keyword">if</span> (!(action-&gt;flags &amp; SA_INTERRUPT)) <span class="hljs-comment">// &#x5982;&#x679C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x80FD;&#x591F;&#x5728;&#x6253;&#x5F00;&#x4E2D;&#x65AD;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6267;&#x884C;, &#x90A3;&#x4E48;&#x5C31;&#x6253;&#x5F00;&#x4E2D;&#x65AD;</span>
+        __sti();
+
+    <span class="hljs-keyword">do</span> {
+        status |= action-&gt;flags;
+        action-&gt;handler(irq, action-&gt;dev_id, regs);
+        action = action-&gt;next;
+    } <span class="hljs-keyword">while</span> (action);
+    <span class="hljs-keyword">if</span> (status &amp; SA_SAMPLE_RANDOM)
+        add_interrupt_randomness(irq);
+    __cli();
+
+    irq_exit(cpu, irq);
+
+    <span class="hljs-keyword">return</span> status;
+}
+</code></pre>
+<p><code>handle_IRQ_event()</code> &#x51FD;&#x6570;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x904D;&#x5386; action &#x94FE;&#x8868;&#x5E76;&#x4E14;&#x6267;&#x884C;&#x5176;&#x4E2D;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#x5BF9;&#x4E8E; <code>&#x65F6;&#x949F;&#x4E2D;&#x65AD;</code> &#x5C31;&#x662F;&#x8C03;&#x7528; <code>timer_interrupt()</code> &#x51FD;&#x6570;&#x3002;&#x8FD9;&#x91CC;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x80FD;&#x591F;&#x5F00;&#x542F;&#x4E2D;&#x65AD;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x628A;&#x4E2D;&#x65AD;&#x6253;&#x5F00;&#xFF08;&#x56E0;&#x4E3A;CPU&#x63A5;&#x6536;&#x5230;&#x4E2D;&#x65AD;&#x4FE1;&#x53F7;&#x65F6;&#x4F1A;&#x5173;&#x95ED;&#x4E2D;&#x65AD;&#xFF09;&#x3002;</p>
+<h2 id="&#x4E2D;&#x65AD;&#x5904;&#x7406;---&#x4E0B;&#x534A;&#x90E8;&#xFF08;&#x8F6F;&#x4E2D;&#x65AD;&#xFF09;">&#x4E2D;&#x65AD;&#x5904;&#x7406; - &#x4E0B;&#x534A;&#x90E8;&#xFF08;&#x8F6F;&#x4E2D;&#x65AD;&#xFF09;</h2>
+<p>&#x7531;&#x4E8E;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x4E00;&#x822C;&#x5728;&#x5173;&#x95ED;&#x4E2D;&#x65AD;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6267;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x4E0D;&#x80FD;&#x592A;&#x8017;&#x65F6;&#xFF0C;&#x5426;&#x5219;&#x540E;&#x7EED;&#x53D1;&#x751F;&#x7684;&#x4E2D;&#x65AD;&#x5C31;&#x4E0D;&#x80FD;&#x5B9E;&#x65F6;&#x5730;&#x88AB;&#x5904;&#x7406;&#x3002;&#x9274;&#x4E8E;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#xFF0C;Linux&#x628A;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;<code>&#x4E0A;&#x534A;&#x90E8;</code> &#x548C; <code>&#x4E0B;&#x534A;&#x90E8;</code>&#xFF0C;<code>&#x4E0A;&#x534A;&#x90E8;</code> &#x5728;&#x524D;&#x9762;&#x5DF2;&#x7ECF;&#x4ECB;&#x7ECD;&#x8FC7;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B; <code>&#x4E0B;&#x534A;&#x90E8;</code> &#x7684;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x4E2D;&#x65AD; <code>&#x4E0A;&#x534A;&#x90E8;</code> &#x53EA;&#x4F1A;&#x505A;&#x4E00;&#x4E9B;&#x6700;&#x57FA;&#x7840;&#x7684;&#x64CD;&#x4F5C;&#xFF08;&#x6BD4;&#x5982;&#x4ECE;&#x7F51;&#x5361;&#x4E2D;&#x590D;&#x5236;&#x6570;&#x636E;&#x5230;&#x7F13;&#x5B58;&#x4E2D;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x8981;&#x6267;&#x884C;&#x7684;&#x4E2D;&#x65AD; <code>&#x4E0B;&#x534A;&#x90E8;</code> &#x8FDB;&#x884C;&#x6807;&#x8BC6;&#xFF0C;&#x6807;&#x8BC6;&#x5B8C;&#x8C03;&#x7528; <code>do_softirq()</code> &#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002; </p>
+<h3 id="softirq&#x673A;&#x5236;">softirq&#x673A;&#x5236;</h3>
+<p><code>&#x4E2D;&#x65AD;&#x4E0B;&#x534A;&#x90E8;</code> &#x7531; <code>softirq&#xFF08;&#x8F6F;&#x4E2D;&#x65AD;&#xFF09;</code> &#x673A;&#x5236;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5728;Linux&#x5185;&#x6838;&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>softirq_vec</code> &#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">static</span> <span class="hljs-keyword">struct</span> softirq_action softirq_vec[<span class="hljs-number">32</span>];
+</code></pre>
+<p>&#x5176;&#x7C7B;&#x578B;&#x4E3A; <code>softirq_action</code> &#x7ED3;&#x6784;&#xFF0C;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> softirq_action
+{
+    <span class="hljs-keyword">void</span>    (*action)(<span class="hljs-keyword">struct</span> softirq_action *);
+    <span class="hljs-keyword">void</span>    *data;
+};
+</code></pre>
+<p><code>softirq_vec</code> &#x6570;&#x7EC4;&#x662F; <code>softirq</code> &#x673A;&#x5236;&#x7684;&#x6838;&#x5FC3;&#xFF0C;<code>softirq_vec</code> &#x6570;&#x7EC4;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4EE3;&#x8868;&#x4E00;&#x79CD;&#x8F6F;&#x4E2D;&#x65AD;&#x3002;&#x4F46;&#x5728;Linux&#x4E2D;&#x53EA;&#x5B9A;&#x4E49;&#x4E86;&#x56DB;&#x79CD;&#x8F6F;&#x4E2D;&#x65AD;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">enum</span>
+{
+    HI_SOFTIRQ=<span class="hljs-number">0</span>,
+    NET_TX_SOFTIRQ,
+    NET_RX_SOFTIRQ,
+    TASKLET_SOFTIRQ
+};
+</code></pre>
+<p><code>HI_SOFTIRQ</code> &#x662F;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;tasklet&#xFF0C;&#x800C; <code>TASKLET_SOFTIRQ</code> &#x662F;&#x666E;&#x901A;tasklet&#xFF0C;tasklet&#x662F;&#x57FA;&#x4E8E;softirq&#x673A;&#x5236;&#x7684;&#x4E00;&#x79CD;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#xFF08;&#x4E0B;&#x9762;&#x4F1A;&#x4ECB;&#x7ECD;&#xFF09;&#x3002;<code>NET_TX_SOFTIRQ</code> &#x548C; <code>NET_RX_SOFTIRQ</code> &#x7279;&#x5B9A;&#x7528;&#x4E8E;&#x7F51;&#x7EDC;&#x5B50;&#x6A21;&#x5757;&#x7684;&#x8F6F;&#x4E2D;&#x65AD;&#xFF08;&#x4E0D;&#x4F5C;&#x4ECB;&#x7ECD;&#xFF09;&#x3002;</p>
+<h3 id="&#x6CE8;&#x518C;softirq&#x5904;&#x7406;&#x51FD;&#x6570;">&#x6CE8;&#x518C;softirq&#x5904;&#x7406;&#x51FD;&#x6570;</h3>
+<p>&#x8981;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;softirq&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>open_softirq()</code> &#x51FD;&#x6570;&#x6765;&#x8FDB;&#x884C;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c">void open_softirq(int nr, void (*action)(struct softirq_action*), void *data)
+{
+    unsigned long flags;
+    int i;
+
+    spin_lock_irqsave(&amp;softirq_mask_lock, flags);
+    softirq_vec[nr].data = data;
+    softirq_vec[nr].action = action;
+
+    for (i=0; i&lt;NR_CPUS; i++)
+        softirq_mask(i) |= (1&lt;&lt;nr);
+    spin_unlock_irqrestore(&amp;softirq_mask_lock, flags);
+}
+</code></pre>
+<p><code>open_softirq()</code> &#x51FD;&#x6570;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x5C31;&#x662F;&#x5411; <code>softirq_vec</code> &#x6570;&#x7EC4;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;softirq&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;</p>
+<p>Linux&#x5728;&#x7CFB;&#x7EDF;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x6CE8;&#x518C;&#x4E86;&#x4E24;&#x79CD;softirq&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x5206;&#x522B;&#x4E3A; <code>TASKLET_SOFTIRQ</code> &#x548C; <code>HI_SOFTIRQ</code>&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">void</span> __<span class="hljs-function">init <span class="hljs-title">softirq_init</span><span class="hljs-params">()</span>
+</span>{
+    ...
+    open_softirq(TASKLET_SOFTIRQ, tasklet_action, <span class="hljs-literal">NULL</span>);
+    open_softirq(HI_SOFTIRQ, tasklet_hi_action, <span class="hljs-literal">NULL</span>);
+}
+</code></pre>
+<h3 id="&#x5904;&#x7406;softirq">&#x5904;&#x7406;softirq</h3>
+<p>&#x5904;&#x7406;softirq&#x662F;&#x901A;&#x8FC7; <code>do_softirq()</code> &#x51FD;&#x6570;&#x5B9E;&#x73B0;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function">asmlinkage <span class="hljs-keyword">void</span> <span class="hljs-title">do_softirq</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">int</span> cpu = smp_processor_id();
+    __u32 active, mask;
+
+    <span class="hljs-keyword">if</span> (in_interrupt())
+        <span class="hljs-keyword">return</span>;
+
+    local_bh_disable();
+
+    local_irq_disable();
+    mask = softirq_mask(cpu);
+    active = softirq_active(cpu) &amp; mask;
+
+    <span class="hljs-keyword">if</span> (active) {
+        <span class="hljs-keyword">struct</span> softirq_action *h;
+
+restart:
+        softirq_active(cpu) &amp;= ~active;
+
+        local_irq_enable();
+
+        h = softirq_vec;
+        mask &amp;= ~active;
+
+        <span class="hljs-keyword">do</span> {
+            <span class="hljs-keyword">if</span> (active &amp; <span class="hljs-number">1</span>)
+                h-&gt;action(h);
+            h++;
+            active &gt;&gt;= <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">while</span> (active);
+
+        local_irq_disable();
+
+        active = softirq_active(cpu);
+        <span class="hljs-keyword">if</span> ((active &amp;= mask) != <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">goto</span> retry;
+    }
+
+    local_bh_enable();
+
+    <span class="hljs-keyword">return</span>;
+
+retry:
+    <span class="hljs-keyword">goto</span> restart;
+}
+</code></pre>
+<p>&#x524D;&#x9762;&#x8BF4;&#x4E86; <code>softirq_vec</code> &#x6570;&#x7EC4;&#x6709;32&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x5BF9;&#x5E94;&#x4E00;&#x79CD;&#x7C7B;&#x578B;&#x7684;softirq&#xFF0C;&#x90A3;&#x4E48;Linux&#x600E;&#x4E48;&#x77E5;&#x9053;&#x54EA;&#x79CD;softirq&#x9700;&#x8981;&#x88AB;&#x6267;&#x884C;&#x5462;&#xFF1F;&#x5728;Linux&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;CPU&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A; <code>irq_cpustat_t</code> &#x7ED3;&#x6784;&#x7684;&#x53D8;&#x91CF;&#xFF0C;<code>irq_cpustat_t</code> &#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> {
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> __softirq_active;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> __softirq_mask;
+    ...
+} <span class="hljs-keyword">irq_cpustat_t</span>;
+</code></pre>
+<p>&#x5176;&#x4E2D; <code>__softirq_active</code> &#x5B57;&#x6BB5;&#x8868;&#x793A;&#x6709;&#x54EA;&#x79CD;softirq&#x89E6;&#x53D1;&#x4E86;&#xFF08;int&#x7C7B;&#x578B;&#x6709;32&#x4E2A;&#x4F4D;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x4F4D;&#x4EE3;&#x8868;&#x4E00;&#x79CD;softirq&#xFF09;&#xFF0C;&#x800C; <code>__softirq_mask</code> &#x5B57;&#x6BB5;&#x8868;&#x793A;&#x54EA;&#x79CD;softirq&#x88AB;&#x5C4F;&#x853D;&#x4E86;&#x3002;Linux&#x901A;&#x8FC7; <code>__softirq_active</code> &#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x5F97;&#x77E5;&#x54EA;&#x79CD;softirq&#x9700;&#x8981;&#x6267;&#x884C;&#xFF08;&#x53EA;&#x9700;&#x8981;&#x628A;&#x5BF9;&#x5E94;&#x4F4D;&#x8BBE;&#x7F6E;&#x4E3A;1&#xFF09;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;<code>do_softirq()</code> &#x51FD;&#x6570;&#x9996;&#x5148;&#x901A;&#x8FC7; <code>softirq_mask(cpu)</code> &#x6765;&#x83B7;&#x53D6;&#x5F53;&#x524D;CPU&#x5BF9;&#x5E94;&#x88AB;&#x5C4F;&#x853D;&#x7684;softirq&#xFF0C;&#x800C; <code>softirq_active(cpu) &amp; mask</code> &#x5C31;&#x662F;&#x83B7;&#x53D6;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;softirq&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x901A;&#x8FC7;&#x5BF9;&#x6BD4; <code>__softirq_active</code> &#x5B57;&#x6BB5;&#x7684;&#x5404;&#x4E2A;&#x4F4D;&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x8981;&#x6267;&#x884C;&#x8BE5;&#x7C7B;&#x578B;&#x7684;softirq&#x3002;</p>
+<h3 id="tasklet&#x673A;&#x5236;">tasklet&#x673A;&#x5236;</h3>
+<p>&#x524D;&#x9762;&#x8BF4;&#x4E86;&#xFF0C;tasklet&#x673A;&#x5236;&#x662F;&#x57FA;&#x4E8E;softirq&#x673A;&#x5236;&#x7684;&#xFF0C;tasklet&#x673A;&#x5236;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;softirq&#x6267;&#x884C;&#x3002;&#x5728;Linux&#x5185;&#x6838;&#x4E2D;&#x6709;&#x4E24;&#x79CD;tasklet&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;tasklet&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x666E;&#x901A;tasklet&#x3002;&#x8FD9;&#x4E24;&#x79CD;tasklet&#x7684;&#x5B9E;&#x73B0;&#x57FA;&#x672C;&#x4E00;&#x81F4;&#xFF0C;&#x552F;&#x4E00;&#x4E0D;&#x540C;&#x7684;&#x5C31;&#x662F;&#x6267;&#x884C;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;tasklet&#x4F1A;&#x5148;&#x4E8E;&#x666E;&#x901A;tasklet&#x6267;&#x884C;&#x3002;</p>
+<p>tasklet&#x672C;&#x8D28;&#x662F;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x901A;&#x8FC7;&#x7ED3;&#x6784;&#x4F53; <code>tasklet_head</code> &#x5B58;&#x50A8;&#xFF0C;&#x5E76;&#x4E14;&#x6BCF;&#x4E2A;CPU&#x6709;&#x4E00;&#x4E2A;&#x8FD9;&#x6837;&#x7684;&#x961F;&#x5217;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x7ED3;&#x6784;&#x4F53; <code>tasklet_head</code> &#x7684;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> tasklet_head
+{
+    <span class="hljs-keyword">struct</span> tasklet_struct *<span class="hljs-built_in">list</span>;
+};
+
+<span class="hljs-keyword">struct</span> tasklet_struct
+{
+    <span class="hljs-keyword">struct</span> tasklet_struct *next;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> state;
+    <span class="hljs-keyword">atomic_t</span> count;
+    <span class="hljs-keyword">void</span> (*func)(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>);
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> data;
+};
+</code></pre>
+<p>&#x4ECE; <code>tasklet_head</code> &#x7684;&#x5B9A;&#x4E49;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C;<code>tasklet_head</code> &#x7ED3;&#x6784;&#x662F; <code>tasklet_struct</code> &#x7ED3;&#x6784;&#x961F;&#x5217;&#x7684;&#x5934;&#x90E8;&#xFF0C;&#x800C; <code>tasklet_struct</code> &#x7ED3;&#x6784;&#x7684; <code>func</code> &#x5B57;&#x6BB5;&#x6B63;&#x5F0F;&#x4EFB;&#x52A1;&#x8981;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#x6307;&#x9488;&#x3002;Linux&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x79CD;&#x7684;tasklet&#x961F;&#x5217;&#xFF0C;&#x5206;&#x522B;&#x4E3A; <code>tasklet_vec</code> &#x548C; <code>tasklet_hi_vec</code>&#xFF0C;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> tasklet_head tasklet_vec[NR_CPUS];
+<span class="hljs-keyword">struct</span> tasklet_head tasklet_hi_vec[NR_CPUS];
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;<code>tasklet_vec</code> &#x548C; <code>tasklet_hi_vec</code> &#x90FD;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x4E3A;CPU&#x7684;&#x6838;&#x5FC3;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6BCF;&#x4E2A;CPU&#x6838;&#x5FC3;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;tasklet&#x961F;&#x5217;&#x548C;&#x4E00;&#x4E2A;&#x666E;&#x901A;tasklet&#x961F;&#x5217;&#x3002;</p>
+<h3 id="&#x8C03;&#x5EA6;tasklet">&#x8C03;&#x5EA6;tasklet</h3>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;tasklet&#x9700;&#x8981;&#x6267;&#x884C;&#xFF0C;&#x90A3;&#x4E48;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;tasklet&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>tasklet_hi_schedule()</code> &#x51FD;&#x6570;&#x8C03;&#x5EA6;&#xFF0C;&#x800C;&#x666E;&#x901A;tasklet&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>tasklet_schedule()</code> &#x8C03;&#x5EA6;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x57FA;&#x672C;&#x4E00;&#x6837;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EA;&#x5206;&#x6790;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">tasklet_hi_schedule</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> tasklet_struct *t)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (!test_and_set_bit(TASKLET_STATE_SCHED, &amp;t-&gt;state)) {
+        <span class="hljs-keyword">int</span> cpu = smp_processor_id();
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> flags;
+
+        local_irq_save(flags);
+        t-&gt;next = tasklet_hi_vec[cpu].<span class="hljs-built_in">list</span>;
+        tasklet_hi_vec[cpu].<span class="hljs-built_in">list</span> = t;
+        __cpu_raise_softirq(cpu, HI_SOFTIRQ);
+        local_irq_restore(flags);
+    }
+}
+</code></pre>
+<p>&#x51FD;&#x6570;&#x53C2;&#x6570;&#x7684;&#x7C7B;&#x578B;&#x662F; <code>tasklet_struct</code> &#x7ED3;&#x6784;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x8868;&#x793A;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;tasklet&#x7ED3;&#x6784;&#x3002;<code>tasklet_hi_schedule()</code> &#x51FD;&#x6570;&#x9996;&#x5148;&#x5224;&#x65AD;&#x8FD9;&#x4E2A;tasklet&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x5C31;&#x6DFB;&#x52A0;&#x5230; <code>tasklet_hi_vec</code> &#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>__cpu_raise_softirq(cpu, HI_SOFTIRQ)</code> &#x6765;&#x544A;&#x8BC9;softirq&#x9700;&#x8981;&#x6267;&#x884C; <code>HI_SOFTIRQ</code> &#x7C7B;&#x578B;&#x7684;softirq&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B; <code>__cpu_raise_softirq()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> __cpu_raise_softirq(<span class="hljs-keyword">int</span> cpu, <span class="hljs-keyword">int</span> nr)
+{
+    softirq_active(cpu) |= (<span class="hljs-number">1</span>&lt;&lt;nr);
+}
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;<code>__cpu_raise_softirq()</code> &#x51FD;&#x6570;&#x5C31;&#x662F;&#x628A; <code>irq_cpustat_t</code> &#x7ED3;&#x6784;&#x7684; <code>__softirq_active</code> &#x5B57;&#x6BB5;&#x7684; <code>nr&#x4F4D;</code> &#x8BBE;&#x7F6E;&#x4E3A;1&#x3002;&#x5BF9;&#x4E8E; <code>tasklet_hi_schedule()</code> &#x51FD;&#x6570;&#x5C31;&#x662F;&#x628A; <code>HI_SOFTIRQ</code> &#x4F4D;&#xFF08;0&#x4F4D;&#xFF09;&#x8BBE;&#x7F6E;&#x4E3A;1&#x3002;</p>
+<p>&#x524D;&#x9762;&#x6211;&#x4EEC;&#x4E5F;&#x4ECB;&#x7ECD;&#x8FC7;&#xFF0C;Linux&#x5728;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x4F1A;&#x6CE8;&#x518C;&#x4E24;&#x79CD;softirq&#xFF0C;<code>TASKLET_SOFTIRQ</code> &#x548C; <code>HI_SOFTIRQ</code>&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">void</span> __<span class="hljs-function">init <span class="hljs-title">softirq_init</span><span class="hljs-params">()</span>
+</span>{
+    ...
+    open_softirq(TASKLET_SOFTIRQ, tasklet_action, <span class="hljs-literal">NULL</span>);
+    open_softirq(HI_SOFTIRQ, tasklet_hi_action, <span class="hljs-literal">NULL</span>);
+}
+</code></pre>
+<p>&#x6240;&#x4EE5;&#x5F53;&#x628A; <code>irq_cpustat_t</code> &#x7ED3;&#x6784;&#x7684; <code>__softirq_active</code> &#x5B57;&#x6BB5;&#x7684; <code>HI_SOFTIRQ</code> &#x4F4D;&#xFF08;0&#x4F4D;&#xFF09;&#x8BBE;&#x7F6E;&#x4E3A;1&#x65F6;&#xFF0C;softirq&#x673A;&#x5236;&#x5C31;&#x4F1A;&#x6267;&#x884C; <code>tasklet_hi_action()</code> &#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B; <code>tasklet_hi_action()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">tasklet_hi_action</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> softirq_action *a)</span>
+</span>{
+    <span class="hljs-keyword">int</span> cpu = smp_processor_id();
+    <span class="hljs-keyword">struct</span> tasklet_struct *<span class="hljs-built_in">list</span>;
+
+    local_irq_disable();
+    <span class="hljs-built_in">list</span> = tasklet_hi_vec[cpu].<span class="hljs-built_in">list</span>;
+    tasklet_hi_vec[cpu].<span class="hljs-built_in">list</span> = <span class="hljs-literal">NULL</span>;
+    local_irq_enable();
+
+    <span class="hljs-keyword">while</span> (<span class="hljs-built_in">list</span> != <span class="hljs-literal">NULL</span>) {
+        <span class="hljs-keyword">struct</span> tasklet_struct *t = <span class="hljs-built_in">list</span>;
+
+        <span class="hljs-built_in">list</span> = <span class="hljs-built_in">list</span>-&gt;next;
+
+        <span class="hljs-keyword">if</span> (tasklet_trylock(t)) {
+            <span class="hljs-keyword">if</span> (atomic_read(&amp;t-&gt;count) == <span class="hljs-number">0</span>) {
+                clear_bit(TASKLET_STATE_SCHED, &amp;t-&gt;state);
+
+                t-&gt;func(t-&gt;data);  <span class="hljs-comment">// &#x8C03;&#x7528;tasklet&#x5904;&#x7406;&#x51FD;&#x6570;</span>
+                tasklet_unlock(t);
+                <span class="hljs-keyword">continue</span>;
+            }
+            tasklet_unlock(t);
+        }
+        ...
+    }
+}
+</code></pre>
+<p><code>tasklet_hi_action()</code> &#x51FD;&#x6570;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x904D;&#x5386; <code>tasklet_hi_vec</code> &#x961F;&#x5217;&#x5E76;&#x4E14;&#x6267;&#x884C;&#x5176;&#x4E2D;tasklet&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="interrupt_hardware.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 硬件相关">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"中断处理","level":"1.4.2","depth":2,"next":{"title":"系统调用","level":"1.5","depth":1,"ref":"","articles":[{"title":"系统调用","level":"1.5.1","depth":2,"path":"syscall.md","ref":"syscall.md","articles":[]}]},"previous":{"title":"硬件相关","level":"1.4.1","depth":2,"path":"interrupt_hardware.md","ref":"interrupt_hardware.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"interrupt_softward.md","mtime":"2019-12-04T06:33:37.587Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T03:48:37.225Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

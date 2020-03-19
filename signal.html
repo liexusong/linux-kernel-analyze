@@ -1,0 +1,1215 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>信号处理机制 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ipc-shm.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="process-management.html">
+            
+                <a href="process-management.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="process-schedule.html">
+            
+                <a href="process-schedule.html">
+            
+                    
+                    进程调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="concurrency-synchronize.html">
+            
+                <a href="concurrency-synchronize.html">
+            
+                    
+                    并发同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="waitqueue.html">
+            
+                <a href="waitqueue.html">
+            
+                    
+                    等待队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    内存管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="physical-memory-managemen-1.html">
+            
+                <a href="physical-memory-managemen-1.html">
+            
+                    
+                    物理内存管理(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="physical-memory-managemen-2.html">
+            
+                <a href="physical-memory-managemen-2.html">
+            
+                    
+                    物理内存管理(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="physical-memory-managemen-3.html">
+            
+                <a href="physical-memory-managemen-3.html">
+            
+                    
+                    物理内存管理(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="virtual_memory_address_manager.html">
+            
+                <a href="virtual_memory_address_manager.html">
+            
+                    
+                    虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="memory_mmap.html">
+            
+                <a href="memory_mmap.html">
+            
+                    
+                    mmap完全剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="memory_swap.html">
+            
+                <a href="memory_swap.html">
+            
+                    
+                    内存交换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    中断机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="interrupt_hardware.html">
+            
+                <a href="interrupt_hardware.html">
+            
+                    
+                    硬件相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="interrupt_softward.html">
+            
+                <a href="interrupt_softward.html">
+            
+                    
+                    中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    系统调用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="syscall.html">
+            
+                <a href="syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="virtual_file_system.html">
+            
+                <a href="virtual_file_system.html">
+            
+                    
+                    虚拟文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="minix_file_system.html">
+            
+                <a href="minix_file_system.html">
+            
+                    
+                    MINIX文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    进程间通信
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.7.1" data-path="signal.html">
+            
+                <a href="signal.html">
+            
+                    
+                    信号处理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ipc-shm.html">
+            
+                <a href="ipc-shm.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="socket_interface.html">
+            
+                <a href="socket_interface.html">
+            
+                    
+                    Socket接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="unix-domain-sockets.html">
+            
+                <a href="unix-domain-sockets.html">
+            
+                    
+                    Unix Domain Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="kernel-timer.html">
+            
+                <a href="kernel-timer.html">
+            
+                    
+                    定时器实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="multiplexing-io.html">
+            
+                <a href="multiplexing-io.html">
+            
+                    
+                    多路复用I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    docker实现原理之 - namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    2.6+内核分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="epoll-principle.html">
+            
+                <a href="epoll-principle.html">
+            
+                    
+                    Epoll原理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >信号处理机制</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4EC0;&#x4E48;&#x662F;&#x4FE1;&#x53F7;">&#x4EC0;&#x4E48;&#x662F;&#x4FE1;&#x53F7;</h2>
+<p>&#x4FE1;&#x53F7;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x5728;&#x8F6F;&#x4EF6;&#x5C42;&#x6B21;&#x4E0A;&#x5BF9;&#x4E2D;&#x65AD;&#x673A;&#x5236;&#x7684;&#x4E00;&#x79CD;&#x6A21;&#x62DF;&#xFF0C;&#x5176;&#x4E3B;&#x8981;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x6765;&#x6E90;&#xFF1A;</p>
+<ul>
+<li>&#x7A0B;&#x5E8F;&#x9519;&#x8BEF;&#xFF1A;&#x9664;&#x96F6;&#xFF0C;&#x975E;&#x6CD5;&#x5185;&#x5B58;&#x8BBF;&#x95EE;&#x7B49;&#x3002;</li>
+<li>&#x5916;&#x90E8;&#x4FE1;&#x53F7;&#xFF1A;&#x7EC8;&#x7AEF; <code>Ctrl-C</code> &#x4EA7;&#x751F; <code>SGINT</code> &#x4FE1;&#x53F7;&#xFF0C;&#x5B9A;&#x65F6;&#x5668;&#x5230;&#x671F;&#x4EA7;&#x751F;SIGALRM&#x7B49;&#x3002;</li>
+<li>&#x663E;&#x5F0F;&#x8BF7;&#x6C42;&#xFF1A;kill&#x51FD;&#x6570;&#x5141;&#x8BB8;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x4EFB;&#x4F55;&#x4FE1;&#x53F7;&#x7ED9;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x6216;&#x8FDB;&#x7A0B;&#x7EC4;&#x3002;</li>
+</ul>
+<p>&#x76EE;&#x524D; Linux &#x652F;&#x6301;64&#x79CD;&#x4FE1;&#x53F7;&#x3002;&#x4FE1;&#x53F7;&#x5206;&#x4E3A;&#x975E;&#x5B9E;&#x65F6;&#x4FE1;&#x53F7;(&#x4E0D;&#x53EF;&#x9760;&#x4FE1;&#x53F7;)&#x548C;&#x5B9E;&#x65F6;&#x4FE1;&#x53F7;&#xFF08;&#x53EF;&#x9760;&#x4FE1;&#x53F7;&#xFF09;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#xFF0C;&#x5BF9;&#x5E94;&#x4E8E; Linux &#x7684;&#x4FE1;&#x53F7;&#x503C;&#x4E3A; 1-31 &#x548C; 34-64&#x3002;</p>
+<p>&#x4FE1;&#x53F7;&#x662F;&#x5F02;&#x6B65;&#x7684;&#xFF0C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x4E0D;&#x5FC5;&#x901A;&#x8FC7;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x6765;&#x7B49;&#x5F85;&#x4FE1;&#x53F7;&#x7684;&#x5230;&#x8FBE;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x8FDB;&#x7A0B;&#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#x4FE1;&#x53F7;&#x5230;&#x5E95;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x5230;&#x8FBE;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5728;&#x8FDB;&#x7A0B;&#x4E2D;&#x8BBE;&#x7F6E;&#x4FE1;&#x53F7;&#x76F8;&#x5E94;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x6709;&#x4FE1;&#x53F7;&#x5230;&#x8FBE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7531;&#x7CFB;&#x7EDF;&#x5F02;&#x6B65;&#x89E6;&#x53D1;&#x76F8;&#x5E94;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x5373;&#x53EF;&#x3002;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;signal.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sigcb</span><span class="hljs-params">(<span class="hljs-keyword">int</span> signo)</span> </span>{
+    <span class="hljs-keyword">switch</span> (signo) {
+    <span class="hljs-keyword">case</span> SIGHUP:
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Get a signal -- SIGHUP\n&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> SIGINT:
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Get a signal -- SIGINT\n&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> SIGQUIT:
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Get a signal -- SIGQUIT\n&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+    }
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    signal(SIGHUP, sigcb);
+    signal(SIGINT, sigcb);
+    signal(SIGQUIT, sigcb);
+    <span class="hljs-keyword">for</span> (;;) {
+        sleep(<span class="hljs-number">1</span>);
+    }
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x540E;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x6309;&#x4E0B; <code>Ctrl+C</code> &#x540E;&#xFF0C;&#x5C4F;&#x5E55;&#x4E0A;&#x5C06;&#x4F1A;&#x6253;&#x5370; <code>Get a signal -- SIGINT</code>&#x3002;&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>kill -s SIGINT pid</code> &#x547D;&#x4EE4;&#x6765;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x7ED9;&#x8FDB;&#x7A0B;&#xFF0C;&#x5C4F;&#x5E55;&#x540C;&#x6837;&#x6253;&#x5370;&#x51FA; <code>Get a signal -- SIGINT</code> &#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<h2 id="&#x4FE1;&#x53F7;&#x5B9E;&#x73B0;&#x539F;&#x7406;">&#x4FE1;&#x53F7;&#x5B9E;&#x73B0;&#x539F;&#x7406;</h2>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5206;&#x6790;&#x4E00;&#x4E0B;Linux&#x5BF9;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x673A;&#x5236;&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x3002;</p>
+<h3 id="&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;">&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</h3>
+<p>&#x5728;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x7ED3;&#x6784; <code>task_struct</code> &#x4E2D;&#x6709;&#x51E0;&#x4E2A;&#x4E0E;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x76F8;&#x5173;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> task_struct {
+    ...
+    <span class="hljs-keyword">int</span> sigpending;
+    ...
+    <span class="hljs-keyword">struct</span> signal_struct *sig;
+    <span class="hljs-keyword">sigset_t</span> blocked;
+    <span class="hljs-keyword">struct</span> sigpending pending;
+    ...
+}
+</code></pre>
+<p>&#x6210;&#x5458; <code>sigpending</code> &#x8868;&#x793A;&#x8FDB;&#x7A0B;&#x662F;&#x5426;&#x6709;&#x4FE1;&#x53F7;&#x9700;&#x8981;&#x5904;&#x7406;&#xFF08;1&#x8868;&#x793A;&#x6709;&#xFF0C;0&#x8868;&#x793A;&#x6CA1;&#x6709;&#xFF09;&#x3002;&#x6210;&#x5458; <code>blocked</code> &#x8868;&#x793A;&#x88AB;&#x5C4F;&#x853D;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6BCF;&#x4E2A;&#x4F4D;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x88AB;&#x5C4F;&#x853D;&#x7684;&#x4FE1;&#x53F7;&#x3002;&#x6210;&#x5458; <code>sig</code> &#x8868;&#x793A;&#x4FE1;&#x53F7;&#x76F8;&#x5E94;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x7C7B;&#x578B;&#x662F; <code>struct signal_struct</code>&#xFF0C;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span>  _NSIG  64</span>
+
+<span class="hljs-keyword">struct</span> signal_struct {
+    <span class="hljs-keyword">atomic_t</span>        count;
+    <span class="hljs-keyword">struct</span> k_sigaction    action[_NSIG];
+    <span class="hljs-keyword">spinlock_t</span>        siglock;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*__sighandler_t)</span><span class="hljs-params">(<span class="hljs-keyword">int</span>)</span></span>;
+
+<span class="hljs-keyword">struct</span> sigaction {
+    <span class="hljs-keyword">__sighandler_t</span> sa_handler;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> sa_flags;
+    <span class="hljs-keyword">void</span> (*sa_restorer)(<span class="hljs-keyword">void</span>);
+    <span class="hljs-keyword">sigset_t</span> sa_mask;
+};
+
+<span class="hljs-keyword">struct</span> k_sigaction {
+    <span class="hljs-keyword">struct</span> sigaction sa;
+};
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;<code>struct signal_struct</code> &#x662F;&#x4E2A;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x5176; <code>action</code> &#x6210;&#x5458;&#x662F;&#x4E2A; <code>struct k_sigaction</code> &#x7ED3;&#x6784;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x6210;&#x5458;&#x4EE3;&#x8868;&#x7740;&#x76F8;&#x5E94;&#x4FE1;&#x53F7;&#x7684;&#x5904;&#x7406;&#x4FE1;&#x606F;&#xFF0C;&#x800C; <code>struct k_sigaction</code> &#x7ED3;&#x6784;&#x5176;&#x5B9E;&#x662F; <code>struct sigaction</code> &#x7684;&#x7B80;&#x5355;&#x5C01;&#x88C5;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x518D;&#x6765;&#x770B;&#x770B; <code>struct  sigaction</code> &#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#xFF0C;&#x5176;&#x4E2D; <code>sa_handler</code> &#x6210;&#x5458;&#x662F;&#x7C7B;&#x578B;&#x4E3A; <code>__sighandler_t</code> &#x7684;&#x51FD;&#x6570;&#x6307;&#x9488;&#xFF0C;&#x4EE3;&#x8868;&#x7740;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B; <code>struct task_struct</code> &#x7ED3;&#x6784;&#x7684; <code>pending</code> &#x6210;&#x5458;&#xFF0C;&#x5176;&#x7C7B;&#x578B;&#x4E3A; <code>struct sigpending</code>&#xFF0C;&#x5B58;&#x50A8;&#x7740;&#x8FDB;&#x7A0B;&#x63A5;&#x6536;&#x5230;&#x7684;&#x4FE1;&#x53F7;&#x961F;&#x5217;&#xFF0C;<code>struct sigpending</code> &#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> sigqueue {
+    <span class="hljs-keyword">struct</span> sigqueue *next;
+    <span class="hljs-keyword">siginfo_t</span> info;
+};
+
+<span class="hljs-keyword">struct</span> sigpending {
+    <span class="hljs-keyword">struct</span> sigqueue *head, **tail;
+    <span class="hljs-keyword">sigset_t</span> signal;
+};
+</code></pre>
+<p>&#x5F53;&#x8FDB;&#x7A0B;&#x63A5;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x65F6;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x628A;&#x63A5;&#x6536;&#x5230;&#x7684;&#x4FE1;&#x53F7;&#x6DFB;&#x52A0; <code>pending</code> &#x8FD9;&#x4E2A;&#x961F;&#x5217;&#x4E2D;&#x3002;</p>
+<h3 id="&#x53D1;&#x9001;&#x4FE1;&#x53F7;">&#x53D1;&#x9001;&#x4FE1;&#x53F7;</h3>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>kill()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x5176;&#x539F;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">kill</span><span class="hljs-params">(pid_t pid, <span class="hljs-keyword">int</span> sig)</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570; <code>pid</code> &#x6307;&#x5B9A;&#x8981;&#x63A5;&#x6536;&#x4FE1;&#x53F7;&#x8FDB;&#x7A0B;&#x7684;ID&#xFF0C;&#x800C;&#x53C2;&#x6570; <code>sig</code> &#x662F;&#x8981;&#x53D1;&#x9001;&#x7684;&#x4FE1;&#x53F7;&#x3002;<code>kill()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6700;&#x7EC8;&#x4F1A;&#x8FDB;&#x5165;&#x5185;&#x6838;&#x6001;&#xFF0C;&#x5E76;&#x4E14;&#x8C03;&#x7528;&#x5185;&#x6838;&#x51FD;&#x6570; <code>sys_kill()</code>&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage <span class="hljs-keyword">long</span>
+<span class="hljs-title">sys_kill</span><span class="hljs-params">(<span class="hljs-keyword">int</span> pid, <span class="hljs-keyword">int</span> sig)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> siginfo info;
+
+    info.si_signo = sig;
+    info.si_errno = <span class="hljs-number">0</span>;
+    info.si_code = SI_USER;
+    info.si_pid = current-&gt;pid;
+    info.si_uid = current-&gt;uid;
+
+    <span class="hljs-keyword">return</span> kill_something_info(sig, &amp;info, pid);
+}
+</code></pre>
+<p><code>sys_kill()</code> &#x7684;&#x4EE3;&#x7801;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x9996;&#x5148;&#x521D;&#x59CB;&#x5316; <code>info</code> &#x53D8;&#x91CF;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x63A5;&#x7740;&#x8C03;&#x7528; <code>kill_something_info()</code> &#x51FD;&#x6570;&#x6765;&#x5904;&#x7406;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7684;&#x64CD;&#x4F5C;&#x3002;<code>kill_something_info()</code> &#x51FD;&#x6570;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">kill_something_info</span><span class="hljs-params">(<span class="hljs-keyword">int</span> sig, <span class="hljs-keyword">struct</span> siginfo *info, <span class="hljs-keyword">int</span> pid)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (!pid) {
+        <span class="hljs-keyword">return</span> kill_pg_info(sig, info, current-&gt;pgrp);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (pid == <span class="hljs-number">-1</span>) {
+        <span class="hljs-keyword">int</span> retval = <span class="hljs-number">0</span>, count = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">struct</span> task_struct * p;
+
+        read_lock(&amp;tasklist_lock);
+        for_each_task(p) {
+            <span class="hljs-keyword">if</span> (p-&gt;pid &gt; <span class="hljs-number">1</span> &amp;&amp; p != current) {
+                <span class="hljs-keyword">int</span> err = send_sig_info(sig, info, p);
+                ++count;
+                <span class="hljs-keyword">if</span> (err != -EPERM)
+                    retval = err;
+            }
+        }
+        read_unlock(&amp;tasklist_lock);
+        <span class="hljs-keyword">return</span> count ? retval : -ESRCH;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (pid &lt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> kill_pg_info(sig, info, -pid);
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> kill_proc_info(sig, info, pid);
+    }
+}
+</code></pre>
+<p><code>kill_something_info()</code> &#x51FD;&#x6570;&#x6839;&#x636E;&#x4F20;&#x5165;<code>pid</code> &#x7684;&#x4E0D;&#x540C;&#x6765;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6709;&#x5982;&#x4E0B;4&#x4E2D;&#x53EF;&#x80FD;&#xFF1A;</p>
+<ul>
+<li><code>pid</code> &#x7B49;&#x4E8E;0&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x4FE1;&#x53F7;&#x5C06;&#x9001;&#x5F80;&#x6240;&#x6709;&#x4E0E;&#x8C03;&#x7528; <code>kill()</code> &#x7684;&#x90A3;&#x4E2A;&#x8FDB;&#x7A0B;&#x5C5E;&#x540C;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x7EC4;&#x7684;&#x8FDB;&#x7A0B;&#x3002;</li>
+<li><code>pid</code> &#x5927;&#x4E8E;&#x96F6;&#x65F6;&#xFF0C;<code>pid</code> &#x662F;&#x4FE1;&#x53F7;&#x8981;&#x9001;&#x5F80;&#x7684;&#x8FDB;&#x7A0B;ID&#x3002;</li>
+<li><code>pid</code> &#x7B49;&#x4E8E;-1&#x65F6;&#xFF0C;&#x4FE1;&#x53F7;&#x5C06;&#x9001;&#x5F80;&#x8C03;&#x7528;&#x8FDB;&#x7A0B;&#x6709;&#x6743;&#x7ED9;&#x5176;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7684;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#xFF0C;&#x9664;&#x4E86;&#x8FDB;&#x7A0B;1(init)&#x3002;</li>
+<li><code>pid</code> &#x5C0F;&#x4E8E;-1&#x65F6;&#xFF0C;&#x4FE1;&#x53F7;&#x5C06;&#x9001;&#x5F80;&#x4EE5;-pid&#x4E3A;&#x7EC4;&#x6807;&#x8BC6;&#x7684;&#x8FDB;&#x7A0B;&#x3002;</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x53EA;&#x5206;&#x6790; <code>pid</code> &#x5927;&#x4E8E;0&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C;&#x5F53; <code>pid</code> &#x5927;&#x4E8E;0&#x65F6;&#xFF0C;&#x4F1A;&#x8C03;&#x7528; <code>kill_proc_info()</code> &#x51FD;&#x6570;&#x6765;&#x5904;&#x7406;&#x4FE1;&#x53F7;&#x53D1;&#x9001;&#x64CD;&#x4F5C;&#xFF0C;&#x5176;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span>
+<span class="hljs-title">kill_proc_info</span><span class="hljs-params">(<span class="hljs-keyword">int</span> sig, <span class="hljs-keyword">struct</span> siginfo *info, pid_t pid)</span>
+</span>{
+    <span class="hljs-keyword">int</span> error;
+    <span class="hljs-keyword">struct</span> task_struct *p;
+
+    read_lock(&amp;tasklist_lock);
+    p = find_task_by_pid(pid);
+    error = -ESRCH;
+    <span class="hljs-keyword">if</span> (p)
+        error = send_sig_info(sig, info, p);
+    read_unlock(&amp;tasklist_lock);
+    <span class="hljs-keyword">return</span> error;
+}
+</code></pre>
+<p><code>kill_proc_info()</code> &#x9996;&#x5148;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>find_task_by_pid()</code> &#x51FD;&#x6570;&#x6765;&#x83B7;&#x5F97; <code>pid</code> &#x5BF9;&#x5E94;&#x7684;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x7ED3;&#x6784;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7; <code>send_sig_info()</code> &#x51FD;&#x6570;&#x6765;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7ED9;&#x6B64;&#x8FDB;&#x7A0B;&#xFF0C;<code>send_sig_info()</code> &#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp">int
+send_sig_info(int sig, struct siginfo *info, struct task_struct *t)
+{
+    unsigned long flags;
+    int ret;
+
+    ret = -EINVAL;
+    if (sig &lt; 0 || sig &gt; _NSIG)
+        goto out_nolock;
+
+    ret = -EPERM;
+    if (bad_signal(sig, info, t))
+        goto out_nolock;
+
+    ret = 0;
+    if (!sig || !t-&gt;sig)
+        goto out_nolock;
+
+    spin_lock_irqsave(&amp;t-&gt;sigmask_lock, flags);
+    handle_stop_signal(sig, t);
+
+    if (ignored_signal(sig, t))
+        goto out;
+
+    if (sig &lt; SIGRTMIN &amp;&amp; sigismember(&amp;t-&gt;pending.signal, sig))
+        goto out;
+
+    ret = deliver_signal(sig, info, t);
+out:
+    spin_unlock_irqrestore(&amp;t-&gt;sigmask_lock, flags);
+    if ((t-&gt;state &amp; TASK_INTERRUPTIBLE) &amp;&amp; signal_pending(t))
+        wake_up_process(t);
+
+out_nolock:
+    return ret;
+}
+</code></pre>
+<p><code>send_sig_info()</code> &#x9996;&#x5148;&#x8C03;&#x7528; <code>bad_signal()</code> &#x51FD;&#x6570;&#x6765;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x6743;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7ED9;&#x8FDB;&#x7A0B;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; <code>ignored_signal()</code> &#x51FD;&#x6570;&#x6765;&#x68C0;&#x67E5;&#x4FE1;&#x53F7;&#x662F;&#x5426;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x63A5;&#x7740;&#x8C03;&#x7528; <code>deliver_signal()</code> &#x51FD;&#x6570;&#x5F00;&#x59CB;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#xFF0C;&#x6700;&#x540E;&#x5982;&#x679C;&#x8FDB;&#x7A0B;&#x662F;&#x7761;&#x7720;&#x72B6;&#x6001;&#x5C31;&#x5524;&#x9192;&#x8FDB;&#x7A0B;&#x3002;&#x6211;&#x4EEC;&#x63A5;&#x7740;&#x6765;&#x5206;&#x6790; <code>deliver_signal()</code> &#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">deliver_signal</span><span class="hljs-params">(<span class="hljs-keyword">int</span> sig, <span class="hljs-keyword">struct</span> siginfo *info, <span class="hljs-keyword">struct</span> task_struct *t)</span>
+</span>{
+    <span class="hljs-keyword">int</span> retval = send_signal(sig, info, &amp;t-&gt;pending);
+
+    <span class="hljs-keyword">if</span> (!retval &amp;&amp; !sigismember(&amp;t-&gt;blocked, sig))
+        signal_wake_up(t);
+
+    <span class="hljs-keyword">return</span> retval;
+}
+</code></pre>
+<p><code>deliver_signal()</code> &#x9996;&#x5148;&#x8C03;&#x7528; <code>send_signal()</code> &#x51FD;&#x6570;&#x8FDB;&#x884C;&#x4FE1;&#x53F7;&#x7684;&#x53D1;&#x9001;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; <code>signal_wake_up()</code> &#x51FD;&#x6570;&#x5524;&#x9192;&#x8FDB;&#x7A0B;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x6700;&#x91CD;&#x8981;&#x7684;&#x51FD;&#x6570; <code>send_signal()</code>&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">send_signal</span><span class="hljs-params">(<span class="hljs-keyword">int</span> sig, <span class="hljs-keyword">struct</span> siginfo *info, <span class="hljs-keyword">struct</span> sigpending *signals)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> sigqueue * q = <span class="hljs-literal">NULL</span>;
+
+    <span class="hljs-keyword">if</span> (atomic_read(&amp;nr_queued_signals) &lt; max_queued_signals) {
+        q = kmem_cache_alloc(sigqueue_cachep, GFP_ATOMIC);
+    }
+
+    <span class="hljs-keyword">if</span> (q) {
+        atomic_inc(&amp;nr_queued_signals);
+        q-&gt;next = <span class="hljs-literal">NULL</span>;
+        *signals-&gt;tail = q;
+        signals-&gt;tail = &amp;q-&gt;next;
+        <span class="hljs-keyword">switch</span> ((<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) info) {
+            <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
+                q-&gt;info.si_signo = sig;
+                q-&gt;info.si_errno = <span class="hljs-number">0</span>;
+                q-&gt;info.si_code = SI_USER;
+                q-&gt;info.si_pid = current-&gt;pid;
+                q-&gt;info.si_uid = current-&gt;uid;
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+                q-&gt;info.si_signo = sig;
+                q-&gt;info.si_errno = <span class="hljs-number">0</span>;
+                q-&gt;info.si_code = SI_KERNEL;
+                q-&gt;info.si_pid = <span class="hljs-number">0</span>;
+                q-&gt;info.si_uid = <span class="hljs-number">0</span>;
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">default</span>:
+                copy_siginfo(&amp;q-&gt;info, info);
+                <span class="hljs-keyword">break</span>;
+        }
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (sig &gt;= SIGRTMIN &amp;&amp; info &amp;&amp; (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>)info != <span class="hljs-number">1</span>
+           &amp;&amp; info-&gt;si_code != SI_USER) {
+        <span class="hljs-keyword">return</span> -EAGAIN;
+    }
+
+    sigaddset(&amp;signals-&gt;signal, sig);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p><code>send_signal()</code> &#x51FD;&#x6570;&#x867D;&#x7136;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x4F46;&#x903B;&#x8F91;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x7684;&#x3002;&#x5728; <code>&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</code> &#x4E00;&#x8282;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x8FC7;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x7ED3;&#x6784; <code>task_struct</code> &#x6709;&#x4E2A; <code>pending</code> &#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF0C;&#x5176;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x63A5;&#x6536;&#x5230;&#x7684;&#x4FE1;&#x53F7;&#x961F;&#x5217;&#x3002;<code>send_signal()</code> &#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x662F;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x7ED3;&#x6784;&#x7684; <code>pending</code> &#x6210;&#x5458;&#x53D8;&#x91CF;&#x3002;</p>
+<p><code>send_signal()</code> &#x9996;&#x5148;&#x8C03;&#x7528; <code>kmem_cache_alloc()</code> &#x51FD;&#x6570;&#x6765;&#x7533;&#x8BF7;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A; <code>struct sigqueue</code> &#x7684;&#x961F;&#x5217;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x5230; <code>pending</code> &#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x63A5;&#x7740;&#x6839;&#x636E;&#x53C2;&#x6570; <code>info</code> &#x7684;&#x503C;&#x6765;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6700;&#x540E;&#x901A;&#x8FC7; <code>sigaddset()</code> &#x51FD;&#x6570;&#x6765;&#x8BBE;&#x7F6E;&#x4FE1;&#x53F7;&#x5BF9;&#x5E94;&#x7684;&#x6807;&#x5FD7;&#x4F4D;&#xFF0C;&#x8868;&#x793A;&#x8FDB;&#x7A0B;&#x63A5;&#x6536;&#x5230;&#x8BE5;&#x4FE1;&#x53F7;&#x3002;</p>
+<p><code>signal_wake_up()</code> &#x51FD;&#x6570;&#x4F1A;&#x628A;&#x8FDB;&#x7A0B;&#x7684; <code>sigpending</code> &#x6210;&#x5458;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;&#x4E3A;1&#xFF0C;&#x8868;&#x793A;&#x6709;&#x4FE1;&#x53F7;&#x9700;&#x8981;&#x5904;&#x7406;&#xFF0C;&#x5982;&#x679C;&#x8FDB;&#x7A0B;&#x662F;&#x7761;&#x7720;&#x53EF;&#x4E2D;&#x65AD;&#x72B6;&#x6001;&#x8FD8;&#x4F1A;&#x5524;&#x9192;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>&#x81F3;&#x6B64;&#xFF0C;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7684;&#x6D41;&#x7A0B;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x8C03;&#x7528;&#x94FE;&#x6765;&#x66F4;&#x52A0;&#x76F4;&#x89C2;&#x7684;&#x7406;&#x89E3;&#x6B64;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<pre><code class="lang-text">kill()   
+  |                    User Space
+---------------------------------------------------------------------------------------
+  |                    Kernel Space
+sys_kill()
+  |---&gt; kill_something_info()
+               |---&gt; kill_proc_info()
+                           |---&gt; find_task_by_pid()
+                           |---&gt; send_sig_info()
+                                       |---&gt; bad_signal()
+                                       |---&gt; handle_stop_signal()
+                                       |---&gt; ignored_signal()
+                                       |---&gt; deliver_signal()
+                                                   |---&gt; send_signal()
+                                                   |          |---&gt; kmem_cache_alloc()
+                                                   |          |---&gt; sigaddset()
+                                                   |---&gt; signal_wake_up()
+</code></pre>
+<h3 id="&#x5185;&#x6838;&#x89E6;&#x53D1;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;">&#x5185;&#x6838;&#x89E6;&#x53D1;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;</h3>
+<p>&#x4E0A;&#x9762;&#x4ECB;&#x7ECD;&#x4E86;&#x600E;&#x4E48;&#x53D1;&#x751F;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x4F46;&#x662F;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4F1A;&#x89E6;&#x53D1;&#x4FE1;&#x53F7;&#x76F8;&#x5E94;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x5462;&#xFF1F;&#x4E3A;&#x4E86;&#x5C3D;&#x5FEB;&#x8BA9;&#x4FE1;&#x53F7;&#x5F97;&#x5230;&#x5904;&#x7406;&#xFF0C;Linux&#x628A;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x653E;&#x7F6E;&#x5728;&#x8FDB;&#x7A0B;&#x4ECE;&#x5185;&#x6838;&#x6001;&#x8FD4;&#x56DE;&#x5230;&#x7528;&#x6237;&#x6001;&#x524D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5728; <code>ret_from_sys_call</code> &#x5904;&#xFF1A;</p>
+<pre><code class="lang-asm">// arch/i386/kernel/entry.S
+
+ENTRY(ret_from_sys_call)
+    ...
+ret_with_reschedule:
+    ...
+    cmpl $0, sigpending(%ebx)  // &#x68C0;&#x67E5;&#x8FDB;&#x7A0B;&#x7684;sigpending&#x6210;&#x5458;&#x662F;&#x5426;&#x7B49;&#x4E8E;1
+    jne signal_return          // &#x5982;&#x679C;&#x662F;&#x5C31;&#x8DF3;&#x8F6C;&#x5230; signal_return &#x5904;&#x6267;&#x884C;
+restore_all:
+    RESTORE_ALL
+
+    ALIGN
+signal_return:
+    sti                             // &#x5F00;&#x542F;&#x786C;&#x4EF6;&#x4E2D;&#x65AD;
+    testl $(VM_MASK),EFLAGS(%esp)
+    movl %esp,%eax
+    jne v86_signal_return
+    xorl %edx,%edx
+    call SYMBOL_NAME(do_signal)    // &#x8C03;&#x7528;do_signal()&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5904;&#x7406;
+    jmp restore_all
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x8FD9;&#x662F;&#x4E00;&#x6BB5;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#xFF0C;&#x6709;&#x70B9;&#x4E0D;&#x592A;&#x76F4;&#x89C2;&#xFF08;&#x5927;&#x6982;&#x77E5;&#x9053;&#x610F;&#x601D;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x8FDB;&#x884C;&#x4E86;&#x6CE8;&#x91CA;&#x3002;&#x4E3B;&#x8981;&#x7684;&#x903B;&#x8F91;&#x5C31;&#x662F;&#x9996;&#x5148;&#x68C0;&#x67E5;&#x8FDB;&#x7A0B;&#x7684; <code>sigpending</code> &#x6210;&#x5458;&#x662F;&#x5426;&#x7B49;&#x4E8E;1&#xFF0C;&#x5982;&#x679C;&#x662F;&#x8C03;&#x7528; <code>do_signal()</code> &#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x7531;&#x4E8E; <code>do_signal()</code> &#x51FD;&#x6570;&#x4EE3;&#x7801;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5206;&#x6BB5;&#x6765;&#x8BF4;&#x660E;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">do_signal</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> pt_regs *regs, sigset_t *oldset)</span>
+</span>{
+    <span class="hljs-keyword">siginfo_t</span> info;
+    <span class="hljs-keyword">struct</span> k_sigaction *ka;
+
+    <span class="hljs-keyword">if</span> ((regs-&gt;xcs &amp; <span class="hljs-number">3</span>) != <span class="hljs-number">3</span>)
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">if</span> (!oldset)
+        oldset = &amp;current-&gt;blocked;
+
+    <span class="hljs-keyword">for</span> (;;) {
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> signr;
+
+        spin_lock_irq(&amp;current-&gt;sigmask_lock);
+        signr = dequeue_signal(&amp;current-&gt;blocked, &amp;info);
+        spin_unlock_irq(&amp;current-&gt;sigmask_lock);
+
+        <span class="hljs-keyword">if</span> (!signr)
+            <span class="hljs-keyword">break</span>;
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x4E3B;&#x8981;&#x903B;&#x8F91;&#x662F;&#x901A;&#x8FC7; <code>dequeue_signal()</code> &#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5230;&#x8FDB;&#x7A0B;&#x63A5;&#x6536;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4FE1;&#x53F7;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8DF3;&#x51FA;&#x5FAA;&#x73AF;&#x3002;&#x6211;&#x4EEC;&#x63A5;&#x7740;&#x6765;&#x5206;&#x6790;&#xFF1A;</p>
+<pre><code class="lang-cpp">        ka = &amp;current-&gt;sig-&gt;action[signr<span class="hljs-number">-1</span>];
+        <span class="hljs-keyword">if</span> (ka-&gt;sa.sa_handler == SIG_IGN) {
+            <span class="hljs-keyword">if</span> (signr != SIGCHLD)
+                <span class="hljs-keyword">continue</span>;
+            <span class="hljs-comment">/* Check for SIGCHLD: it&apos;s special.  */</span>
+            <span class="hljs-keyword">while</span> (sys_wait4(<span class="hljs-number">-1</span>, <span class="hljs-literal">NULL</span>, WNOHANG, <span class="hljs-literal">NULL</span>) &gt; <span class="hljs-number">0</span>)
+                <span class="hljs-comment">/* nothing */</span>;
+            <span class="hljs-keyword">continue</span>;
+        }
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x9996;&#x5148;&#x83B7;&#x53D6;&#x5230;&#x4FE1;&#x53F7;&#x5BF9;&#x5E94;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x6B64;&#x4FE1;&#x53F7;&#x7684;&#x5904;&#x7406;&#x662F;&#x5FFD;&#x7565;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x76F4;&#x63A5;&#x8DF3;&#x8FC7;&#x3002;</p>
+<pre><code class="lang-cpp">        <span class="hljs-keyword">if</span> (ka-&gt;sa.sa_handler == SIG_DFL) {
+            <span class="hljs-keyword">int</span> exit_code = signr;
+
+            <span class="hljs-comment">/* Init gets no signals it doesn&apos;t want.  */</span>
+            <span class="hljs-keyword">if</span> (current-&gt;pid == <span class="hljs-number">1</span>)
+                <span class="hljs-keyword">continue</span>;
+
+            <span class="hljs-keyword">switch</span> (signr) {
+            <span class="hljs-keyword">case</span> SIGCONT: <span class="hljs-keyword">case</span> SIGCHLD: <span class="hljs-keyword">case</span> SIGWINCH:
+                <span class="hljs-keyword">continue</span>;
+
+            <span class="hljs-keyword">case</span> SIGTSTP: <span class="hljs-keyword">case</span> SIGTTIN: <span class="hljs-keyword">case</span> SIGTTOU:
+                <span class="hljs-keyword">if</span> (is_orphaned_pgrp(current-&gt;pgrp))
+                    <span class="hljs-keyword">continue</span>;
+                <span class="hljs-comment">/* FALLTHRU */</span>
+
+            <span class="hljs-keyword">case</span> SIGSTOP:
+                current-&gt;state = TASK_STOPPED;
+                current-&gt;exit_code = signr;
+                <span class="hljs-keyword">if</span> (!(current-&gt;p_pptr-&gt;sig-&gt;action[SIGCHLD<span class="hljs-number">-1</span>].sa.sa_flags &amp; SA_NOCLDSTOP))
+                    notify_parent(current, SIGCHLD);
+                schedule();
+                <span class="hljs-keyword">continue</span>;
+
+            <span class="hljs-keyword">case</span> SIGQUIT: <span class="hljs-keyword">case</span> SIGILL: <span class="hljs-keyword">case</span> SIGTRAP:
+            <span class="hljs-keyword">case</span> SIGABRT: <span class="hljs-keyword">case</span> SIGFPE: <span class="hljs-keyword">case</span> SIGSEGV:
+            <span class="hljs-keyword">case</span> SIGBUS: <span class="hljs-keyword">case</span> SIGSYS: <span class="hljs-keyword">case</span> SIGXCPU: <span class="hljs-keyword">case</span> SIGXFSZ:
+                <span class="hljs-keyword">if</span> (do_coredump(signr, regs))
+                    exit_code |= <span class="hljs-number">0x80</span>;
+                <span class="hljs-comment">/* FALLTHRU */</span>
+
+            <span class="hljs-keyword">default</span>:
+                sigaddset(&amp;current-&gt;pending.signal, signr);
+                recalc_sigpending(current);
+                current-&gt;flags |= PF_SIGNALED;
+                do_exit(exit_code);
+                <span class="hljs-comment">/* NOTREACHED */</span>
+            }
+        }
+        ...
+        handle_signal(signr, ka, &amp;info, oldset, regs);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    }
+    ...
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x8868;&#x793A;&#xFF0C;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E3A;&#x9ED8;&#x8BA4;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x7684;&#x9ED8;&#x8BA4;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x53BB;&#x5904;&#x7406;&#x4FE1;&#x53F7;&#xFF0C;&#x6BD4;&#x5982; <code>SIGSEGV</code> &#x4FE1;&#x53F7;&#x7684;&#x9ED8;&#x8BA4;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x4F7F;&#x7528; <code>do_coredump()</code> &#x51FD;&#x6570;&#x6765;&#x751F;&#x6210;&#x4E00;&#x4E2A; <code>core dump</code> &#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>do_exit()</code> &#x51FD;&#x6570;&#x9000;&#x51FA;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E86;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x901A;&#x8FC7; <code>handle_signal()</code> &#x51FD;&#x6570;&#x53BB;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;<code>handle_signal()</code> &#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span>
+<span class="hljs-title">handle_signal</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> sig, <span class="hljs-keyword">struct</span> k_sigaction *ka,
+          siginfo_t *info, sigset_t *oldset, <span class="hljs-keyword">struct</span> pt_regs * regs)</span>
+</span>{
+    ...
+    <span class="hljs-keyword">if</span> (ka-&gt;sa.sa_flags &amp; SA_SIGINFO)
+        setup_rt_frame(sig, ka, info, oldset, regs);
+    <span class="hljs-keyword">else</span>
+        setup_frame(sig, ka, oldset, regs);
+
+    <span class="hljs-keyword">if</span> (ka-&gt;sa.sa_flags &amp; SA_ONESHOT)
+        ka-&gt;sa.sa_handler = SIG_DFL;
+
+    <span class="hljs-keyword">if</span> (!(ka-&gt;sa.sa_flags &amp; SA_NODEFER)) {
+        spin_lock_irq(&amp;current-&gt;sigmask_lock);
+        sigorsets(&amp;current-&gt;blocked,&amp;current-&gt;blocked,&amp;ka-&gt;sa.sa_mask);
+        sigaddset(&amp;current-&gt;blocked,sig);
+        recalc_sigpending(current);
+        spin_unlock_irq(&amp;current-&gt;sigmask_lock);
+    }
+}
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x662F;&#x7531;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x5728;&#x7528;&#x6237;&#x6001;&#x7684;&#x3002;&#x800C;&#x4ECE;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x8FD4;&#x56DE;&#x5230;&#x7528;&#x6237;&#x6001;&#x524D;&#x8FD8;&#x662F;&#x5C5E;&#x4E8E;&#x5185;&#x6838;&#x6001;&#xFF0C;CPU&#x662F;&#x7981;&#x6B62;&#x5185;&#x6838;&#x6001;&#x6267;&#x884C;&#x7528;&#x6237;&#x6001;&#x4EE3;&#x7801;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x600E;&#x4E48;&#x529E;&#xFF1F;</p>
+<p>&#x7B54;&#x6848;&#x5148;&#x8FD4;&#x56DE;&#x5230;&#x7528;&#x6237;&#x6001;&#x6267;&#x884C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x6267;&#x884C;&#x5B8C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x540E;&#x518D;&#x8FD4;&#x56DE;&#x5230;&#x5185;&#x6838;&#x6001;&#xFF0C;&#x518D;&#x5728;&#x5185;&#x6838;&#x6001;&#x5B8C;&#x6210;&#x6536;&#x5C3E;&#x5DE5;&#x4F5C;&#x3002;&#x542C;&#x8D77;&#x6765;&#x6709;&#x70B9;&#x7ED5;&#xFF0C;&#x4E8B;&#x5B9E;&#x4E5F;&#x7684;&#x786E;&#x662F;&#x8FD9;&#x6837;&#x3002;&#x4E0B;&#x9762;&#x901A;&#x8FC7;&#x4E00;&#x526F;&#x56FE;&#x7247;&#x6765;&#x76F4;&#x89C2;&#x7684;&#x5C55;&#x793A;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#xFF08;&#x56FE;&#x7247;&#x6765;&#x6E90;&#x7F51;&#x7EDC;&#xFF09;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/signal1.png" alt="signal"></p>
+<p>&#x4E3A;&#x4E86;&#x8FBE;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x7684;&#xFF0C;Linux&#x7ECF;&#x5386;&#x4E86;&#x4E00;&#x4E2A;&#x5341;&#x5206;&#x5D0E;&#x5C96;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;&#x4ECE;&#x5185;&#x6838;&#x6001;&#x8FD4;&#x56DE;&#x5230;&#x7528;&#x6237;&#x6001;&#x65F6;&#xFF0C;CPU&#x8981;&#x4ECE;&#x5185;&#x6838;&#x6808;&#x4E2D;&#x627E;&#x5230;&#x8FD4;&#x56DE;&#x5230;&#x7528;&#x6237;&#x6001;&#x7684;&#x5730;&#x5740;&#xFF08;&#x5C31;&#x662F;&#x8C03;&#x7528;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x4E0B;&#x4E00;&#x6761;&#x4EE3;&#x7801;&#x6307;&#x4EE4;&#x5730;&#x5740;&#xFF09;&#xFF0C;Linux&#x4E3A;&#x4E86;&#x5148;&#x8BA9;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x9700;&#x8981;&#x628A;&#x8FD9;&#x4E2A;&#x8FD4;&#x56DE;&#x5730;&#x5740;&#x4FEE;&#x6539;&#x4E3A;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x7684;&#x5165;&#x53E3;&#xFF0C;&#x8FD9;&#x6837;&#x5F53;&#x4ECE;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x8FD4;&#x56DE;&#x5230;&#x7528;&#x6237;&#x6001;&#x65F6;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4E86;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;<code>handle_signal()</code> &#x8C03;&#x7528;&#x4E86; <code>setup_frame()</code> &#x51FD;&#x6570;&#x6765;&#x6784;&#x5EFA;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x7684;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#xFF08;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4FEE;&#x6539;&#x5185;&#x6838;&#x6808;&#x548C;&#x7528;&#x6237;&#x6808;&#x76F8;&#x5E94;&#x7684;&#x6570;&#x636E;&#x6765;&#x5B8C;&#x6210;&#xFF09;&#x3002;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x770B;&#x5185;&#x6838;&#x6808;&#x7684;&#x5185;&#x5B58;&#x5E03;&#x5C40;&#x56FE;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/signal-kernel-stack.png" alt="signal-kernel-stack"></p>
+<p>&#x56FE;&#x4E2D;&#x7684; <code>eip</code> &#x5C31;&#x662F;&#x5185;&#x6838;&#x6001;&#x8FD4;&#x56DE;&#x5230;&#x7528;&#x6237;&#x6001;&#x540E;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x628A; <code>eip</code> &#x6539;&#x6210;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x7684;&#x5730;&#x5740;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x5185;&#x6838;&#x6001;&#x8FD4;&#x56DE;&#x5230;&#x7528;&#x6237;&#x6001;&#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4E86;&#x3002;&#x6211;&#x4EEC;&#x770B;&#x770B; <code>setup_frame()</code> &#x51FD;&#x6570;&#x5176;&#x4E2D;&#x6709;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x5C31;&#x662F;&#x4FEE;&#x6539; <code>eip</code> &#x7684;&#x503C;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setup_frame</span><span class="hljs-params">(<span class="hljs-keyword">int</span> sig, <span class="hljs-keyword">struct</span> k_sigaction *ka,
+            sigset_t *<span class="hljs-built_in">set</span>, <span class="hljs-keyword">struct</span> pt_regs * regs)</span>
+</span>{
+    ...
+    regs-&gt;eip = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) ka-&gt;sa.sa_handler; <span class="hljs-comment">// regs&#x662F;&#x5185;&#x6838;&#x6808;&#x4E2D;&#x4FDD;&#x5B58;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x96C6;&#x5408;</span>
+    ...
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x5728;&#x5185;&#x6838;&#x6001;&#x8FD4;&#x56DE;&#x5230;&#x7528;&#x6237;&#x6001;&#x65F6;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x5F53;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x5B8C;&#x600E;&#x4E48;&#x8FD4;&#x56DE;&#x5230;&#x5185;&#x6838;&#x6001;&#x5462;&#xFF1F;Linux&#x7684;&#x505A;&#x6CD5;&#x5C31;&#x662F;&#x5728;&#x7528;&#x6237;&#x6001;&#x6808;&#x7A7A;&#x95F4;&#x6784;&#x5EFA;&#x4E00;&#x4E2A; <code>Frame&#xFF08;&#x5E27;&#xFF09;</code>&#xFF08;&#x6211;&#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FD9;&#x6837;&#x53EB;&#xFF09;&#xFF0C;&#x6784;&#x5EFA;&#x8FD9;&#x4E2A;&#x5E27;&#x7684;&#x76EE;&#x7684;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x6267;&#x884C;&#x5B8C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x540E;&#x8FD4;&#x56DE;&#x5230;&#x5185;&#x6838;&#x6001;&#xFF0C;&#x5E76;&#x6062;&#x590D;&#x539F;&#x6765;&#x5185;&#x6838;&#x6808;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x8FD4;&#x56DE;&#x5230;&#x5185;&#x6838;&#x6001;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>sigreturn()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x7136;&#x540E;&#x518D; <code>sigreturn()</code> &#x4E2D;&#x6062;&#x590D;&#x539F;&#x6765;&#x5185;&#x6838;&#x6808;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x600E;&#x6837;&#x80FD;&#x5728;&#x6267;&#x884C;&#x5B8C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x540E;&#x8C03;&#x7528; <code>sigreturn()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x5462;&#xFF1F;&#x5176;&#x5B9E;&#x8DDF;&#x524D;&#x9762;&#x4FEE;&#x6539;&#x5185;&#x6838;&#x6808; <code>eip</code> &#x7684;&#x503C;&#x4E00;&#x6837;&#xFF0C;&#x8FD9;&#x91CC;&#x4FEE;&#x6539;&#x7684;&#x662F;&#x7528;&#x6237;&#x6808; <code>eip</code> &#x7684;&#x503C;&#xFF0C;&#x4FEE;&#x6539;&#x540E;&#x8DF3;&#x8F6C;&#x5230;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x5730;&#x65B9;&#xFF08;&#x7528;&#x6237;&#x6808;&#x7684;&#x67D0;&#x4E00;&#x5904;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-asm">popl %eax 
+movl $__NR_sigreturn,%eax 
+int $0x80
+</code></pre>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x8C03;&#x7528;&#x4E86; <code>sigreturn()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x3002;&#x4FEE;&#x6539;&#x7528;&#x6237;&#x6808;&#x7684;&#x4EE3;&#x7801;&#x5728; <code>setup_frame()</code> &#x4E2D;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setup_frame</span><span class="hljs-params">(<span class="hljs-keyword">int</span> sig, <span class="hljs-keyword">struct</span> k_sigaction *ka,
+            sigset_t *<span class="hljs-built_in">set</span>, <span class="hljs-keyword">struct</span> pt_regs * regs)</span>
+</span>{
+    ...
+        err |= __put_user(frame-&gt;retcode, &amp;frame-&gt;pretcode);
+        <span class="hljs-comment">/* This is popl %eax ; movl $,%eax ; int $0x80 */</span>
+        err |= __put_user(<span class="hljs-number">0xb858</span>, (<span class="hljs-keyword">short</span> *)(frame-&gt;retcode+<span class="hljs-number">0</span>));
+        err |= __put_user(__NR_sigreturn, (<span class="hljs-keyword">int</span> *)(frame-&gt;retcode+<span class="hljs-number">2</span>));
+        err |= __put_user(<span class="hljs-number">0x80cd</span>, (<span class="hljs-keyword">short</span> *)(frame-&gt;retcode+<span class="hljs-number">6</span>));
+    ...
+}
+</code></pre>
+<p>&#x8FD9;&#x51E0;&#x884C;&#x4EE3;&#x7801;&#x6BD4;&#x8F83;&#x96BE;&#x61C2;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4FEE;&#x6539;&#x4FE1;&#x53F7;&#x7A0B;&#x5E8F;&#x7A0B;&#x5E8F;&#x8FD4;&#x56DE;&#x540E;&#x8981;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x7684;&#x5730;&#x5740;&#x3002;&#x4FEE;&#x6539;&#x540E;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/signal-user-stack.png" alt="signal-user-stack"></p>
+<p>&#x8FD9;&#x6837;&#x6267;&#x884C;&#x5B8C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x540E;&#x5C31;&#x4F1A;&#x8C03;&#x7528; <code>sigreturn()</code>&#xFF0C;&#x800C; <code>sigreturn()</code> &#x8981;&#x505A;&#x7684;&#x5DE5;&#x4F5C;&#x5C31;&#x662F;&#x6062;&#x590D;&#x539F;&#x6765;&#x5185;&#x6838;&#x6808;&#x7684;&#x5185;&#x5BB9;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B; <code>sigreturn()</code> &#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage <span class="hljs-keyword">int</span> <span class="hljs-title">sys_sigreturn</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> __unused)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> pt_regs *regs = (<span class="hljs-keyword">struct</span> pt_regs *) &amp;__unused;
+    <span class="hljs-keyword">struct</span> sigframe *frame = (<span class="hljs-keyword">struct</span> sigframe *)(regs-&gt;esp - <span class="hljs-number">8</span>);
+    <span class="hljs-keyword">sigset_t</span> <span class="hljs-built_in">set</span>;
+    <span class="hljs-keyword">int</span> eax;
+
+    <span class="hljs-keyword">if</span> (verify_area(VERIFY_READ, frame, <span class="hljs-keyword">sizeof</span>(*frame)))
+        <span class="hljs-keyword">goto</span> badframe;
+    <span class="hljs-keyword">if</span> (__get_user(<span class="hljs-built_in">set</span>.sig[<span class="hljs-number">0</span>], &amp;frame-&gt;sc.oldmask)
+        || (_NSIG_WORDS &gt; <span class="hljs-number">1</span>
+        &amp;&amp; __copy_from_user(&amp;<span class="hljs-built_in">set</span>.sig[<span class="hljs-number">1</span>], &amp;frame-&gt;extramask,
+                    <span class="hljs-keyword">sizeof</span>(frame-&gt;extramask))))
+        <span class="hljs-keyword">goto</span> badframe;
+
+    sigdelsetmask(&amp;<span class="hljs-built_in">set</span>, ~_BLOCKABLE);
+    spin_lock_irq(&amp;current-&gt;sigmask_lock);
+    current-&gt;blocked = <span class="hljs-built_in">set</span>;
+    recalc_sigpending(current);
+    spin_unlock_irq(&amp;current-&gt;sigmask_lock);
+
+    <span class="hljs-keyword">if</span> (restore_sigcontext(regs, &amp;frame-&gt;sc, &amp;eax))
+        <span class="hljs-keyword">goto</span> badframe;
+    <span class="hljs-keyword">return</span> eax;
+
+badframe:
+    force_sig(SIGSEGV, current);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#x8C03;&#x7528; <code>restore_sigcontext()</code> &#x6062;&#x590D;&#x539F;&#x6765;&#x5185;&#x6838;&#x6808;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8981;&#x6062;&#x590D;&#x539F;&#x6765;&#x5185;&#x6838;&#x6808;&#x7684;&#x5185;&#x5BB9;&#x9996;&#x5148;&#x662F;&#x8981;&#x6307;&#x5B9A;&#x539F;&#x6765;&#x5185;&#x6838;&#x6808;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6240;&#x4EE5;&#x5148;&#x8981;&#x4FDD;&#x5B58;&#x539F;&#x6765;&#x5185;&#x6838;&#x6808;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x4FDD;&#x5B58;&#x539F;&#x6765;&#x5185;&#x6838;&#x6808;&#x7684;&#x5185;&#x5BB9;&#x4E5F;&#x662F;&#x5728; <code>setup_frame()</code> &#x51FD;&#x6570;&#x4E2D;&#xFF0C;<code>setup_frame()</code> &#x51FD;&#x6570;&#x628A;&#x539F;&#x6765;&#x5185;&#x6838;&#x6808;&#x7684;&#x5185;&#x5BB9;&#x4FDD;&#x5B58;&#x5230;&#x7528;&#x6237;&#x6808;&#x4E2D;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x6240;&#x8BF4;&#x7684; <code>&#x5E27;</code> &#x4E2D;&#xFF09;&#x3002;<code>restore_sigcontext()</code> &#x51FD;&#x6570;&#x5C31;&#x662F;&#x4ECE;&#x7528;&#x6237;&#x6808;&#x4E2D;&#x8BFB;&#x53D6;&#x539F;&#x6765;&#x5185;&#x6838;&#x6808;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x6062;&#x590D;&#x4E4B;&#x3002;&#x4FDD;&#x5B58;&#x5185;&#x6838;&#x6808;&#x5185;&#x5BB9;&#x4E3B;&#x8981;&#x7531; <code>setup_sigcontext()</code> &#x51FD;&#x6570;&#x5B8C;&#x6210;&#xFF0C;&#x6709;&#x5174;&#x8DA3;&#x53EF;&#x4EE5;&#x67E5;&#x9605;&#x4EE3;&#x7801;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x505A;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#xFF0C;&#x5F53;&#x4ECE; <code>sigreturn()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x8FD4;&#x56DE;&#x65F6;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6309;&#x539F;&#x6765;&#x7684;&#x8DEF;&#x5F84;&#x8FD4;&#x56DE;&#x5230;&#x7528;&#x6237;&#x7A0B;&#x5E8F;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x70B9;&#xFF08;&#x6BD4;&#x5982;&#x8C03;&#x7528;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x4E0B;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#xFF09;&#x3002;</p>
+<h3 id="&#x8BBE;&#x7F6E;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;">&#x8BBE;&#x7F6E;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;</h3>
+<p>&#x6700;&#x540E;&#x6211;&#x4EEC;&#x6765;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x600E;&#x4E48;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>signal()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B; <code>signal()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>
+<span class="hljs-title">sys_signal</span><span class="hljs-params">(<span class="hljs-keyword">int</span> sig, __sighandler_t handler)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> k_sigaction new_sa, old_sa;
+    <span class="hljs-keyword">int</span> ret;
+
+    new_sa.sa.sa_handler = handler;
+    new_sa.sa.sa_flags = SA_ONESHOT | SA_NOMASK;
+
+    ret = do_sigaction(sig, &amp;new_sa, &amp;old_sa);
+
+    <span class="hljs-keyword">return</span> ret ? ret : (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>)old_sa.sa.sa_handler;
+}
+</code></pre>
+<p>&#x4EE3;&#x7801;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x5148;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>struct k_sigaction</code> &#x7ED3;&#x6784;&#xFF0C;&#x628A;&#x5176; <code>sa.sa_handler</code> &#x5B57;&#x6BB5;&#x8BBE;&#x7F6E;&#x4E3A;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;&#x7136;&#x540E;&#x901A;&#x8FC7; <code>do_sigaction()</code> &#x51FD;&#x6570;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span>
+<span class="hljs-title">do_sigaction</span><span class="hljs-params">(<span class="hljs-keyword">int</span> sig, <span class="hljs-keyword">const</span> <span class="hljs-keyword">struct</span> k_sigaction *act, <span class="hljs-keyword">struct</span> k_sigaction *oact)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> k_sigaction *k;
+
+    <span class="hljs-keyword">if</span> (sig &lt; <span class="hljs-number">1</span> || sig &gt; _NSIG ||
+        (act &amp;&amp; (sig == SIGKILL || sig == SIGSTOP)))
+        <span class="hljs-keyword">return</span> -EINVAL;
+
+    k = &amp;current-&gt;sig-&gt;action[sig<span class="hljs-number">-1</span>];
+
+    spin_lock(&amp;current-&gt;sig-&gt;siglock);
+
+    <span class="hljs-keyword">if</span> (oact)
+        *oact = *k;
+
+    <span class="hljs-keyword">if</span> (act) {
+        *k = *act;
+        sigdelsetmask(&amp;k-&gt;sa.sa_mask, sigmask(SIGKILL) | sigmask(SIGSTOP));
+
+        <span class="hljs-keyword">if</span> (k-&gt;sa.sa_handler == SIG_IGN
+            || (k-&gt;sa.sa_handler == SIG_DFL
+            &amp;&amp; (sig == SIGCONT ||
+                sig == SIGCHLD ||
+                sig == SIGWINCH))) {
+            spin_lock_irq(&amp;current-&gt;sigmask_lock);
+            <span class="hljs-keyword">if</span> (rm_sig_from_queue(sig, current))
+                recalc_sigpending(current);
+            spin_unlock_irq(&amp;current-&gt;sigmask_lock);
+        }
+    }
+
+    spin_unlock(&amp;current-&gt;sig-&gt;siglock);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E5F;&#x4E0D;&#x96BE;&#xFF0C;&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x4ECB;&#x7ECD;&#x8FC7;&#xFF0C;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x7ED3;&#x6784;&#x4E2D;&#x6709;&#x4E2A; <code>sig</code> &#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A; <code>struct k_sigaction</code> &#x7ED3;&#x6784;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4FDD;&#x5B58;&#x7740;&#x5BF9;&#x5E94;&#x4FE1;&#x53F7;&#x7684;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x6240;&#x4EE5; <code>do_sigaction()</code> &#x51FD;&#x6570;&#x5C31;&#x662F;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;&#x4EE3;&#x7801; <code>k = &amp;current-&gt;sig-&gt;action[sig-1]</code> &#x5C31;&#x662F;&#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x4FE1;&#x53F7;&#x7684;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;&#x65B0;&#x7684;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x5373;&#x53EF;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="ipc-shm.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 共享内存">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"信号处理机制","level":"1.7.1","depth":2,"next":{"title":"共享内存","level":"1.7.2","depth":2,"path":"ipc-shm.md","ref":"ipc-shm.md","articles":[]},"previous":{"title":"进程间通信","level":"1.7","depth":1,"ref":"","articles":[{"title":"信号处理机制","level":"1.7.1","depth":2,"path":"signal.md","ref":"signal.md","articles":[]},{"title":"共享内存","level":"1.7.2","depth":2,"path":"ipc-shm.md","ref":"ipc-shm.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"signal.md","mtime":"2019-11-18T10:27:14.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T03:48:37.225Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

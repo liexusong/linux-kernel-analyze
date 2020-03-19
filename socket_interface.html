@@ -1,0 +1,964 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Socket接口 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="unix-domain-sockets.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="process-management.html">
+            
+                <a href="process-management.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="process-schedule.html">
+            
+                <a href="process-schedule.html">
+            
+                    
+                    进程调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="concurrency-synchronize.html">
+            
+                <a href="concurrency-synchronize.html">
+            
+                    
+                    并发同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="waitqueue.html">
+            
+                <a href="waitqueue.html">
+            
+                    
+                    等待队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    内存管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="physical-memory-managemen-1.html">
+            
+                <a href="physical-memory-managemen-1.html">
+            
+                    
+                    物理内存管理(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="physical-memory-managemen-2.html">
+            
+                <a href="physical-memory-managemen-2.html">
+            
+                    
+                    物理内存管理(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="physical-memory-managemen-3.html">
+            
+                <a href="physical-memory-managemen-3.html">
+            
+                    
+                    物理内存管理(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="virtual_memory_address_manager.html">
+            
+                <a href="virtual_memory_address_manager.html">
+            
+                    
+                    虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="memory_mmap.html">
+            
+                <a href="memory_mmap.html">
+            
+                    
+                    mmap完全剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="memory_swap.html">
+            
+                <a href="memory_swap.html">
+            
+                    
+                    内存交换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    中断机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="interrupt_hardware.html">
+            
+                <a href="interrupt_hardware.html">
+            
+                    
+                    硬件相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="interrupt_softward.html">
+            
+                <a href="interrupt_softward.html">
+            
+                    
+                    中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    系统调用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="syscall.html">
+            
+                <a href="syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="virtual_file_system.html">
+            
+                <a href="virtual_file_system.html">
+            
+                    
+                    虚拟文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="minix_file_system.html">
+            
+                <a href="minix_file_system.html">
+            
+                    
+                    MINIX文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    进程间通信
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="signal.html">
+            
+                <a href="signal.html">
+            
+                    
+                    信号处理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ipc-shm.html">
+            
+                <a href="ipc-shm.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.8.1" data-path="socket_interface.html">
+            
+                <a href="socket_interface.html">
+            
+                    
+                    Socket接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="unix-domain-sockets.html">
+            
+                <a href="unix-domain-sockets.html">
+            
+                    
+                    Unix Domain Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="kernel-timer.html">
+            
+                <a href="kernel-timer.html">
+            
+                    
+                    定时器实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="multiplexing-io.html">
+            
+                <a href="multiplexing-io.html">
+            
+                    
+                    多路复用I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    docker实现原理之 - namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    2.6+内核分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="epoll-principle.html">
+            
+                <a href="epoll-principle.html">
+            
+                    
+                    Epoll原理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Socket接口</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="socket&#x63A5;&#x53E3;&#x7684;&#x5206;&#x5C42;">Socket&#x63A5;&#x53E3;&#x7684;&#x5206;&#x5C42;</h1>
+<p>Socket&#x7684;&#x82F1;&#x6587;&#x539F;&#x672C;&#x610F;&#x601D;&#x662F; <code>&#x5B54;</code> &#x6216; <code>&#x63D2;&#x5EA7;</code>&#x3002;&#x4F46;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x79D1;&#x5B66;&#x4E2D;&#x901A;&#x5E38;&#x88AB;&#x79F0;&#x4F5C;&#x4E3A; <code>&#x5957;&#x63A5;&#x5B57;</code>&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x76F8;&#x540C;&#x673A;&#x5668;&#x7684;&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x95F4;&#x6216;&#x8005;&#x4E0D;&#x540C;&#x673A;&#x5668;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x3002;Socket&#x7684;&#x4F7F;&#x7528;&#x5F88;&#x591A;&#x7F51;&#x7EDC;&#x7F16;&#x7A0B;&#x7684;&#x4E66;&#x7C4D;&#x90FD;&#x6709;&#x4ECB;&#x7ECD;&#xFF0C;&#x6240;&#x4EE5;&#x672C;&#x6587;&#x4E0D;&#x6253;&#x7B97;&#x4ECB;&#x7ECD;Socket&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x53EA;&#x8BA8;&#x8BBA;Socket&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x5BF9;Socket&#x4E0D;&#x592A;&#x4E86;&#x89E3;&#x7684;&#x540C;&#x5B66;&#x53EF;&#x4EE5;&#x5148;&#x67E5;&#x9605;Socket&#x76F8;&#x5173;&#x7684;&#x8D44;&#x6599;&#x6216;&#x8005;&#x4E66;&#x7C4D;&#x3002;</p>
+<p>&#x5728;Linux&#x5185;&#x6838;&#x4E2D;&#xFF0C;Socket&#x7684;&#x5B9E;&#x73B0;&#x5206;&#x4E3A;&#x4E09;&#x5C42;&#xFF0C;&#x7B2C;&#x4E00;&#x5C42;&#x662F; <code>GLIBC&#x63A5;&#x53E3;&#x5C42;</code>&#xFF0C;&#x7B2C;&#x4E8C;&#x5C42;&#x662F; <code>BSD&#x63A5;&#x53E3;&#x5C42;</code>&#xFF0C;&#x7B2C;&#x4E09;&#x5C42;&#x662F; <code>&#x5177;&#x4F53;&#x7684;&#x534F;&#x8BAE;&#x5C42;</code>&#xFF08;&#x5982;Unix sokcet&#x6216;&#x8005;INET socket&#xFF09;&#x3002;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;
+<img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/socket-layer.jpg" alt="socket layer"></p>
+<p>GLIBC&#x5C42;&#x5728;&#x7528;&#x6237;&#x6001;&#x5B9E;&#x73B0;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x7CFB;&#x5217;&#x7684;socket&#x65CF;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x8BA9;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x3002;BSD&#x5C42;&#x5728;&#x5185;&#x6838;&#x6001;&#x5B9E;&#x73B0;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x8BA9;&#x4E0D;&#x540C;&#x7684;&#x534F;&#x8BAE;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#x540C;&#x4E00;&#x5957;&#x63A5;&#x53E3;&#x6765;&#x8BBF;&#x95EE;&#x800C;&#x521B;&#x9020;&#x7684;&#xFF0C;&#x5982;&#x4E0A;&#x56FE;&#x6240;&#x793A;&#xFF0C; <code>Unix socket</code> &#x548C; <code>Inet socket</code> &#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x63A5;&#x5165; <code>BSD&#x63A5;&#x53E3;&#x5C42;</code> &#x6765;&#x5411;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x76F8;&#x540C;&#x7684;&#x63A5;&#x53E3;&#x3002; <code>&#x5177;&#x4F53;&#x7684;&#x534F;&#x8BAE;&#x5C42;</code> &#x662F;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x7684;&#x534F;&#x8BAE;&#x6216;&#x8005;&#x529F;&#x80FD;&#x800C;&#x5B58;&#x5728;&#x7684;&#xFF0C;&#x5982; <code>Unix socket</code> &#x4E3B;&#x8981;&#x662F;&#x7528;&#x4E8E;&#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;&#xFF0C;<code>Inet socket</code> &#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x7F51;&#x7EDC;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x7B49;&#x3002;</p>
+<h2 id="glibc&#x63A5;&#x53E3;&#x5C42;">GLIBC&#x63A5;&#x53E3;&#x5C42;</h2>
+<p><code>GLIBC&#x63A5;&#x53E3;&#x5C42;</code> &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x63A5;&#x53E3;&#x51FD;&#x6570;&#x4F9B;&#x7528;&#x6237;&#x4F7F;&#x7528;&#xFF08;&#x53EF;&#x4EE5;&#x6210;&#x4E3A; <code>Socket&#x65CF;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</code>&#xFF09;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>socket()</li>
+<li>bind()</li>
+<li>listen()</li>
+<li>accept()</li>
+<li>connect()</li>
+<li>recv()</li>
+<li>send()</li>
+<li>recvfrom()</li>
+<li>sendto()</li>
+<li>...</li>
+</ul>
+<p>&#x4F8B;&#x5982; <code>socket()</code> &#x63A5;&#x53E3;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;socket&#x53E5;&#x67C4;&#xFF0C;&#x800C; <code>bind()</code> &#x51FD;&#x6570;&#x5C06;&#x4E00;&#x4E2A;socket&#x7ED1;&#x5B9A;&#x5230;&#x6307;&#x5B9A;&#x7684;IP&#x548C;&#x7AEF;&#x53E3;&#x4E0A;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x5230;&#x5185;&#x6838;&#x6001;&#x7684;&#x67D0;&#x4E2A;&#x5185;&#x6838;&#x51FD;&#x6570;&#x6765;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x5728;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x4E00;&#x7AE0;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x8FC7;&#x76F8;&#x5173;&#x7684;&#x539F;&#x7406;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x53EA;&#x4F1A;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528;&#x54EA;&#x4E9B;&#x5185;&#x6838;&#x51FD;&#x6570;&#x3002;</p>
+<h3 id="glibc&#x5C42;&#x5B9E;&#x73B0;&#x539F;&#x7406;">GLIBC&#x5C42;&#x5B9E;&#x73B0;&#x539F;&#x7406;</h3>
+<p>&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x770B; <code>GLIBC</code> &#x662F;&#x600E;&#x4E48;&#x5B9A;&#x4E49;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x5427;&#xFF0C;&#x9996;&#x5148;&#x6765;&#x770B;&#x770B; <code>socket()</code> &#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-asm">#define P(a, b) P2(a, b)
+#define P2(a, b) a##b
+
+    .text
+
+.globl P(__,socket)
+ENTRY (P(__,socket))
+    movl %ebx, %edx
+
+    movl $SYS_ify(socketcall), %eax        // &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x53F7;
+
+    movl $P(SOCKOP_,socket), %ebx          // &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;
+    lea 4(%esp), %ecx                      // &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;
+
+    int $0x80
+
+    movl %edx, %ebx
+
+    cmpl $-125, %eax
+    jae syscall_error
+
+    ret
+</code></pre>
+<p>&#x867D;&#x7136; <code>socket()</code> &#x51FD;&#x6570;&#x662F;&#x4F7F;&#x7528;&#x6C47;&#x7F16;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x5728;&#x7528;&#x6237;&#x6001;&#x5FC5;&#x987B;&#x4F7F;&#x7528; <code>int 0x80</code> &#x4E2D;&#x65AD;&#x6765;&#x89E6;&#x53D1;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#xFF0C;&#x800C;&#x8981;&#x8C03;&#x7528;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7F16;&#x53F7;&#x4FDD;&#x5B58;&#x5728;&#x5BC4;&#x5B58;&#x5668; <code>eax</code> &#x4E2D;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4FDD;&#x5B58;&#x5728; <code>ebx</code> &#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#xFF0C;&#x800C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4FDD;&#x5B58;&#x5728; <code>ecx</code> &#x4E2D;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x8C03;&#x7528; <code>socket()</code> &#x51FD;&#x6570;&#x65F6;&#x4F1A;&#x628A; <code>eax</code> &#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A; <code>sys_socketcall</code>&#xFF0C;&#x628A; <code>ebx</code> &#x7684;&#x503C;&#x4F1A;&#x8BBE;&#x7F6E;&#x4E3A; <code>SOCKOP_socket</code>&#xFF0C;&#x800C;&#x628A; <code>ecx</code> &#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;&#x8C03;&#x7528; <code>socket()</code> &#x51FD;&#x6570;&#x65F6;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x5730;&#x5740;&#x3002;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x4EE3;&#x7801; <code>int 0x80</code> &#x6765;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x4E2D;&#x65AD;&#xFF0C;&#x90A3;&#x4E48;&#x6700;&#x7EC8;&#x8C03;&#x7528;&#x7684;&#x662F; <code>sys_socketcall()</code> &#x5185;&#x6838;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x503C;&#x4E3A; <code>SOCKOP_socket</code>&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x503C;&#x4E3A;&#x8C03;&#x7528; <code>socket()</code> &#x51FD;&#x6570;&#x65F6;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x90A3;&#x4E48; <code>bind()</code> &#x51FD;&#x6570;&#x53C8;&#x662F;&#x600E;&#x4E48;&#x5B9A;&#x4E49;&#x7684;&#x5462;&#xFF1F;&#x56E0;&#x4E3A;&#x6709;&#x4E86; <code>socket()</code> &#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x90A3;&#x4E48;&#x6240;&#x6709; <code>Socket&#x65CF;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</code> &#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6A21;&#x677F;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x4F8B;&#x5982; <code>bind()</code> &#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span>    socket    bind</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;socket.S&gt;</span></span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;<code>bind()</code> &#x51FD;&#x6570;&#x76F4;&#x63A5;&#x5957;&#x7528;&#x4E86; <code>socket()</code> &#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x7684;&#x6A21;&#x677F;&#xFF0C;&#x53EA;&#x662F;&#x628A; <code>socket</code> &#x8FD9;&#x4E2A;&#x540D;&#x5B57;&#x66FF;&#x6362;&#x6210; <code>bind</code> &#x800C;&#x5DF2;&#xFF0C;&#x66FF;&#x6362;&#x4E4B;&#x540E; <code>ebx</code> &#x7684;&#x503C;&#x5C31;&#x4F1A;&#x53D8;&#x6210; <code>SOCKOP_bind</code>&#xFF0C;&#x5176;&#x4ED6;&#x90FD;&#x8DDF; <code>socket()</code> &#x51FD;&#x6570;&#x4E00;&#x6837;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x65F6;&#x4F20;&#x7ED9; <code>sys_socketcall()</code> &#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x53D8;&#x6210; <code>SOCKOP_bind</code>&#x4E86;&#x3002;</p>
+<h2 id="bsd&#x63A5;&#x53E3;&#x5C42;">BSD&#x63A5;&#x53E3;&#x5C42;</h2>
+<p>&#x524D;&#x9762;&#x8BF4;&#x4E86;&#xFF0C;<code>BSD&#x63A5;&#x53E3;&#x5C42;</code> &#x662F;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x63A5;&#x53E3;&#x6765;&#x64CD;&#x4F5C;&#x4E0D;&#x540C;&#x534F;&#x8BAE;&#x800C;&#x521B;&#x9020;&#x7684;&#x3002;&#x6709;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#x7ECF;&#x9A8C;&#x7684;&#x8BFB;&#x8005;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;<code>BSD&#x63A5;&#x53E3;&#x5C42;</code> &#x4F7F;&#x7528;&#x7684;&#x6280;&#x5DE7;&#x4E0E;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684; <code>&#x63A5;&#x53E3;</code> &#x6982;&#x5FF5;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#x3002;&#x4E3B;&#x8981;&#x7684;&#x65B9;&#x5F0F;&#x662F; <code>BSD&#x63A5;&#x53E3;&#x5C42;</code> &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;&#x63A5;&#x53E3;&#xFF0C;<code>&#x5177;&#x4F53;&#x7684;&#x534F;&#x8BAE;&#x5C42;</code> &#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#x8FD9;&#x4E9B;&#x63A5;&#x53E3;&#x624D;&#x80FD;&#x63A5;&#x5165;&#x5230; <code>BSD&#x63A5;&#x53E3;&#x5C42;</code>&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x8FD9;&#x79CD;&#x673A;&#x5236;&#xFF0C;Linux&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A; <code>struct socket</code> &#x7684;&#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x6BCF;&#x4E2A;socket&#x90FD;&#x4E0E;&#x4E00;&#x4E2A; <code>struct socket</code> &#x7684;&#x7ED3;&#x6784;&#x5BF9;&#x5E94;&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> socket
+{
+    socket_state          state;
+
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>         flags;
+    <span class="hljs-keyword">struct</span> proto_ops     *ops;
+    <span class="hljs-keyword">struct</span> inode         *inode;
+    <span class="hljs-keyword">struct</span> fasync_struct *fasync_list;
+    <span class="hljs-keyword">struct</span> file          *file;
+    <span class="hljs-keyword">struct</span> sock          *sk;
+    <span class="hljs-keyword">wait_queue_head_t</span>    wait;
+
+    <span class="hljs-keyword">short</span>                type;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span>        passcred;
+};
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x60F3;&#x8C61;&#x6210;&#x94A9;&#x5B50;&#xFF0C;&#x8981;&#x5728;&#x4E0A;&#x9762;&#x6302;&#x4EC0;&#x4E48;&#x7531;&#x7528;&#x6237;&#x81EA;&#x5DF1;&#x51B3;&#x5B9A;&#x3002;&#x5176;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x5B57;&#x6BB5;&#x662F; <code>ops</code> &#x548C; <code>sk</code>&#x3002;<code>ops</code> &#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x4E3A; <code>struct proto_ops</code>&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x64CD;&#x4F5C;socket&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x800C; <code>sk</code> &#x5B57;&#x6BB5;&#x7684;&#x7C7B;&#x578B;&#x4E3A; <code>struct sock</code>&#xFF0C; &#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x5177;&#x4F53;&#x534F;&#x8BAE;&#x6240;&#x64CD;&#x4F5C;&#x7684;&#x771F;&#x5B9E;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x770B; <code>struct proto_ops</code> &#x7ED3;&#x6784;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> proto_ops {
+  <span class="hljs-keyword">int</span>   family;
+
+  <span class="hljs-keyword">int</span>   (*release)(<span class="hljs-keyword">struct</span> socket *sock);
+  <span class="hljs-keyword">int</span>   (*bind)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">struct</span> sockaddr *umyaddr,
+                <span class="hljs-keyword">int</span> sockaddr_len);
+  <span class="hljs-keyword">int</span>   (*connect)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">struct</span> sockaddr *uservaddr,
+             <span class="hljs-keyword">int</span> sockaddr_len, <span class="hljs-keyword">int</span> flags);
+  <span class="hljs-keyword">int</span>   (*socketpair)(<span class="hljs-keyword">struct</span> socket *sock1, <span class="hljs-keyword">struct</span> socket *sock2);
+  <span class="hljs-keyword">int</span>   (*accept)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">struct</span> socket *newsock,
+                  <span class="hljs-keyword">int</span> flags);
+  <span class="hljs-keyword">int</span>   (*getname)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">struct</span> sockaddr *uaddr,
+                   <span class="hljs-keyword">int</span> *usockaddr_len, <span class="hljs-keyword">int</span> peer);
+  <span class="hljs-function"><span class="hljs-keyword">unsigned</span> <span class="hljs-title">int</span> <span class="hljs-params">(*poll)</span>  <span class="hljs-params">(<span class="hljs-keyword">struct</span> file *file, <span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">struct</span> poll_table_struct *wait)</span></span>;
+  <span class="hljs-keyword">int</span>   (*ioctl)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> cmd,
+                 <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> arg);
+  <span class="hljs-keyword">int</span>   (*listen)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">int</span> len);
+  <span class="hljs-keyword">int</span>   (*shutdown)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">int</span> flags);
+  <span class="hljs-keyword">int</span>   (*setsockopt)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">int</span> level, <span class="hljs-keyword">int</span> optname,
+                      <span class="hljs-keyword">char</span> *optval, <span class="hljs-keyword">int</span> optlen);
+  <span class="hljs-keyword">int</span>   (*getsockopt)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">int</span> level, <span class="hljs-keyword">int</span> optname,
+                      <span class="hljs-keyword">char</span> *optval, <span class="hljs-keyword">int</span> *optlen);
+  <span class="hljs-keyword">int</span>   (*sendmsg)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">struct</span> msghdr *m, <span class="hljs-keyword">int</span> total_len, <span class="hljs-keyword">struct</span> scm_cookie *scm);
+  <span class="hljs-keyword">int</span>   (*recvmsg)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">struct</span> msghdr *m, <span class="hljs-keyword">int</span> total_len, <span class="hljs-keyword">int</span> flags, <span class="hljs-keyword">struct</span> scm_cookie *scm);
+  <span class="hljs-keyword">int</span>   (*mmap)(<span class="hljs-keyword">struct</span> file *file, <span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">struct</span> vm_area_struct * vma);
+};
+</code></pre>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;<code>struct proto_ops</code> &#x7ED3;&#x6784;&#x4E3B;&#x8981;&#x662F;&#x5B9A;&#x4E49;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x51FD;&#x6570;&#x63A5;&#x53E3;&#xFF0C;&#x6BCF;&#x4E2A; <code>&#x5177;&#x4F53;&#x7684;&#x534F;&#x8BAE;&#x5C42;</code> &#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; <code>struct proto_ops</code> &#x7ED3;&#x6784;&#x6302;&#x8F7D;&#x5230; <code>struct socket</code> &#x7ED3;&#x6784;&#x7684; <code>ops</code> &#x5B57;&#x6BB5;&#x4E0A;&#x3002;&#x6240;&#x4EE5;&#x5F53;&#x7528;&#x6237;&#x8C03;&#x7528; <code>bind()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x65F6;&#x771F;&#x5B9E;&#x8C03;&#x7528;&#x7684;&#x662F;&#xFF1A;<code>socket-&gt;ops-&gt;bind()</code>&#x3002;</p>
+<h3 id="syssocketcall&#x51FD;&#x6570;">sys_socketcall()&#x51FD;&#x6570;</h3>
+<p>&#x524D;&#x9762;&#x8BF4;&#x8FC7;&#xFF0C;&#x6240;&#x6709;&#x7684; <code>Socket&#x65CF;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</code> &#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x8C03;&#x7528; <code>sys_socketcall()</code> &#x51FD;&#x6570;&#x6765;&#x5904;&#x7406;&#x7528;&#x6237;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B; <code>sys_socketcall()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage <span class="hljs-keyword">long</span> <span class="hljs-title">sys_socketcall</span><span class="hljs-params">(<span class="hljs-keyword">int</span> call, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> *args)</span>
+</span>{
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> a[<span class="hljs-number">6</span>];
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> a0,a1;
+    <span class="hljs-keyword">int</span> err;
+
+    <span class="hljs-keyword">if</span>(call&lt;<span class="hljs-number">1</span>||call&gt;SYS_RECVMSG)
+        <span class="hljs-keyword">return</span> -EINVAL;
+
+    <span class="hljs-comment">/* copy_from_user should be SMP safe. */</span>
+    <span class="hljs-keyword">if</span> (copy_from_user(a, args, nargs[call]))
+        <span class="hljs-keyword">return</span> -EFAULT;
+
+    a0=a[<span class="hljs-number">0</span>];
+    a1=a[<span class="hljs-number">1</span>];
+
+    <span class="hljs-keyword">switch</span>(call) 
+    {
+        <span class="hljs-keyword">case</span> SYS_SOCKET:
+            err = sys_socket(a0,a1,a[<span class="hljs-number">2</span>]);
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> SYS_BIND:
+            err = sys_bind(a0,(<span class="hljs-keyword">struct</span> sockaddr *)a1, a[<span class="hljs-number">2</span>]);
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> SYS_CONNECT:
+            err = sys_connect(a0, (<span class="hljs-keyword">struct</span> sockaddr *)a1, a[<span class="hljs-number">2</span>]);
+            <span class="hljs-keyword">break</span>;
+        ...
+    }
+    <span class="hljs-keyword">return</span> err;
+}
+</code></pre>
+<p>&#x4ECE; <code>sys_socketcall()</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x6839;&#x636E;&#x53C2;&#x6570; <code>call</code> &#x4E0D;&#x540C;&#x7684;&#x503C;&#x4F1A;&#x8C03;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x5185;&#x6838;&#x51FD;&#x6570;&#xFF0C;&#x8B6C;&#x5982; <code>call</code> &#x7684;&#x503C;&#x4E3A; <code>SYS_SOCKET</code> &#x65F6;&#x4F1A;&#x8C03;&#x7528; <code>sys_socket()</code> &#x51FD;&#x6570;&#xFF0C;&#x800C; <code>call</code> &#x7684;&#x503C;&#x4E3A; <code>SYS_BIND</code> &#x65F6;&#x4F1A;&#x8C03;&#x7528; <code>sys_bind()</code> &#x51FD;&#x6570;&#x3002;&#x800C;&#x53C2;&#x6570; <code>args</code> &#x5C31;&#x662F;&#x5728;&#x7528;&#x6237;&#x6001;&#x7ED9; <code>Socket&#x65CF;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</code> &#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;&#x5730;&#x5740;&#xFF0C;Linux&#x5185;&#x6838;&#x4F1A;&#x5148;&#x4F7F;&#x7528; <code>copy_from_user()</code> &#x51FD;&#x6570;&#x628A;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x590D;&#x5236;&#x5230;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x3002;</p>
+<p>&#x524D;&#x9762;&#x8BF4;&#x8FC7;&#xFF0C;&#x5728;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x8C03;&#x7528; <code>socket()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x65F6;&#x4F1A;&#x628A;&#x53C2;&#x6570; <code>call</code> &#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A; <code>SOCKOP_socket</code>&#xFF0C;&#x5B83;&#x7684;&#x503C;&#x8DDF; <code>sys_socketcall()</code> &#x51FD;&#x6570;&#x4E2D; <code>SYS_SOCKET</code> &#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x770B;&#x51FA;&#x7AEF;&#x502A;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// GLIBC &#x7684;&#x5B9A;&#x4E49;</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_socket       1</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_bind         2</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_connect      3</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_listen       4</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_accept       5</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_getsockname  6</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_getpeername  7</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_socketpair   8</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_send         9</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_recv         10</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_sendto       11</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_recvfrom     12</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_shutdown     13</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_setsockopt   14</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_getsockopt   15</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_sendmsg      16</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCKOP_recvmsg      17</span>
+
+<span class="hljs-comment">// Linux &#x5185;&#x6838;&#x7684;&#x5B9A;&#x4E49;</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_SOCKET      1       <span class="hljs-comment">/* sys_socket(2)        */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_BIND        2       <span class="hljs-comment">/* sys_bind(2)          */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_CONNECT     3       <span class="hljs-comment">/* sys_connect(2)       */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_LISTEN      4       <span class="hljs-comment">/* sys_listen(2)        */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_ACCEPT      5       <span class="hljs-comment">/* sys_accept(2)        */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_GETSOCKNAME 6       <span class="hljs-comment">/* sys_getsockname(2)   */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_GETPEERNAME 7       <span class="hljs-comment">/* sys_getpeername(2)   */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_SOCKETPAIR  8       <span class="hljs-comment">/* sys_socketpair(2)    */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_SEND        9       <span class="hljs-comment">/* sys_send(2)          */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_RECV        10      <span class="hljs-comment">/* sys_recv(2)          */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_SENDTO      11      <span class="hljs-comment">/* sys_sendto(2)        */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_RECVFROM    12      <span class="hljs-comment">/* sys_recvfrom(2)      */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_SHUTDOWN    13      <span class="hljs-comment">/* sys_shutdown(2)      */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_SETSOCKOPT  14      <span class="hljs-comment">/* sys_setsockopt(2)    */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_GETSOCKOPT  15      <span class="hljs-comment">/* sys_getsockopt(2)    */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_SENDMSG     16      <span class="hljs-comment">/* sys_sendmsg(2)       */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SYS_RECVMSG     17      <span class="hljs-comment">/* sys_recvmsg(2)       */</span></span>
+</code></pre>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x5B9A;&#x4E49;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x5728; GLIBC &#x4E2D;&#x7684;&#x5B9A;&#x4E49;&#x8DDF; Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x5B9A;&#x4E49;&#x662F;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x7684;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x4ECE;&#x4E2D;&#x5F97;&#x5230;&#xFF0C;&#x5F53;&#x5728;&#x7528;&#x6237;&#x6001;&#x8C03;&#x7528; <code>socket()</code> &#x51FD;&#x6570;&#x65F6;&#x5B9E;&#x9645;&#x8C03;&#x7528;&#x7684;&#x662F; <code>sys_socket()</code> &#x5185;&#x6838;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4ED6;&#x7684; <code>Socket&#x65CF;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</code> &#x9053;&#x7406;&#x4E0E; <code>socket()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x4E00;&#x81F4;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x4E00;&#x5E45;&#x56FE;&#x6765;&#x5C55;&#x793A; <code>Socket&#x65CF;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</code> &#x7684;&#x539F;&#x7406;&#xFF1A;
+<img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/socket_interface.jpg" alt="socket interfaces"></p>
+<h3 id="syssocket&#x51FD;&#x6570;">sys_socket()&#x51FD;&#x6570;</h3>
+<p><code>sys_socket()</code> &#x51FD;&#x6570;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; socket &#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x3002;&#x5176;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage <span class="hljs-keyword">long</span> <span class="hljs-title">sys_socket</span><span class="hljs-params">(<span class="hljs-keyword">int</span> family, <span class="hljs-keyword">int</span> type, <span class="hljs-keyword">int</span> protocol)</span>
+</span>{
+    <span class="hljs-keyword">int</span> retval;
+    <span class="hljs-keyword">struct</span> socket *sock;
+
+    retval = sock_create(family, type, protocol, &amp;sock);
+    <span class="hljs-keyword">if</span> (retval &lt; <span class="hljs-number">0</span>)
+        <span class="hljs-keyword">goto</span> out;
+
+    retval = sock_map_fd(sock);
+    <span class="hljs-keyword">if</span> (retval &lt; <span class="hljs-number">0</span>)
+        <span class="hljs-keyword">goto</span> out_release;
+
+out:
+    <span class="hljs-keyword">return</span> retval;
+
+out_release:
+    sock_release(sock);
+    <span class="hljs-keyword">return</span> retval;
+}
+</code></pre>
+<p>&#x53C2;&#x6570; <code>family</code> &#x6307;&#x5B9A; <code>&#x5177;&#x4F53;&#x534F;&#x8BAE;&#x5C42;</code>&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x7684;&#x534F;&#x8BAE;&#x975E;&#x5E38;&#x591A;&#xFF0C;&#x4E0B;&#x9762;&#x5217;&#x4E3E;&#x51E0;&#x4E2A;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> AF_UNIX     1   <span class="hljs-comment">/* Unix domain sockets      */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> AF_LOCAL    1   <span class="hljs-comment">/* POSIX name for AF_UNIX   */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> AF_INET     2   <span class="hljs-comment">/* Internet IP Protocol     */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> AF_AX25     3   <span class="hljs-comment">/* Amateur Radio AX.25      */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> AF_IPX      4   <span class="hljs-comment">/* Novell IPX               */</span></span>
+...
+</code></pre>
+<p>&#x4F8B;&#x5982; <code>AF_UNIX</code> &#x6307;&#x5B9A;&#x7684;&#x662F; <code>Unix socket</code>&#xFF0C;<code>AF_INET</code> &#x6307;&#x5B9A;&#x7684;&#x662F; <code>&#x4EE5;&#x592A;&#x7F51;&#x534F;&#x8BAE;</code> &#x7B49;&#x3002;&#x800C;&#x53C2;&#x6570; <code>type</code> &#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6709;&#x4E00;&#x4E0B;&#x51E0;&#x79CD;&#x9009;&#x62E9;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCK_STREAM 1       <span class="hljs-comment">/* stream (connection) socket   */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCK_DGRAM  2       <span class="hljs-comment">/* datagram (conn.less) socket  */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCK_RAW    3       <span class="hljs-comment">/* raw socket                   */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCK_RDM    4       <span class="hljs-comment">/* reliably-delivered message   */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCK_SEQPACKET  5   <span class="hljs-comment">/* sequential packet socket     */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SOCK_PACKET 10      <span class="hljs-comment">/* linux specific way of        */</span></span>
+</code></pre>
+<p>&#x4F8B;&#x5982; <code>SOCK_STREAM</code> &#x7C7B;&#x578B;&#x6307;&#x5B9A;&#x7684;&#x662F;&#x6D41;&#x65B9;&#x5F0F;&#xFF0C;&#x800C; <code>SOCK_DGRAM</code> &#x7C7B;&#x578B;&#x6307;&#x5B9A;&#x7684;&#x662F;&#x6570;&#x636E;&#x62A5;&#x65B9;&#x5F0F;&#x7B49;&#x3002;&#x6700;&#x540E;&#x4E00;&#x4E2A; <code>protocol</code> &#x53C2;&#x6570;&#x770B;&#x8D77;&#x6765;&#x4E5F;&#x662F;&#x534F;&#x8BAE;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x8DDF; <code>family</code> &#x597D;&#x50CF;&#x91CD;&#x590D;&#x4E86;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A; <code>family</code> &#x6240;&#x6307;&#x5B9A;&#x7684;&#x534F;&#x8BAE;&#x504F;&#x5411;&#x4E8E;&#x7269;&#x7406;&#x4ECB;&#x8D28;&#xFF0C;&#x5982; <code>Unix socket</code> &#x662F;&#x7528;&#x4E8E;&#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#xFF0C;&#x800C; <code>Inet socket</code> &#x662F;&#x7528;&#x4E8E;&#x4EE5;&#x592A;&#x7F51;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x7684;&#x3002;&#x800C; <code>protocol</code> &#x6240;&#x6307;&#x5B9A;&#x7684;&#x534F;&#x8BAE;&#x504F;&#x5411;&#x4E8E;&#x903B;&#x8F91;&#x4E0A;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x5982; <code>TCP</code>&#x3001;<code>UDP</code> &#x7B49;&#x3002;&#x4E3E;&#x4E2A;&#x6817;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x628A; <code>family</code> &#x6BD4;&#x4F5C;&#x662F;&#x4E0D;&#x540C;&#x4EA4;&#x901A;&#x5DE5;&#x5177;&#xFF08;&#x98DE;&#x673A;&#x3001;&#x6C7D;&#x8F66;&#x3001;&#x706B;&#x8F66;&#x7B49;&#xFF09;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48; <code>protocol</code> &#x5C31;&#x662F;&#x5927;&#x5DF4;&#x3001;&#x7684;&#x58EB;&#x548C;&#x5C0F;&#x8F66;&#x3002;</p>
+<p><code>sys_socket()</code> &#x51FD;&#x6570;&#x9996;&#x5148;&#x8C03;&#x7528; <code>sock_create()</code> &#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>struct socket</code> &#x7ED3;&#x6784;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>sock_map_fd()</code> &#x51FD;&#x6570;&#x628A;&#x6B64; <code>struct  socket</code> &#x7ED3;&#x6784;&#x4E0E;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x5173;&#x8054;&#x8D77;&#x6765;&#xFF0C;&#x6700;&#x540E;&#x628A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x8FD4;&#x56DE;&#x7ED9;&#x7528;&#x6237;&#x3002;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x770B; <code>sock_create()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sock_create</span><span class="hljs-params">(<span class="hljs-keyword">int</span> family, <span class="hljs-keyword">int</span> type, <span class="hljs-keyword">int</span> protocol, <span class="hljs-keyword">struct</span> socket **res)</span>
+</span>{
+    <span class="hljs-keyword">int</span> i;
+    <span class="hljs-keyword">struct</span> socket *sock;
+
+    ...
+    net_family_read_lock();
+    ...
+
+    <span class="hljs-keyword">if</span> (!(sock = sock_alloc())) {
+        printk(KERN_WARNING <span class="hljs-string">&quot;socket: no more sockets\n&quot;</span>);
+        i = -ENFILE;
+        <span class="hljs-keyword">goto</span> out;
+    }
+
+    sock-&gt;type  = type;
+
+    <span class="hljs-keyword">if</span> ((i = net_families[family]-&gt;create(sock, protocol)) &lt; <span class="hljs-number">0</span>)  {
+        sock_release(sock);
+        <span class="hljs-keyword">goto</span> out;
+    }
+
+    *res = sock;
+
+out:
+    net_family_read_unlock();
+    <span class="hljs-keyword">return</span> i;
+}
+</code></pre>
+<p><code>sock_create()</code> &#x51FD;&#x6570;&#x9996;&#x5148;&#x8C03;&#x7528; <code>sock_alloc()</code> &#x7533;&#x8BF7;&#x4E00;&#x4E2A; <code>struct socket</code> &#x7ED3;&#x6784;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x534F;&#x8BAE;&#x65CF;&#x7684; <code>create()</code> &#x51FD;&#x6570;&#xFF08;<code>net_families[family]-&gt;create()</code>&#xFF09;&#x8FDB;&#x884C;&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x521B;&#x5EFA;&#x529F;&#x80FD;&#x3002;<code>net_families</code> &#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x4E3A; <code>struct net_proto_family</code>&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> net_proto_family {
+    <span class="hljs-keyword">int</span> family;
+    <span class="hljs-keyword">int</span> (*create)(<span class="hljs-keyword">struct</span> socket *sock, <span class="hljs-keyword">int</span> protocol);
+    ...
+};
+</code></pre>
+<p><code>family</code> &#x5B57;&#x6BB5;&#x5BF9;&#x5E94;&#x7684;&#x5C31;&#x662F;&#x5177;&#x4F53;&#x7684;&#x534F;&#x8BAE;&#x65CF;&#xFF0C;&#x800C; <code>create</code> &#x5B57;&#x6BB5;&#x6307;&#x5B9A;&#x4E86;&#x5176;&#x521B;&#x5EFA;socket&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x534F;&#x8BAE;&#x65CF;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>sock_register()</code> &#x51FD;&#x6570;&#x5411;&#x7CFB;&#x7EDF;&#x6CE8;&#x518C;&#x5176;&#x521B;&#x5EFA;socket&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x4F8B;&#x5982; <code>Unix socket</code> &#x5C31;&#x5728;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6CE8;&#x518C;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> net_proto_family unix_family_ops = {
+    PF_UNIX,
+    unix_create
+};
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> __<span class="hljs-function">init <span class="hljs-title">af_unix_init</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    ...
+    sock_register(&amp;unix_family_ops);
+    ...
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x6240;&#x4EE5;&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#xFF0C;&#x5BF9;&#x4E8E; <code>Unix socket</code> &#x7684;&#x8BDD;&#xFF0C;<code>net_families[family]-&gt;create()</code> &#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x5B9E;&#x9645;&#x8C03;&#x7528;&#x7684;&#x662F; <code>unix_create()</code> &#x51FD;&#x6570;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="unix-domain-sockets.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Unix Domain Socket">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Socket接口","level":"1.8.1","depth":2,"next":{"title":"Unix Domain Socket","level":"1.8.2","depth":2,"path":"unix-domain-sockets.md","ref":"unix-domain-sockets.md","articles":[]},"previous":{"title":"网络","level":"1.8","depth":1,"ref":"","articles":[{"title":"Socket接口","level":"1.8.1","depth":2,"path":"socket_interface.md","ref":"socket_interface.md","articles":[]},{"title":"Unix Domain Socket","level":"1.8.2","depth":2,"path":"unix-domain-sockets.md","ref":"unix-domain-sockets.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"socket_interface.md","mtime":"2019-11-18T10:27:14.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T03:48:37.225Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

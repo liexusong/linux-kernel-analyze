@@ -1,0 +1,934 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>docker实现原理之 - namespace · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="multiplexing-io.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="process-management.html">
+            
+                <a href="process-management.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="process-schedule.html">
+            
+                <a href="process-schedule.html">
+            
+                    
+                    进程调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="concurrency-synchronize.html">
+            
+                <a href="concurrency-synchronize.html">
+            
+                    
+                    并发同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="waitqueue.html">
+            
+                <a href="waitqueue.html">
+            
+                    
+                    等待队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    内存管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="physical-memory-managemen-1.html">
+            
+                <a href="physical-memory-managemen-1.html">
+            
+                    
+                    物理内存管理(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="physical-memory-managemen-2.html">
+            
+                <a href="physical-memory-managemen-2.html">
+            
+                    
+                    物理内存管理(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="physical-memory-managemen-3.html">
+            
+                <a href="physical-memory-managemen-3.html">
+            
+                    
+                    物理内存管理(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="virtual_memory_address_manager.html">
+            
+                <a href="virtual_memory_address_manager.html">
+            
+                    
+                    虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="memory_mmap.html">
+            
+                <a href="memory_mmap.html">
+            
+                    
+                    mmap完全剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="memory_swap.html">
+            
+                <a href="memory_swap.html">
+            
+                    
+                    内存交换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    中断机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="interrupt_hardware.html">
+            
+                <a href="interrupt_hardware.html">
+            
+                    
+                    硬件相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="interrupt_softward.html">
+            
+                <a href="interrupt_softward.html">
+            
+                    
+                    中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    系统调用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="syscall.html">
+            
+                <a href="syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="virtual_file_system.html">
+            
+                <a href="virtual_file_system.html">
+            
+                    
+                    虚拟文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="minix_file_system.html">
+            
+                <a href="minix_file_system.html">
+            
+                    
+                    MINIX文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    进程间通信
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="signal.html">
+            
+                <a href="signal.html">
+            
+                    
+                    信号处理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ipc-shm.html">
+            
+                <a href="ipc-shm.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="socket_interface.html">
+            
+                <a href="socket_interface.html">
+            
+                    
+                    Socket接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="unix-domain-sockets.html">
+            
+                <a href="unix-domain-sockets.html">
+            
+                    
+                    Unix Domain Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="kernel-timer.html">
+            
+                <a href="kernel-timer.html">
+            
+                    
+                    定时器实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="multiplexing-io.html">
+            
+                <a href="multiplexing-io.html">
+            
+                    
+                    多路复用I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.3" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    docker实现原理之 - namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    2.6+内核分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="epoll-principle.html">
+            
+                <a href="epoll-principle.html">
+            
+                    
+                    Epoll原理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >docker实现原理之 - namespace</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="namespace&#x4ECB;&#x7ECD;">namespace&#x4ECB;&#x7ECD;</h2>
+<p><code>namespace&#xFF08;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF09;</code> &#x662F;Linux&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x79CD;&#x5185;&#x6838;&#x7EA7;&#x522B;&#x73AF;&#x5883;&#x9694;&#x79BB;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5F88;&#x591A;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E5F;&#x6709; namespace &#x8FD9;&#x6837;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4F8B;&#x5982;C++&#xFF0C;Java&#x7B49;&#xFF0C;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x7684; namespace &#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x9879;&#x76EE;&#x4E2D;&#x80FD;&#x591F;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x91CC;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x51FD;&#x6570;&#x540D;&#x6216;&#x8005;&#x7C7B;&#x540D;&#x3002;&#x800C;Linux&#x7684; namespace &#x4E5F;&#x662F;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x8D44;&#x6E90;&#x80FD;&#x591F;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x91CC;&#x6709;&#x76F8;&#x540C;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x8B6C;&#x5982;&#x5728; <code>A&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x6709;&#x4E2A;pid&#x4E3A;1&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x800C;&#x5728; <code>B&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x6709;&#x4E00;&#x4E2A;pid&#x4E3A;1&#x7684;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>&#x6709;&#x4E86; <code>namespace</code> &#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x57FA;&#x672C;&#x7684;&#x5BB9;&#x5668;&#x529F;&#x80FD;&#xFF0C;&#x8457;&#x540D;&#x7684; <code>Docker</code> &#x4E5F;&#x662F;&#x4F7F;&#x7528;&#x4E86; namespace &#x6765;&#x5B9E;&#x73B0;&#x8D44;&#x6E90;&#x9694;&#x79BB;&#x7684;&#x3002;</p>
+<p>Linux&#x652F;&#x6301;6&#x79CD;&#x8D44;&#x6E90;&#x7684; <code>namespace</code>&#xFF0C;&#x5206;&#x522B;&#x4E3A;&#xFF08;<a href="https://lwn.net/Articles/531114/" target="_blank">&#x6587;&#x6863;</a>&#xFF09;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Parameter</th>
+<th>Linux Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mount namespaces</td>
+<td>CLONE_NEWNS</td>
+<td>Linux 2.4.19</td>
+</tr>
+<tr>
+<td>UTS namespaces</td>
+<td>CLONE_NEWUTS</td>
+<td>Linux 2.6.19</td>
+</tr>
+<tr>
+<td>IPC namespaces</td>
+<td>CLONE_NEWIPC</td>
+<td>Linux 2.6.19</td>
+</tr>
+<tr>
+<td>PID namespaces</td>
+<td>CLONE_NEWPID</td>
+<td>Linux 2.6.24</td>
+</tr>
+<tr>
+<td>Network namespaces</td>
+<td>CLONE_NEWNET</td>
+<td>Linux 2.6.24</td>
+</tr>
+<tr>
+<td>User namespaces</td>
+<td>CLONE_NEWUSER</td>
+<td>Linux 2.6.23</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5728;&#x8C03;&#x7528; <code>clone()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x4F20;&#x5165;&#x4EE5;&#x4E0A;&#x7684;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x53C2;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x590D;&#x5236;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;namespace&#x3002;&#x6BD4;&#x5982;&#x4F20;&#x5165; <code>CLONE_NEWPID</code> &#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x5C31;&#x662F;&#x590D;&#x5236; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code>&#xFF0C;&#x5728;&#x65B0;&#x7684; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x91CC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0E;&#x5176;&#x4ED6; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x76F8;&#x540C;&#x7684;pid&#x3002;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _GNU_SOURCE</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sched.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/types.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/wait.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;signal.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;errno.h&gt;</span></span>
+
+<span class="hljs-keyword">char</span> child_stack[<span class="hljs-number">5000</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">child</span><span class="hljs-params">(<span class="hljs-keyword">void</span>* arg)</span>
+</span>{
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Child - %d\n&quot;</span>, getpid());
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Parent - fork child\n&quot;</span>);
+    <span class="hljs-keyword">int</span> pid = clone(child, child_stack+<span class="hljs-number">5000</span>, CLONE_NEWPID, <span class="hljs-literal">NULL</span>);
+    <span class="hljs-keyword">if</span> (pid == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;clone:&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);
+    }
+    waitpid(pid, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Parent - child(%d) exit\n&quot;</span>, pid);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>Parent - fork child
+Parent - child(9054) exit
+Child - 1
+</code></pre><p>&#x4ECE;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x5728;&#x5B50;&#x8FDB;&#x7A0B;&#x7684; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x91CC;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;pid&#x4E3A;1&#xFF0C;&#x4F46;&#x5728;&#x7236;&#x8FDB;&#x7A0B;&#x7684; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x4E2D;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;pid&#x5374;&#x662F;9045&#x3002;</p>
+<h2 id="namespace&#x5B9E;&#x73B0;&#x539F;&#x7406;">namespace&#x5B9E;&#x73B0;&#x539F;&#x7406;</h2>
+<p>&#x4E3A;&#x4E86;&#x8BA9;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x90FD;&#x53EF;&#x4EE5;&#x4ECE;&#x5C5E;&#x4E8E;&#x67D0;&#x4E00;&#x4E2A;namespace&#xFF0C;Linux&#x5185;&#x6838;&#x4E3A;&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A; <code>struct nsproxy</code> &#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> task_struct {
+    ...
+    <span class="hljs-comment">/* namespaces */</span>
+    <span class="hljs-keyword">struct</span> nsproxy *nsproxy;
+    ...
+}
+
+<span class="hljs-keyword">struct</span> nsproxy {
+    <span class="hljs-keyword">atomic_t</span> count;
+    <span class="hljs-keyword">struct</span> uts_namespace  *uts_ns;
+    <span class="hljs-keyword">struct</span> ipc_namespace  *ipc_ns;
+    <span class="hljs-keyword">struct</span> mnt_namespace  *mnt_ns;
+    <span class="hljs-keyword">struct</span> pid_namespace  *pid_ns;
+    <span class="hljs-keyword">struct</span> user_namespace *user_ns;
+    <span class="hljs-keyword">struct</span> net            *net_ns;
+};
+</code></pre>
+<p>&#x4ECE; <code>struct nsproxy</code> &#x7ED3;&#x6784;&#x7684;&#x5B9A;&#x4E49;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;Linux&#x4E3A;&#x6BCF;&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x8D44;&#x6E90;&#x5B9A;&#x4E49;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7ED3;&#x6784;&#x4F53;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x3002;&#x6BD4;&#x5982;&#x5BF9;&#x4E8E; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x5B9A;&#x4E49;&#x4E86; <code>struct pid_namespace</code> &#x7ED3;&#x6784;&#x6765;&#x7BA1;&#x7406; &#x3002;&#x7531;&#x4E8E; namespace &#x6D89;&#x53CA;&#x7684;&#x8D44;&#x6E90;&#x79CD;&#x7C7B;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x6240;&#x4EE5;&#x672C;&#x6587;&#x4E3B;&#x8981;&#x4EE5; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x4F5C;&#x4E3A;&#x5206;&#x6790;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x770B;&#x7BA1;&#x7406; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x7684; <code>struct pid_namespace</code> &#x7ED3;&#x6784;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> pid_namespace {
+    <span class="hljs-keyword">struct</span> kref kref;
+    <span class="hljs-keyword">struct</span> pidmap pidmap[PIDMAP_ENTRIES];
+    <span class="hljs-keyword">int</span> last_pid;
+    <span class="hljs-keyword">struct</span> task_struct *child_reaper;
+    <span class="hljs-keyword">struct</span> kmem_cache *pid_cachep;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> level;
+    <span class="hljs-keyword">struct</span> pid_namespace *parent;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> CONFIG_PROC_FS</span>
+    <span class="hljs-keyword">struct</span> vfsmount *proc_mnt;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+};
+</code></pre>
+<p>&#x56E0;&#x4E3A; <code>struct pid_namespace</code> &#x7ED3;&#x6784;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x4E3A;&#x5F53;&#x524D; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x5206;&#x914D;&#x7A7A;&#x95F2;&#x7684;pid&#xFF0C;&#x6240;&#x4EE5;&#x5B9A;&#x4E49;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF1A;</p>
+<ul>
+<li><code>kref</code> &#x6210;&#x5458;&#x662F;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x5F15;&#x7528;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x7684;&#x8FDB;&#x7A0B;&#x6570;</li>
+<li><code>pidmap</code> &#x6210;&#x5458;&#x7528;&#x4E8E;&#x5FEB;&#x901F;&#x627E;&#x5230;&#x53EF;&#x7528;pid&#x7684;&#x4F4D;&#x56FE;</li>
+<li><code>last_pid</code> &#x6210;&#x5458;&#x662F;&#x8BB0;&#x5F55;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x7684;pid</li>
+<li><code>level</code> &#x6210;&#x5458;&#x8BB0;&#x5F55;&#x5F53;&#x524D; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x6240;&#x5728;&#x7684;&#x5C42;&#x6B21;</li>
+<li><code>parent</code> &#x6210;&#x5458;&#x8BB0;&#x5F55;&#x5F53;&#x524D; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x7684;&#x7236;&#x547D;&#x540D;&#x7A7A;&#x95F4;</li>
+</ul>
+<p>&#x7531;&#x4E8E; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x662F;&#x5206;&#x5C42;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x65B0;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x65F6;&#x4F1A;&#x8BB0;&#x5F55;&#x7236;&#x7EA7; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x5230; <code>parent</code> &#x5B57;&#x6BB5;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x968F;&#x7740; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x7684;&#x521B;&#x5EFA;&#xFF0C;&#x5728;&#x5185;&#x6838;&#x4E2D;&#x4F1A;&#x5F62;&#x6210;&#x4E00;&#x9897; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x7684;&#x6811;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF08;<a href="http://www.zhongruitech.com/256011226.html" target="_blank">&#x56FE;&#x7247;&#x6765;&#x6E90;</a>&#xFF09;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/pid-namespace-level.png" alt="pid-namespace"></p>
+<p>&#x7B2C;0&#x5C42;&#x7684; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x662F; <code>init</code> &#x8FDB;&#x7A0B;&#x6240;&#x5728;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x6240;&#x5728;&#x7684; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x4E3A; <code>N</code>&#xFF0C;&#x90A3;&#x4E48;&#x5176;&#x5728; <code>0 ~ N &#x5C42;pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;pid&#x53F7;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4; <code>&#x9AD8;&#x5C42;pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x7684;&#x8FDB;&#x7A0B;&#x5BF9; <code>&#x4F4E;&#x5C42;pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x7684;&#x8FDB;&#x7A0B;&#x662F;&#x53EF;&#x89C1;&#x7684;&#xFF0C;&#x4F46;&#x662F; <code>&#x4F4E;&#x5C42;pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x7684;&#x8FDB;&#x7A0B;&#x5BF9; <code>&#x9AD8;&#x5C42;pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x7684;&#x8FDB;&#x7A0B;&#x662F;&#x4E0D;&#x53EF;&#x89C1;&#x7684;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x5728; <code>&#x7B2C;N&#x5C42;pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x7684;&#x8FDB;&#x7A0B;&#x5176;&#x5728; <code>0 ~ N&#x5C42;pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;pid&#x53F7;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26;&#x4E2D;&#x901A;&#x8FC7; <code>pids</code> &#x6210;&#x5458;&#x6765;&#x8BB0;&#x5F55;&#x5176;&#x5728;&#x6BCF;&#x4E2A;&#x5C42;&#x7684;pid&#x53F7;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> task_struct {
+    ...
+    <span class="hljs-keyword">struct</span> pid_link pids[PIDTYPE_MAX];
+    ...
+}
+
+<span class="hljs-keyword">enum</span> pid_type {
+    PIDTYPE_PID,
+    PIDTYPE_PGID,
+    PIDTYPE_SID,
+    PIDTYPE_MAX
+};
+
+<span class="hljs-keyword">struct</span> upid {
+    <span class="hljs-keyword">int</span> nr;
+    <span class="hljs-keyword">struct</span> pid_namespace *ns;
+    <span class="hljs-keyword">struct</span> hlist_node pid_chain;
+};
+
+<span class="hljs-keyword">struct</span> pid {
+    <span class="hljs-keyword">atomic_t</span> count;
+    <span class="hljs-keyword">struct</span> hlist_head tasks[PIDTYPE_MAX];
+    <span class="hljs-keyword">struct</span> rcu_head rcu;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> level;
+    <span class="hljs-keyword">struct</span> upid numbers[<span class="hljs-number">1</span>];
+};
+
+<span class="hljs-keyword">struct</span> pid_link {
+    <span class="hljs-keyword">struct</span> hlist_node node;
+    <span class="hljs-keyword">struct</span> pid *pid;
+};
+</code></pre>
+<p>&#x8FD9;&#x51E0;&#x4E2A;&#x7ED3;&#x6784;&#x7684;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/pid-namespace-structs.png" alt="pid-namespace-structs"></p>
+<p>&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x5173;&#x6CE8; <code>struct pid</code> &#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#xFF0C;<code>struct pid</code> &#x6709;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A; <code>struct upid</code> &#x7684;&#x6210;&#x5458; <code>numbers</code>&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x4E3A;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5B83;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x4E0E; <code>level</code> &#x7684;&#x503C;&#x4E00;&#x81F4;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5F53; <code>level</code> &#x7684;&#x503C;&#x4E3A;5&#x65F6;&#xFF0C;&#x90A3;&#x4E48; <code>numbers</code> &#x6210;&#x5458;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x62E5;&#x6709;5&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6570;&#x7EC4;&#x3002;&#x800C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8BB0;&#x5F55;&#x4E86;&#x5176;&#x5728;&#x6BCF;&#x5C42; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x7684;pid&#x53F7;&#xFF0C;&#x800C; <code>struct upid</code> &#x7ED3;&#x6784;&#x7684; <code>nr</code> &#x6210;&#x5458;&#x5C31;&#x662F;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x8FDB;&#x7A0B;&#x5728;&#x4E0D;&#x540C;&#x5C42;&#x7EA7; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x7684;pid&#x53F7;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4EE3;&#x7801;&#x6765;&#x770B;&#x770B;&#x600E;&#x4E48;&#x4E3A;&#x8FDB;&#x7A0B;&#x5206;&#x914D;pid&#x53F7;&#x7684;&#xFF0C;&#x5728;&#x5185;&#x6838;&#x4E2D;&#x662F;&#x7528;&#x8FC7; <code>alloc_pid()</code> &#x51FD;&#x6570;&#x5206;&#x914D;pid&#x53F7;&#x7684;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">struct</span> pid *<span class="hljs-title">alloc_pid</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> pid_namespace *ns)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> pid *pid;
+    <span class="hljs-keyword">enum</span> pid_type type;
+    <span class="hljs-keyword">int</span> i, nr;
+    <span class="hljs-keyword">struct</span> pid_namespace *tmp;
+    <span class="hljs-keyword">struct</span> upid *upid;
+
+    pid = kmem_cache_alloc(ns-&gt;pid_cachep, GFP_KERNEL);
+    <span class="hljs-keyword">if</span> (!pid)
+        <span class="hljs-keyword">goto</span> out;
+
+    tmp = ns;
+    <span class="hljs-keyword">for</span> (i = ns-&gt;level; i &gt;= <span class="hljs-number">0</span>; i--) {
+        nr = alloc_pidmap(tmp);    <span class="hljs-comment">// &#x4E3A;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x6240;&#x5728;&#x7684;&#x4E0D;&#x540C;&#x5C42;&#x7EA7;pid&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5206;&#x914D;&#x4E00;&#x4E2A;pid</span>
+        <span class="hljs-keyword">if</span> (nr &lt; <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">goto</span> out_free;
+
+        pid-&gt;numbers[i].nr = nr;   <span class="hljs-comment">// &#x5BF9;&#x5E94;i&#x5C42;namespace&#x4E2D;&#x7684;pid&#x6570;&#x5B57;</span>
+        pid-&gt;numbers[i].ns = tmp;  <span class="hljs-comment">// &#x5BF9;&#x5E94;i&#x5C42;namespace&#x7684;&#x5B9E;&#x4F53;</span>
+        tmp = tmp-&gt;parent;
+    }
+
+    get_pid_ns(ns);
+    pid-&gt;level = ns-&gt;level;
+    atomic_set(&amp;pid-&gt;count, <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">for</span> (type = <span class="hljs-number">0</span>; type &lt; PIDTYPE_MAX; ++type)
+        INIT_HLIST_HEAD(&amp;pid-&gt;tasks[type]);
+
+    spin_lock_irq(&amp;pidmap_lock);
+    <span class="hljs-keyword">for</span> (i = ns-&gt;level; i &gt;= <span class="hljs-number">0</span>; i--) {
+        upid = &amp;pid-&gt;numbers[i];
+        <span class="hljs-comment">// &#x628A;upid&#x8FDE;&#x63A5;&#x5230;&#x5168;&#x5C40;pid&#x4E2D;, &#x7528;&#x4E8E;&#x5FEB;&#x901F;&#x67E5;&#x627E;pid</span>
+        hlist_add_head_rcu(&amp;upid-&gt;pid_chain,
+                &amp;pid_hash[pid_hashfn(upid-&gt;nr, upid-&gt;ns)]);
+    }
+    spin_unlock_irq(&amp;pidmap_lock);
+
+out:
+    <span class="hljs-keyword">return</span> pid;
+
+    ...
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x90A3;&#x4E2A; <code>for (i = ns-&gt;level; i &gt;= 0; i--)</code> &#x5C31;&#x662F;&#x901A;&#x8FC7; <code>parent</code> &#x6210;&#x5458;&#x4E0D;&#x65AD;&#x5411;&#x4E0A;&#x68C0;&#x7D22;&#x4E3A;&#x4E0D;&#x540C;&#x5C42;&#x7EA7;&#x7684; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x5206;&#x914D;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;pid&#x53F7;&#xFF0C;&#x5E76;&#x4E14;&#x4FDD;&#x5B58;&#x5230;&#x5BF9;&#x5E94;&#x7684; <code>nr</code> &#x5B57;&#x6BB5;&#x4E2D;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x8FD8;&#x4F1A;&#x628A;&#x8FDB;&#x7A0B;&#x6240;&#x5728;&#x5404;&#x4E2A;&#x5C42;&#x7EA7;&#x7684;pid&#x53F7;&#x6DFB;&#x52A0;&#x5230;&#x5168;&#x5C40;pid&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x505A;&#x662F;&#x4E3A;&#x4E86;&#x901A;&#x8FC7;pid&#x53F7;&#x5FEB;&#x901F;&#x627E;&#x5230;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x600E;&#x4E48;&#x901A;&#x8FC7;pid&#x53F7;&#x5FEB;&#x901F;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x5728;&#x5185;&#x6838;&#x4E2D; <code>find_get_pid()</code> &#x51FD;&#x6570;&#x7528;&#x6765;&#x901A;&#x8FC7;pid&#x53F7;&#x67E5;&#x627E;&#x5BF9;&#x5E94;&#x7684; <code>struct pid</code> &#x7ED3;&#x6784;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF08;find_get_pid() -&gt; find_vpid() -&gt; find_pid_ns()&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">struct</span> pid *<span class="hljs-title">find_get_pid</span><span class="hljs-params">(pid_t nr)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> pid *pid;
+
+    rcu_read_lock();
+    pid = get_pid(find_vpid(nr));
+    rcu_read_unlock();
+
+    <span class="hljs-keyword">return</span> pid;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">struct</span> pid *<span class="hljs-title">find_vpid</span><span class="hljs-params">(<span class="hljs-keyword">int</span> nr)</span>
+</span>{
+    <span class="hljs-keyword">return</span> find_pid_ns(nr, current-&gt;nsproxy-&gt;pid_ns);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">struct</span> pid *<span class="hljs-title">find_pid_ns</span><span class="hljs-params">(<span class="hljs-keyword">int</span> nr, <span class="hljs-keyword">struct</span> pid_namespace *ns)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> hlist_node *elem;
+    <span class="hljs-keyword">struct</span> upid *pnr;
+
+    hlist_for_each_entry_rcu(pnr, elem,
+            &amp;pid_hash[pid_hashfn(nr, ns)], pid_chain)
+        <span class="hljs-keyword">if</span> (pnr-&gt;nr == nr &amp;&amp; pnr-&gt;ns == ns)
+            <span class="hljs-keyword">return</span> container_of(pnr, <span class="hljs-keyword">struct</span> pid,
+                    numbers[ns-&gt;level]);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+}
+</code></pre>
+<p>&#x901A;&#x8FC7;pid&#x53F7;&#x67E5;&#x627E; <code>struct pid</code> &#x7ED3;&#x6784;&#x65F6;&#xFF0C;&#x9996;&#x5148;&#x4F1A;&#x628A;&#x8FDB;&#x7A0B;pid&#x53F7;&#x548C;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684; <code>pid&#x547D;&#x540D;&#x7A7A;&#x95F4;</code> &#x4F20;&#x5165;&#x5230; <code>find_pid_ns()</code> &#x51FD;&#x6570;&#xFF0C;&#x800C;&#x5728; <code>find_pid_ns()</code> &#x51FD;&#x6570;&#x4E2D;&#x901A;&#x8FC7;&#x5168;&#x5C40;pid&#x54C8;&#x5E0C;&#x8868;&#x6765;&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x5BF9;&#x5E94;&#x7684; <code>struct pid</code> &#x7ED3;&#x6784;&#x3002;&#x83B7;&#x53D6;&#x5230; <code>struct pid</code> &#x7ED3;&#x6784;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x83B7;&#x53D6;&#x5230;&#x8FDB;&#x7A0B;&#x5BF9;&#x5E94;&#x7684;&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x4F8B;&#x5982;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>pid_task()</code> &#x51FD;&#x6570;&#x6765;&#x83B7;&#x53D6; <code>struct pid</code> &#x7ED3;&#x6784;&#x5BF9;&#x5E94;&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x7531;&#x4E8E;&#x4EE3;&#x7801;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x518D;&#x5206;&#x6790;&#x4E86;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="multiplexing-io.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 多路复用I/O">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"docker实现原理之 - namespace","level":"1.9.3","depth":2,"next":{"title":"2.6+内核分析","level":"1.10","depth":1,"ref":"","articles":[{"title":"Epoll原理与实现","level":"1.10.1","depth":2,"path":"epoll-principle.md","ref":"epoll-principle.md","articles":[]}]},"previous":{"title":"多路复用I/O","level":"1.9.2","depth":2,"path":"multiplexing-io.md","ref":"multiplexing-io.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"namespace.md","mtime":"2019-11-18T10:27:14.224Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T03:48:37.225Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

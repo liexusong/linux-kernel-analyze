@@ -1,0 +1,1012 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>共享内存 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="signal.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="process-management.html">
+            
+                <a href="process-management.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="process-schedule.html">
+            
+                <a href="process-schedule.html">
+            
+                    
+                    进程调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="concurrency-synchronize.html">
+            
+                <a href="concurrency-synchronize.html">
+            
+                    
+                    并发同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="waitqueue.html">
+            
+                <a href="waitqueue.html">
+            
+                    
+                    等待队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    内存管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="physical-memory-managemen-1.html">
+            
+                <a href="physical-memory-managemen-1.html">
+            
+                    
+                    物理内存管理(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="physical-memory-managemen-2.html">
+            
+                <a href="physical-memory-managemen-2.html">
+            
+                    
+                    物理内存管理(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="physical-memory-managemen-3.html">
+            
+                <a href="physical-memory-managemen-3.html">
+            
+                    
+                    物理内存管理(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="virtual_memory_address_manager.html">
+            
+                <a href="virtual_memory_address_manager.html">
+            
+                    
+                    虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="memory_mmap.html">
+            
+                <a href="memory_mmap.html">
+            
+                    
+                    mmap完全剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="memory_swap.html">
+            
+                <a href="memory_swap.html">
+            
+                    
+                    内存交换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    中断机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="interrupt_hardware.html">
+            
+                <a href="interrupt_hardware.html">
+            
+                    
+                    硬件相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="interrupt_softward.html">
+            
+                <a href="interrupt_softward.html">
+            
+                    
+                    中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    系统调用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="syscall.html">
+            
+                <a href="syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="virtual_file_system.html">
+            
+                <a href="virtual_file_system.html">
+            
+                    
+                    虚拟文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="minix_file_system.html">
+            
+                <a href="minix_file_system.html">
+            
+                    
+                    MINIX文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    进程间通信
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="signal.html">
+            
+                <a href="signal.html">
+            
+                    
+                    信号处理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="ipc-shm.html">
+            
+                <a href="ipc-shm.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="socket_interface.html">
+            
+                <a href="socket_interface.html">
+            
+                    
+                    Socket接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="unix-domain-sockets.html">
+            
+                <a href="unix-domain-sockets.html">
+            
+                    
+                    Unix Domain Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="kernel-timer.html">
+            
+                <a href="kernel-timer.html">
+            
+                    
+                    定时器实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="multiplexing-io.html">
+            
+                <a href="multiplexing-io.html">
+            
+                    
+                    多路复用I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    docker实现原理之 - namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    2.6+内核分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="epoll-principle.html">
+            
+                <a href="epoll-principle.html">
+            
+                    
+                    Epoll原理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >共享内存</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;---&#x5171;&#x4EAB;&#x5185;&#x5B58;">&#x8FDB;&#x7A0B;&#x95F4;&#x901A;&#x4FE1; - &#x5171;&#x4EAB;&#x5185;&#x5B58;</h1>
+<p>&#x5728;Linux&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x90FD;&#x6709;&#x72EC;&#x7ACB;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x7A0B;&#x8BBF;&#x95EE;&#x540C;&#x4E00;&#x6BB5;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#x6240;&#x5F97;&#x5230;&#x7684;&#x6570;&#x636E;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x76F8;&#x540C;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#x4F1A;&#x6620;&#x5C04;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5730;&#x5740;&#x4E0A;&#x3002;</p>
+<p>&#x4F46;&#x6709;&#x65F6;&#x5019;&#x4E3A;&#x4E86;&#x8BA9;&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#xFF0C;&#x9700;&#x8981;&#x8BA9;&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x5171;&#x4EAB;&#x76F8;&#x540C;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#xFF0C;Linux&#x901A;&#x8FC7; <code>&#x5171;&#x4EAB;&#x5185;&#x5B58;</code> &#x6765;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x3002;&#x4E0B;&#x9762;&#x5148;&#x6765;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;Linux&#x7CFB;&#x7EDF;&#x7684;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<h2 id="&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4F7F;&#x7528;">&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4F7F;&#x7528;</h2>
+<h3 id="1-&#x83B7;&#x53D6;&#x5171;&#x4EAB;&#x5185;&#x5B58;">1. &#x83B7;&#x53D6;&#x5171;&#x4EAB;&#x5185;&#x5B58;</h3>
+<p>&#x8981;&#x4F7F;&#x7528;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>shmget()</code> &#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#xFF0C;<code>shmget()</code> &#x51FD;&#x6570;&#x7684;&#x539F;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">shmget</span><span class="hljs-params">(key_t key, size_t size, <span class="hljs-keyword">int</span> shmflg)</span></span>;
+</code></pre>
+<ul>
+<li>&#x53C2;&#x6570; <code>key</code> &#x4E00;&#x822C;&#x7531; <code>ftok()</code> &#x51FD;&#x6570;&#x751F;&#x6210;&#xFF0C;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x7CFB;&#x7EDF;&#x7684;&#x552F;&#x4E00;IPC&#x8D44;&#x6E90;&#x3002;</li>
+<li>&#x53C2;&#x6570; <code>size</code> &#x6307;&#x5B9A;&#x521B;&#x5EFA;&#x7684;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#x3002;</li>
+<li>&#x53C2;&#x6570; <code>shmflg</code> &#x6307;&#x5B9A; <code>shmget()</code> &#x51FD;&#x6570;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x4F20;&#x5165; <code>IPC_CREAT</code> &#x8868;&#x793A;&#x8981;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x3002;</li>
+</ul>
+<p>&#x51FD;&#x6570;&#x8C03;&#x7528;&#x6210;&#x529F;&#x65F6;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x5EFA;&#x6216;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x7684;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x53D6;&#x51B3;&#x4E8E;shmflg&#x7684;&#x53C2;&#x6570;&#x3002;&#x5931;&#x8D25;&#x8FD4;&#x56DE;-1&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x9519;&#x8BEF;&#x7801;&#x3002;</p>
+<h3 id="2-&#x5173;&#x8054;&#x5171;&#x4EAB;&#x5185;&#x5B58;">2. &#x5173;&#x8054;&#x5171;&#x4EAB;&#x5185;&#x5B58;</h3>
+<p><code>shmget()</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x53EF;&#x7528;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x8FD8;&#x9700;&#x8981;&#x8C03;&#x7528; <code>shmat()</code> &#x51FD;&#x6570;&#x628A;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5173;&#x8054;&#x5230;&#x67D0;&#x4E2A;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#x4E0A;&#x3002;<code>shmat()</code> &#x51FD;&#x6570;&#x7684;&#x539F;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> *<span class="hljs-title">shmat</span><span class="hljs-params">(<span class="hljs-keyword">int</span> shmid, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *shmaddr, <span class="hljs-keyword">int</span> shmflg)</span></span>;
+</code></pre>
+<ul>
+<li>&#x53C2;&#x6570; <code>shmid</code> &#x662F; <code>shmget()</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x3002;</li>
+<li>&#x53C2;&#x6570; <code>shmaddr</code> &#x662F;&#x8981;&#x5173;&#x8054;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C;&#x4F20;&#x5165;0&#xFF0C;&#x8868;&#x793A;&#x7531;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#x3002;</li>
+<li>&#x53C2;&#x6570; <code>shmflg</code> &#x82E5;&#x6307;&#x5B9A;&#x4E86; <code>SHM_RDONLY</code> &#x4F4D;&#xFF0C;&#x5219;&#x4EE5;&#x53EA;&#x8BFB;&#x65B9;&#x5F0F;&#x8FDE;&#x63A5;&#x6B64;&#x6BB5;&#xFF0C;&#x5426;&#x5219;&#x4EE5;&#x8BFB;&#x5199;&#x65B9;&#x5F0F;&#x8FDE;&#x63A5;&#x6B64;&#x6BB5;&#x3002;</li>
+</ul>
+<p>&#x51FD;&#x6570;&#x8C03;&#x7528;&#x6210;&#x529F;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x7684;&#x6307;&#x9488;&#xFF08;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF09;&#xFF0C;&#x51FA;&#x9519;&#x8FD4;&#x56DE;-1&#x3002;</p>
+<h3 id="3-&#x53D6;&#x6D88;&#x5173;&#x8054;&#x5171;&#x4EAB;&#x5185;&#x5B58;">3. &#x53D6;&#x6D88;&#x5173;&#x8054;&#x5171;&#x4EAB;&#x5185;&#x5B58;</h3>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x4E0D;&#x9700;&#x8981;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x53D6;&#x6D88;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4E0E;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7684;&#x5173;&#x8054;&#x3002;&#x53D6;&#x6D88;&#x5173;&#x8054;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x901A;&#x8FC7; <code>shmdt()</code> &#x51FD;&#x6570;&#x5B9E;&#x73B0;&#xFF0C;&#x539F;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">shmdt</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *shmaddr)</span></span>;
+</code></pre>
+<ul>
+<li>&#x53C2;&#x6570; <code>shmaddr</code> &#x662F;&#x8981;&#x53D6;&#x6D88;&#x5173;&#x8054;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; <code>shmat()</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x51FD;&#x6570;&#x8C03;&#x7528;&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x51FA;&#x9519;&#x8FD4;&#x56DE;-1&#x3002;</p>
+<h3 id="&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x4F8B;&#x5B50;">&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x4F8B;&#x5B50;</h3>
+<p>&#x4E0B;&#x9762;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x5206;&#x522B;&#x4E3A; <code>&#x8FDB;&#x7A0B;A</code> &#x548C; <code>&#x8FDB;&#x7A0B;B</code>&#xFF0C;<code>&#x8FDB;&#x7A0B;A</code> &#x521B;&#x5EFA;&#x4E00;&#x5757;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#xFF0C;&#x7136;&#x540E;&#x5199;&#x5165;&#x6570;&#x636E;&#xFF0C;<code>&#x8FDB;&#x7A0B;B</code> &#x83B7;&#x53D6;&#x8FD9;&#x5757;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5E76;&#x4E14;&#x8BFB;&#x53D6;&#x5176;&#x5185;&#x5BB9;&#x3002;</p>
+<h4 id="&#x8FDB;&#x7A0B;a">&#x8FDB;&#x7A0B;A</h4>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/types.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/ipc.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/shm.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SHM_PATH <span class="hljs-string">&quot;/tmp/shm&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SHM_SIZE 128</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span>
+</span>{
+    <span class="hljs-keyword">int</span> shmid;
+    <span class="hljs-keyword">char</span> *addr;
+    <span class="hljs-keyword">key_t</span> key = ftok(SHM_PATH, <span class="hljs-number">0x6666</span>);
+
+    shmid = shmget(key, SHM_SIZE, IPC_CREAT|IPC_EXCL|<span class="hljs-number">0666</span>);
+    <span class="hljs-keyword">if</span> (shmid &lt; <span class="hljs-number">0</span>) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;failed to create share memory\n&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    }
+
+    addr = shmat(shmid, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span> (addr &lt;= <span class="hljs-number">0</span>) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;failed to map share memory\n&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    }
+
+    <span class="hljs-built_in">sprintf</span>(addr, <span class="hljs-string">&quot;%s&quot;</span>, <span class="hljs-string">&quot;Hello World\n&quot;</span>);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h4 id="&#x8FDB;&#x7A0B;b">&#x8FDB;&#x7A0B;B</h4>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/types.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/ipc.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/shm.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SHM_PATH <span class="hljs-string">&quot;/tmp/shm&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SHM_SIZE 128</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span>
+</span>{
+    <span class="hljs-keyword">int</span> shmid;
+    <span class="hljs-keyword">char</span> *addr;
+    <span class="hljs-keyword">key_t</span> key = ftok(SHM_PATH, <span class="hljs-number">0x6666</span>);
+
+    <span class="hljs-keyword">char</span> buf[<span class="hljs-number">128</span>];
+
+    shmid = shmget(key, SHM_SIZE, IPC_CREAT);
+    <span class="hljs-keyword">if</span> (shmid &lt; <span class="hljs-number">0</span>) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;failed to get share memory\n&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    }
+
+    addr = shmat(shmid, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span> (addr &lt;= <span class="hljs-number">0</span>) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;failed to map share memory\n&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    }
+
+    <span class="hljs-built_in">strcpy</span>(buf, addr, <span class="hljs-number">128</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>, buf);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x6D4B;&#x8BD5;&#x65F6;&#x5148;&#x8FD0;&#x884C;&#x8FDB;&#x7A0B;A&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8FD0;&#x884C;&#x8FDB;&#x7A0B;B&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FDB;&#x7A0B;B&#x4F1A;&#x6253;&#x5370;&#x51FA; &#x201C;Hello World&#x201D;&#xFF0C;&#x8BF4;&#x660E;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x6210;&#x529F;&#x5E76;&#x4E14;&#x8BFB;&#x53D6;&#x3002;</p>
+<h2 id="&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5B9E;&#x73B0;&#x539F;&#x7406;">&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5B9E;&#x73B0;&#x539F;&#x7406;</h2>
+<p>&#x6211;&#x4EEC;&#x5148;&#x901A;&#x8FC7;&#x4E00;&#x5E45;&#x56FE;&#x6765;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;&#x5927;&#x6982;&#x539F;&#x7406;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;
+<img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/shm-map.jpg" alt="shm-map"></p>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x56FE;&#x53EF;&#x77E5;&#xFF0C;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x662F;&#x901A;&#x8FC7;&#x5C06;&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#x6620;&#x5C04;&#x5230;&#x76F8;&#x540C;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5730;&#x5740;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x4E0B;&#x9762;&#x5C06;&#x4F1A;&#x4ECB;&#x7ECD;Linux&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x5728;Linux&#x5185;&#x6838;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x90FD;&#x7531;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>struct shmid_kernel</code> &#x7684;&#x7ED3;&#x6784;&#x4F53;&#x6765;&#x7BA1;&#x7406;&#xFF0C;&#x800C;&#x4E14;Linux&#x9650;&#x5236;&#x4E86;&#x7CFB;&#x7EDF;&#x6700;&#x5927;&#x80FD;&#x521B;&#x5EFA;&#x7684;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4E3A;128&#x4E2A;&#x3002;&#x901A;&#x8FC7;&#x7C7B;&#x578B;&#x4E3A; <code>struct shmid_kernel</code> &#x7ED3;&#x6784;&#x7684;&#x6570;&#x7EC4;&#x6765;&#x7BA1;&#x7406;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> shmid_ds {
+    <span class="hljs-keyword">struct</span> ipc_perm        shm_perm;    <span class="hljs-comment">/* operation perms */</span>
+    <span class="hljs-keyword">int</span>            shm_segsz;    <span class="hljs-comment">/* size of segment (bytes) */</span>
+    <span class="hljs-keyword">__kernel_time_t</span>        shm_atime;    <span class="hljs-comment">/* last attach time */</span>
+    <span class="hljs-keyword">__kernel_time_t</span>        shm_dtime;    <span class="hljs-comment">/* last detach time */</span>
+    <span class="hljs-keyword">__kernel_time_t</span>        shm_ctime;    <span class="hljs-comment">/* last change time */</span>
+    <span class="hljs-keyword">__kernel_ipc_pid_t</span>    shm_cpid;    <span class="hljs-comment">/* pid of creator */</span>
+    <span class="hljs-keyword">__kernel_ipc_pid_t</span>    shm_lpid;    <span class="hljs-comment">/* pid of last operator */</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span>        shm_nattch;    <span class="hljs-comment">/* no. of current attaches */</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span>         shm_unused;    <span class="hljs-comment">/* compatibility */</span>
+    <span class="hljs-keyword">void</span>             *shm_unused2;    <span class="hljs-comment">/* ditto - used by DIPC */</span>
+    <span class="hljs-keyword">void</span>            *shm_unused3;    <span class="hljs-comment">/* unused */</span>
+};
+
+<span class="hljs-keyword">struct</span> shmid_kernel
+{    
+    <span class="hljs-keyword">struct</span> shmid_ds        u;
+    <span class="hljs-comment">/* the following are private */</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>        shm_npages;    <span class="hljs-comment">/* size of segment (pages) */</span>
+    <span class="hljs-keyword">pte_t</span>            *shm_pages;    <span class="hljs-comment">/* array of ptrs to frames -&gt; SHMMAX */</span> 
+    <span class="hljs-keyword">struct</span> vm_area_struct    *attaches;    <span class="hljs-comment">/* descriptors for attaches */</span>
+};
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">struct</span> shmid_kernel *shm_segs[SHMMNI]; <span class="hljs-comment">// SHMMNI&#x7B49;&#x4E8E;128</span>
+</code></pre>
+<p>&#x4ECE;&#x6CE8;&#x91CA;&#x53EF;&#x4EE5;&#x77E5;&#x9053; <code>struct shmid_kernel</code> &#x7ED3;&#x6784;&#x4F53;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x6BD4;&#x5982; <code>shm_npages</code> &#x5B57;&#x6BB5;&#x8868;&#x793A;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x4E86;&#x591A;&#x5C11;&#x4E2A;&#x5185;&#x5B58;&#x9875;&#x3002;&#x800C; <code>shm_pages</code> &#x5B57;&#x6BB5;&#x6307;&#x5411;&#x4E86;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x6620;&#x5C04;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x9875;&#x8868;&#x9879;&#x6570;&#x7EC4;&#x7B49;&#x3002;</p>
+<p>&#x53E6;&#x5916; <code>struct shmid_ds</code> &#x7ED3;&#x6784;&#x4F53;&#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x800C; <code>shm_segs&#x6570;&#x7EC4;</code> &#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x3002;</p>
+<h3 id="shmget-&#x51FD;&#x6570;&#x5B9E;&#x73B0;">shmget() &#x51FD;&#x6570;&#x5B9E;&#x73B0;</h3>
+<p>&#x901A;&#x8FC7;&#x524D;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x53EF;&#x77E5;&#xFF0C;&#x8981;&#x4F7F;&#x7528;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x8C03;&#x7528; <code>shmget()</code> &#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#x6216;&#x8005;&#x83B7;&#x53D6;&#x4E00;&#x5757;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x3002;<code>shmget()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage <span class="hljs-keyword">long</span> <span class="hljs-title">sys_shmget</span> <span class="hljs-params">(key_t key, <span class="hljs-keyword">int</span> size, <span class="hljs-keyword">int</span> shmflg)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> shmid_kernel *shp;
+    <span class="hljs-keyword">int</span> err, id = <span class="hljs-number">0</span>;
+
+    down(&amp;current-&gt;mm-&gt;mmap_sem);
+    spin_lock(&amp;shm_lock);
+    <span class="hljs-keyword">if</span> (size &lt; <span class="hljs-number">0</span> || size &gt; shmmax) {
+        err = -EINVAL;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (key == IPC_PRIVATE) {
+        err = newseg(key, shmflg, size);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((id = findkey (key)) == <span class="hljs-number">-1</span>) {
+        <span class="hljs-keyword">if</span> (!(shmflg &amp; IPC_CREAT))
+            err = -ENOENT;
+        <span class="hljs-keyword">else</span>
+            err = newseg(key, shmflg, size);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((shmflg &amp; IPC_CREAT) &amp;&amp; (shmflg &amp; IPC_EXCL)) {
+        err = -EEXIST;
+    } <span class="hljs-keyword">else</span> {
+        shp = shm_segs[id];
+        <span class="hljs-keyword">if</span> (shp-&gt;u.shm_perm.mode &amp; SHM_DEST)
+            err = -EIDRM;
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (size &gt; shp-&gt;u.shm_segsz)
+            err = -EINVAL;
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (ipcperms (&amp;shp-&gt;u.shm_perm, shmflg))
+            err = -EACCES;
+        <span class="hljs-keyword">else</span>
+            err = (<span class="hljs-keyword">int</span>) shp-&gt;u.shm_perm.seq * SHMMNI + id;
+    }
+    spin_unlock(&amp;shm_lock);
+    up(&amp;current-&gt;mm-&gt;mmap_sem);
+    <span class="hljs-keyword">return</span> err;
+}
+</code></pre>
+<p><code>shmget()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x9996;&#x5148;&#x8C03;&#x7528; <code>findkey()</code> &#x51FD;&#x6570;&#x67E5;&#x627E;&#x503C;&#x4E3A;key&#x7684;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x88AB;&#x521B;&#x5EFA;&#xFF0C;<code>findkey()</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5728; <code>shm_segs&#x6570;&#x7EC4;</code> &#x7684;&#x7D22;&#x5F15;&#x3002;&#x5982;&#x679C;&#x627E;&#x5230;&#xFF0C;&#x90A3;&#x4E48;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x5373;&#x53EF;&#x3002;&#x5426;&#x5219;&#x5C31;&#x8C03;&#x7528; <code>newseg()</code> &#x51FD;&#x6570;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x3002;<code>newseg()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x4E5F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>struct shmid_kernel</code> &#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x7136;&#x540E;&#x8BBE;&#x7F6E;&#x5176;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF0C;&#x5E76;&#x4E14;&#x4FDD;&#x5B58;&#x5230; <code>shm_segs&#x6570;&#x7EC4;</code> &#x4E2D;&#x3002;</p>
+<h3 id="shmat-&#x51FD;&#x6570;&#x5B9E;&#x73B0;">shmat() &#x51FD;&#x6570;&#x5B9E;&#x73B0;</h3>
+<p><code>shmat()</code> &#x51FD;&#x6570;&#x7528;&#x4E8E;&#x5C06;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x6620;&#x5C04;&#x5230;&#x672C;&#x5730;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x7531;&#x4E8E; <code>shmat()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5206;&#x6BB5;&#x6765;&#x5206;&#x6790;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage <span class="hljs-keyword">long</span> <span class="hljs-title">sys_shmat</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> shmid, <span class="hljs-keyword">char</span> *shmaddr, <span class="hljs-keyword">int</span> shmflg, ulong *raddr)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> shmid_kernel *shp;
+    <span class="hljs-keyword">struct</span> vm_area_struct *shmd;
+    <span class="hljs-keyword">int</span> err = -EINVAL;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> id;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> addr;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> len;
+
+    down(&amp;current-&gt;mm-&gt;mmap_sem);
+    spin_lock(&amp;shm_lock);
+    <span class="hljs-keyword">if</span> (shmid &lt; <span class="hljs-number">0</span>)
+        <span class="hljs-keyword">goto</span> out;
+
+    shp = shm_segs[id = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span>) shmid % SHMMNI];
+    <span class="hljs-keyword">if</span> (shp == IPC_UNUSED || shp == IPC_NOID)
+        <span class="hljs-keyword">goto</span> out;
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x4E3B;&#x8981;&#x901A;&#x8FC7; <code>shmid</code> &#x6807;&#x8BC6;&#x7B26;&#x6765;&#x627E;&#x5230;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x4E0A;&#x9762;&#x8BF4;&#x8FC7;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5230;&#x4FDD;&#x5B58;&#x5728; <code>shm_segs</code> &#x6570;&#x7EC4;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-cpp">    <span class="hljs-keyword">if</span> (!(addr = (ulong) shmaddr)) {
+        <span class="hljs-keyword">if</span> (shmflg &amp; SHM_REMAP)
+            <span class="hljs-keyword">goto</span> out;
+        err = -ENOMEM;
+        addr = <span class="hljs-number">0</span>;
+    again:
+        <span class="hljs-keyword">if</span> (!(addr = get_unmapped_area(addr, shp-&gt;u.shm_segsz))) <span class="hljs-comment">// &#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x7A7A;&#x95F2;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7A7A;&#x95F4;</span>
+            <span class="hljs-keyword">goto</span> out;
+        <span class="hljs-keyword">if</span>(addr &amp; (SHMLBA - <span class="hljs-number">1</span>)) {
+            addr = (addr + (SHMLBA - <span class="hljs-number">1</span>)) &amp; ~(SHMLBA - <span class="hljs-number">1</span>);
+            <span class="hljs-keyword">goto</span> again;
+        }
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (addr &amp; (SHMLBA<span class="hljs-number">-1</span>)) {
+        <span class="hljs-keyword">if</span> (shmflg &amp; SHM_RND)
+            addr &amp;= ~(SHMLBA<span class="hljs-number">-1</span>);       <span class="hljs-comment">/* round down */</span>
+        <span class="hljs-keyword">else</span>
+            <span class="hljs-keyword">goto</span> out;
+    }
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E3B;&#x8981;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x8C03;&#x7528; <code>shmat()</code> &#x51FD;&#x6570;&#x65F6;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x4E86;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x901A;&#x8FC7; <code>get_unmapped_area()</code> &#x51FD;&#x6570;&#x6765;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#x3002;</p>
+<pre><code class="lang-cpp">    spin_unlock(&amp;shm_lock);
+    err = -ENOMEM;
+    shmd = kmem_cache_alloc(vm_area_cachep, SLAB_KERNEL);
+    spin_lock(&amp;shm_lock);
+    <span class="hljs-keyword">if</span> (!shmd)
+        <span class="hljs-keyword">goto</span> out;
+    <span class="hljs-keyword">if</span> ((shp != shm_segs[id]) || (shp-&gt;u.shm_perm.seq != (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span>) shmid / SHMMNI)) {
+        kmem_cache_free(vm_area_cachep, shmd);
+        err = -EIDRM;
+        <span class="hljs-keyword">goto</span> out;
+    }
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E3B;&#x8981;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>kmem_cache_alloc()</code> &#x51FD;&#x6570;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>vm_area_struct</code> &#x7ED3;&#x6784;&#xFF0C;&#x5728;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x4E00;&#x7AE0;&#x77E5;&#x9053;&#xFF0C;<code>vm_area_struct</code> &#x7ED3;&#x6784;&#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x8FDB;&#x7A0B;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x3002;</p>
+<pre><code class="lang-cpp">    shmd-&gt;vm_private_data = shm_segs + id;
+    shmd-&gt;vm_start = addr;
+    shmd-&gt;vm_end = addr + shp-&gt;shm_npages * PAGE_SIZE;
+    shmd-&gt;vm_mm = current-&gt;mm;
+    shmd-&gt;vm_page_prot = (shmflg &amp; SHM_RDONLY) ? PAGE_READONLY : PAGE_SHARED;
+    shmd-&gt;vm_flags = VM_SHM | VM_MAYSHARE | VM_SHARED
+             | VM_MAYREAD | VM_MAYEXEC | VM_READ | VM_EXEC
+             | ((shmflg &amp; SHM_RDONLY) ? <span class="hljs-number">0</span> : VM_MAYWRITE | VM_WRITE);
+    shmd-&gt;vm_file = <span class="hljs-literal">NULL</span>;
+    shmd-&gt;vm_offset = <span class="hljs-number">0</span>;
+    shmd-&gt;vm_ops = &amp;shm_vm_ops;
+
+    shp-&gt;u.shm_nattch++;        <span class="hljs-comment">/* prevent destruction */</span>
+    spin_unlock(&amp;shm_lock);
+    err = shm_map(shmd);
+    spin_lock(&amp;shm_lock);
+    <span class="hljs-keyword">if</span> (err)
+        <span class="hljs-keyword">goto</span> failed_shm_map;
+
+    insert_attach(shp,shmd);  <span class="hljs-comment">/* insert shmd into shp-&gt;attaches */</span>
+
+    shp-&gt;u.shm_lpid = current-&gt;pid;
+    shp-&gt;u.shm_atime = CURRENT_TIME;
+
+    *raddr = addr;
+    err = <span class="hljs-number">0</span>;
+out:
+    spin_unlock(&amp;shm_lock);
+    up(&amp;current-&gt;mm-&gt;mmap_sem);
+    <span class="hljs-keyword">return</span> err;
+    ...
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E3B;&#x8981;&#x662F;&#x8BBE;&#x7F6E;&#x521A;&#x521B;&#x5EFA;&#x7684; <code>vm_area_struct</code> &#x7ED3;&#x6784;&#x7684;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x662F;&#x8BBE;&#x7F6E;&#x5176; <code>vm_ops</code> &#x5B57;&#x6BB5;&#x4E3A; <code>shm_vm_ops</code>&#xFF0C;<code>shm_vm_ops</code> &#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">static</span> <span class="hljs-keyword">struct</span> vm_operations_struct shm_vm_ops = {
+    shm_open,        <span class="hljs-comment">/* open - callback for a new vm-area open */</span>
+    shm_close,        <span class="hljs-comment">/* close - callback for when the vm-area is released */</span>
+    <span class="hljs-literal">NULL</span>,            <span class="hljs-comment">/* no need to sync pages at unmap */</span>
+    <span class="hljs-literal">NULL</span>,            <span class="hljs-comment">/* protect */</span>
+    <span class="hljs-literal">NULL</span>,            <span class="hljs-comment">/* sync */</span>
+    <span class="hljs-literal">NULL</span>,            <span class="hljs-comment">/* advise */</span>
+    shm_nopage,        <span class="hljs-comment">/* nopage */</span>
+    <span class="hljs-literal">NULL</span>,            <span class="hljs-comment">/* wppage */</span>
+    shm_swapout        <span class="hljs-comment">/* swapout */</span>
+};
+</code></pre>
+<p><code>shm_vm_ops</code> &#x7684; <code>nopage</code> &#x56DE;&#x8C03;&#x4E3A; <code>shm_nopage()</code> &#x51FD;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5F53;&#x53D1;&#x751F;&#x9875;&#x7F3A;&#x5931;&#x5F02;&#x5E38;&#x65F6;&#x5C06;&#x4F1A;&#x8C03;&#x7528;&#x6B64;&#x51FD;&#x6570;&#x6765;&#x6062;&#x590D;&#x5185;&#x5B58;&#x7684;&#x6620;&#x5C04;&#x3002;</p>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x770B;&#x51FA;&#xFF0C;<code>shmat()</code> &#x51FD;&#x6570;&#x53EA;&#x662F;&#x7533;&#x8BF7;&#x4E86;&#x8FDB;&#x7A0B;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x800C;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;&#x7269;&#x7406;&#x7A7A;&#x95F4;&#x5E76;&#x6CA1;&#x6709;&#x7533;&#x8BF7;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x7533;&#x8BF7;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5462;&#xFF1F;&#x7B54;&#x6848;&#x5C31;&#x662F;&#x5F53;&#x8FDB;&#x7A0B;&#x53D1;&#x751F;&#x7F3A;&#x9875;&#x5F02;&#x5E38;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8C03;&#x7528; <code>shm_nopage()</code> &#x51FD;&#x6570;&#x6765;&#x6062;&#x590D;&#x8FDB;&#x7A0B;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#x5230;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7684;&#x6620;&#x5C04;&#x3002;</p>
+<h3 id="shmnopage-&#x51FD;&#x6570;&#x5B9E;&#x73B0;">shm_nopage() &#x51FD;&#x6570;&#x5B9E;&#x73B0;</h3>
+<p>shm_nopage() &#x51FD;&#x6570;&#x662F;&#x5F53;&#x53D1;&#x751F;&#x5185;&#x5B58;&#x7F3A;&#x9875;&#x5F02;&#x5E38;&#x65F6;&#x88AB;&#x8C03;&#x7528;&#x7684;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">struct</span> page * <span class="hljs-title">shm_nopage</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> vm_area_struct * shmd, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> address, <span class="hljs-keyword">int</span> no_share)</span>
+</span>{
+    <span class="hljs-keyword">pte_t</span> pte;
+    <span class="hljs-keyword">struct</span> shmid_kernel *shp;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> idx;
+    <span class="hljs-keyword">struct</span> page * page;
+
+    shp = *(<span class="hljs-keyword">struct</span> shmid_kernel **) shmd-&gt;vm_private_data;
+    idx = (address - shmd-&gt;vm_start + shmd-&gt;vm_offset) &gt;&gt; PAGE_SHIFT;
+
+    spin_lock(&amp;shm_lock);
+again:
+    pte = shp-&gt;shm_pages[idx]; <span class="hljs-comment">// &#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;&#x9875;&#x8868;&#x9879;</span>
+    <span class="hljs-keyword">if</span> (!pte_present(pte)) {   <span class="hljs-comment">// &#x5982;&#x679C;&#x5185;&#x5B58;&#x9875;&#x4E0D;&#x5B58;&#x5728;</span>
+        <span class="hljs-keyword">if</span> (pte_none(pte)) {
+            spin_unlock(&amp;shm_lock);
+            page = get_free_highpage(GFP_HIGHUSER); <span class="hljs-comment">// &#x7533;&#x8BF7;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x9875;</span>
+            <span class="hljs-keyword">if</span> (!page)
+                <span class="hljs-keyword">goto</span> oom;
+            clear_highpage(page);
+            spin_lock(&amp;shm_lock);
+            <span class="hljs-keyword">if</span> (pte_val(pte) != pte_val(shp-&gt;shm_pages[idx]))
+                <span class="hljs-keyword">goto</span> changed;
+        } <span class="hljs-keyword">else</span> {
+            ...
+        }
+        shm_rss++;
+        pte = pte_mkdirty(mk_pte(page, PAGE_SHARED));   <span class="hljs-comment">// &#x521B;&#x5EFA;&#x9875;&#x8868;&#x9879;</span>
+        shp-&gt;shm_pages[idx] = pte;                      <span class="hljs-comment">// &#x4FDD;&#x5B58;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;&#x9875;&#x8868;&#x9879;</span>
+    } <span class="hljs-keyword">else</span>
+        --current-&gt;maj_flt;  <span class="hljs-comment">/* was incremented in do_no_page */</span>
+
+done:
+    get_page(pte_page(pte));
+    spin_unlock(&amp;shm_lock);
+    current-&gt;min_flt++;
+    <span class="hljs-keyword">return</span> pte_page(pte);
+    ...
+}
+</code></pre>
+<p>shm_nopage() &#x51FD;&#x6570;&#x7684;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x662F;&#x5F53;&#x53D1;&#x751F;&#x5185;&#x5B58;&#x7F3A;&#x9875;&#x65F6;&#xFF0C;&#x7533;&#x8BF7;&#x65B0;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x9875;&#xFF0C;&#x5E76;&#x6620;&#x5C04;&#x5230;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4E2D;&#x3002;&#x7531;&#x4E8E;&#x4F7F;&#x7528;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x65F6;&#x4F1A;&#x6620;&#x5C04;&#x5230;&#x76F8;&#x540C;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x9875;&#x4E0A;&#xFF0C;&#x4ECE;&#x800C;&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x53EF;&#x4EE5;&#x5171;&#x7528;&#x6B64;&#x5757;&#x5185;&#x5B58;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="signal.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 信号处理机制">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"共享内存","level":"1.7.2","depth":2,"next":{"title":"网络","level":"1.8","depth":1,"ref":"","articles":[{"title":"Socket接口","level":"1.8.1","depth":2,"path":"socket_interface.md","ref":"socket_interface.md","articles":[]},{"title":"Unix Domain Socket","level":"1.8.2","depth":2,"path":"unix-domain-sockets.md","ref":"unix-domain-sockets.md","articles":[]}]},"previous":{"title":"信号处理机制","level":"1.7.1","depth":2,"path":"signal.md","ref":"signal.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ipc-shm.md","mtime":"2019-11-18T10:27:14.221Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T03:48:37.225Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

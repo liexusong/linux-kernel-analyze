@@ -1,0 +1,845 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>进程管理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="process-schedule.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="process-management.html">
+            
+                <a href="process-management.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="process-schedule.html">
+            
+                <a href="process-schedule.html">
+            
+                    
+                    进程调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="concurrency-synchronize.html">
+            
+                <a href="concurrency-synchronize.html">
+            
+                    
+                    并发同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="waitqueue.html">
+            
+                <a href="waitqueue.html">
+            
+                    
+                    等待队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    内存管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="physical-memory-managemen-1.html">
+            
+                <a href="physical-memory-managemen-1.html">
+            
+                    
+                    物理内存管理(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="physical-memory-managemen-2.html">
+            
+                <a href="physical-memory-managemen-2.html">
+            
+                    
+                    物理内存管理(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="physical-memory-managemen-3.html">
+            
+                <a href="physical-memory-managemen-3.html">
+            
+                    
+                    物理内存管理(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="virtual_memory_address_manager.html">
+            
+                <a href="virtual_memory_address_manager.html">
+            
+                    
+                    虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="memory_mmap.html">
+            
+                <a href="memory_mmap.html">
+            
+                    
+                    mmap完全剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="memory_swap.html">
+            
+                <a href="memory_swap.html">
+            
+                    
+                    内存交换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    中断机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="interrupt_hardware.html">
+            
+                <a href="interrupt_hardware.html">
+            
+                    
+                    硬件相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="interrupt_softward.html">
+            
+                <a href="interrupt_softward.html">
+            
+                    
+                    中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    系统调用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="syscall.html">
+            
+                <a href="syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="virtual_file_system.html">
+            
+                <a href="virtual_file_system.html">
+            
+                    
+                    虚拟文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="minix_file_system.html">
+            
+                <a href="minix_file_system.html">
+            
+                    
+                    MINIX文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    进程间通信
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="signal.html">
+            
+                <a href="signal.html">
+            
+                    
+                    信号处理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ipc-shm.html">
+            
+                <a href="ipc-shm.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="socket_interface.html">
+            
+                <a href="socket_interface.html">
+            
+                    
+                    Socket接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="unix-domain-sockets.html">
+            
+                <a href="unix-domain-sockets.html">
+            
+                    
+                    Unix Domain Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="kernel-timer.html">
+            
+                <a href="kernel-timer.html">
+            
+                    
+                    定时器实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="multiplexing-io.html">
+            
+                <a href="multiplexing-io.html">
+            
+                    
+                    多路复用I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    docker实现原理之 - namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    2.6+内核分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="epoll-principle.html">
+            
+                <a href="epoll-principle.html">
+            
+                    
+                    Epoll原理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >进程管理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;">&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;</h1>
+<h2 id="&#x8FDB;&#x7A0B;">&#x8FDB;&#x7A0B;</h2>
+<p>&#x7A0B;&#x5E8F;&#x662F;&#x6307;&#x50A8;&#x5B58;&#x5728;&#x5916;&#x90E8;&#x5B58;&#x50A8;(&#x5982;&#x786C;&#x76D8;)&#x7684;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;, &#x800C;&#x8FDB;&#x7A0B;&#x662F;&#x6307;&#x5904;&#x4E8E;&#x6267;&#x884C;&#x671F;&#x95F4;&#x7684;&#x7A0B;&#x5E8F;, &#x8FDB;&#x7A0B;&#x5305;&#x62EC; <code>&#x4EE3;&#x7801;&#x6BB5;(text section)</code> &#x548C; <code>&#x6570;&#x636E;&#x6BB5;(data section)</code>, &#x9664;&#x4E86;&#x4EE3;&#x7801;&#x6BB5;&#x548C;&#x6570;&#x636E;&#x6BB5;&#x5916;, &#x8FDB;&#x7A0B;&#x4E00;&#x822C;&#x8FD8;&#x5305;&#x542B;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;, &#x8981;&#x5904;&#x7406;&#x7684;&#x4FE1;&#x53F7;&#x548C;CPU&#x4E0A;&#x4E0B;&#x6587;&#x7B49;&#x7B49;. </p>
+<h3 id="&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26;">&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26;</h3>
+<p>Linux&#x8FDB;&#x7A0B;&#x4F7F;&#x7528; <code>struct task_struct</code> &#x6765;&#x63CF;&#x8FF0;(include/linux/sched.h), &#x5982;&#x4E0B;:</p>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> task_struct {
+    <span class="hljs-comment">/*
+     * offsets of these are hardcoded elsewhere - touch with care
+     */</span>
+    <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">long</span> state;    <span class="hljs-comment">/* -1 unrunnable, 0 runnable, &gt;0 stopped */</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> flags;    <span class="hljs-comment">/* per process flags, defined below */</span>
+    <span class="hljs-keyword">int</span> sigpending;
+    <span class="hljs-keyword">mm_segment_t</span> addr_limit;    <span class="hljs-comment">/* thread address space:
+                         0-0xBFFFFFFF for user-thead
+                        0-0xFFFFFFFF for kernel-thread
+                     */</span>
+    <span class="hljs-keyword">struct</span> exec_domain *exec_domain;
+    <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">long</span> need_resched;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> ptrace;
+
+    <span class="hljs-keyword">int</span> lock_depth;        <span class="hljs-comment">/* Lock depth */</span>
+
+<span class="hljs-comment">/*
+ * offset 32 begins here on 32-bit platforms. We keep
+ * all fields in a single cacheline that are needed for
+ * the goodness() loop in schedule().
+ */</span>
+    <span class="hljs-keyword">long</span> counter;
+    <span class="hljs-keyword">long</span> nice;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> policy;
+    <span class="hljs-keyword">struct</span> mm_struct *mm;
+    <span class="hljs-keyword">int</span> processor;
+    ...
+}
+</code></pre>
+<p>Linux&#x628A;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x8FDE;&#x63A5;&#x8D77;&#x6765;, &#x5982;&#x4E0B;&#x56FE;(&#x6765;&#x6E90;<linux设计与实现>):
+<img src="https://github.com/liexusong/myblog/blob/master/images/task_list.png" alt=""></linux设计与实现></p>
+<p>Linux&#x5185;&#x6838;&#x4E3A;&#x4E86;&#x52A0;&#x5FEB;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;&#x7684;task_struct&#x7ED3;&#x6784;, &#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x6280;&#x5DE7;, &#x5C31;&#x662F;&#x628A;task_struct&#x653E;&#x7F6E;&#x5728;&#x5185;&#x6838;&#x6808;&#x7684;&#x6808;&#x5E95;, &#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>esp&#x5BC4;&#x5B58;&#x5668;</code> &#x5FEB;&#x901F;&#x83B7;&#x53D6;&#x5230;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x8FDB;&#x7A0B;&#x7684;task_struct&#x7ED3;&#x6784;. &#x5982;&#x4E0B;&#x56FE;:
+<img src="https://raw.githubusercontent.com/liexusong/myblog/master/images/task_stack.png" alt=""></p>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x8FDB;&#x7A0B;&#x7684;task_struct&#x4EE3;&#x7801;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">struct</span> task_struct * <span class="hljs-title">get_current</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> task_struct *current;
+    __asm__(<span class="hljs-string">&quot;andl %%esp,%0; &quot;</span>:<span class="hljs-string">&quot;=r&quot;</span> (current) : <span class="hljs-string">&quot;0&quot;</span> (~<span class="hljs-number">8191U</span>L));
+    <span class="hljs-keyword">return</span> current;
+ }
+</code></pre>
+<h3 id="&#x8FDB;&#x7A0B;&#x72B6;&#x6001;">&#x8FDB;&#x7A0B;&#x72B6;&#x6001;</h3>
+<p>&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26;&#x7684;state&#x5B57;&#x6BB5;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x8FDB;&#x7A0B;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;, &#x8FDB;&#x7A0B;&#x7684;&#x72B6;&#x6001;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;:</p>
+<ul>
+<li><code>TASK_RUNNING (&#x8FD0;&#x884C;)</code> -- &#x8FDB;&#x7A0B;&#x5904;&#x4E8E;&#x53EF;&#x6267;&#x884C;&#x72B6;&#x6001;, &#x5728;&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x4E0B;&#x7684;&#x8FDB;&#x7A0B;&#x8981;&#x4E48;&#x6B63;&#x5728;&#x88AB;CPU&#x6267;&#x884C;, &#x8981;&#x4E48;&#x5728;&#x7B49;&#x5F85;&#x6267;&#x884C;(CPU&#x88AB;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x5360;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E0B;).</li>
+<li><code>TASK_INTERRUPTIBLE (&#x53EF;&#x4E2D;&#x65AD;&#x7B49;&#x5F85;)</code> -- &#x8FDB;&#x7A0B;&#x5904;&#x4E8E;&#x7B49;&#x5F85;&#x72B6;&#x6001;, &#x5176;&#x5728;&#x7B49;&#x5F85;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x6210;&#x7ACB;&#x6216;&#x8005;&#x63A5;&#x6536;&#x5230;&#x67D0;&#x4E9B;&#x4FE1;&#x53F7;, &#x8FDB;&#x7A0B;&#x4F1A;&#x88AB;&#x5524;&#x9192;&#x53D8;&#x4E3A;&#x8FD0;&#x884C;&#x72B6;&#x6001;.</li>
+<li><code>TASK_UNINTERRUPTIBLE (&#x4E0D;&#x53EF;&#x4E2D;&#x65AD;&#x7B49;&#x5F85;)</code> -- &#x8FDB;&#x7A0B;&#x5904;&#x4E8E;&#x7B49;&#x5F85;&#x72B6;&#x6001;, &#x5176;&#x5728;&#x7B49;&#x5F85;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x6210;&#x7ACB;, &#x8FDB;&#x7A0B;&#x4F1A;&#x88AB;&#x5524;&#x9192;&#x53D8;&#x4E3A;&#x8FD0;&#x884C;&#x72B6;&#x6001;, &#x4F46;&#x4E0D;&#x80FD;&#x88AB;&#x4FE1;&#x53F7;&#x5524;&#x9192;.</li>
+<li><code>TASK_TRACED (&#x88AB;&#x8FFD;&#x8E2A;)</code> -- &#x8FDB;&#x7A0B;&#x5904;&#x4E8E;&#x88AB;&#x8FFD;&#x8E2A;&#x72B6;&#x6001;, &#x4F8B;&#x5982;&#x901A;&#x8FC7;ptrace&#x547D;&#x4EE4;&#x5BF9;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;.</li>
+<li><code>TASK_STOPPED (&#x505C;&#x6B62;)</code> -- &#x8FDB;&#x7A0B;&#x5904;&#x4E8E;&#x505C;&#x6B62;&#x72B6;&#x6001;, &#x8FDB;&#x7A0B;&#x4E0D;&#x80FD;&#x88AB;&#x6267;&#x884C;. &#x4E00;&#x822C;&#x63A5;&#x6536;&#x5230;SIGSTOP, SIGTSTP, SIGTTIN, SIGTTOU&#x4FE1;&#x53F7;&#x8FDB;&#x7A0B;&#x4F1A;&#x53D8;&#x6210;TASK_STOPPED&#x72B6;&#x6001;.</li>
+</ul>
+<p>&#x5404;&#x79CD;&#x72B6;&#x6001;&#x95F4;&#x7684;&#x8F6C;&#x6362;&#x5982;&#x4E0B;&#x56FE;:</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/myblog/master/images/task_state.png" alt=""></p>
+<h3 id="&#x8FDB;&#x7A0B;&#x7684;&#x521B;&#x5EFA;">&#x8FDB;&#x7A0B;&#x7684;&#x521B;&#x5EFA;</h3>
+<p>&#x5728;Linux&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x8FDB;&#x7A0B;&#x7684;&#x521B;&#x5EFA;&#x4F7F;&#x7528;fork()&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;fork()&#x8C03;&#x7528;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E0E;&#x7236;&#x8FDB;&#x7A0B;&#x4E00;&#x6837;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x552F;&#x4E00;&#x4E0D;&#x540C;&#x5C31;&#x662F;fork()&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x7236;&#x8FDB;&#x7A0B;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x8FDB;&#x7A0B;ID&#xFF0C;&#x800C;&#x5B50;&#x8FDB;&#x7A0B;&#x8FD4;&#x56DE;&#x7684;&#x662F;0&#x3002;</p>
+<p>Linux&#x521B;&#x5EFA;&#x5B50;&#x8FDB;&#x7A0B;&#x65F6;&#x4F7F;&#x7528;&#x4E86;<code>&#x5199;&#x65F6;&#x590D;&#x5236;&#xFF08;Copy On Write&#xFF09;</code>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x521B;&#x5EFA;&#x5B50;&#x8FDB;&#x7A0B;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x7236;&#x8FDB;&#x7A0B;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x5F53;&#x5B50;&#x8FDB;&#x7A0B;&#x6216;&#x8005;&#x7236;&#x8FDB;&#x7A0B;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x65F6;&#x624D;&#x4F1A;&#x590D;&#x5236;&#x76F8;&#x5E94;&#x7684;&#x5185;&#x5B58;&#x9875;&#x3002;</p>
+<p>&#x5F53;&#x8C03;&#x7528;fork()&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x65F6;&#x4F1A;&#x9677;&#x5165;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x5E76;&#x4E14;&#x8C03;&#x7528;sys_fork()&#x51FD;&#x6570;&#xFF0C;sys_fork()&#x51FD;&#x6570;&#x4F1A;&#x8C03;&#x7528;do_fork()&#x51FD;&#x6570;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;(arch/i386/kernel/process.c)&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function">asmlinkage <span class="hljs-keyword">int</span> <span class="hljs-title">sys_fork</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> pt_regs regs)</span>
+</span>{
+    <span class="hljs-keyword">return</span> do_fork(SIGCHLD, regs.esp, &amp;regs, <span class="hljs-number">0</span>);
+}
+</code></pre>
+<p>do_fork()&#x4E3B;&#x8981;&#x7684;&#x5DE5;&#x4F5C;&#x662F;&#x7533;&#x8BF7;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26;, &#x7136;&#x540E;&#x521D;&#x59CB;&#x5316;&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26;&#x7684;&#x5404;&#x4E2A;&#x5B57;&#x6BB5;,  &#x5305;&#x62EC;&#x8C03;&#x7528; copy_files() &#x51FD;&#x6570;&#x590D;&#x5236;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;,  &#x8C03;&#x7528; copy_sighand() &#x51FD;&#x6570;&#x590D;&#x5236;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;, &#x8C03;&#x7528; copy_mm() &#x51FD;&#x6570;&#x590D;&#x5236;&#x8FDB;&#x7A0B;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7A7A;&#x95F4;, &#x8C03;&#x7528; copy_namespace() &#x51FD;&#x6570;&#x590D;&#x5236;&#x547D;&#x540D;&#x7A7A;&#x95F4;. &#x4EE3;&#x7801;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">do_fork</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> clone_flags, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> stack_start,
+        <span class="hljs-keyword">struct</span> pt_regs *regs, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> stack_size)</span>
+</span>{
+    ...
+    p = alloc_task_struct(); <span class="hljs-comment">// &#x7533;&#x8BF7;&#x8FDB;&#x7A0B;&#x63CF;&#x8FF0;&#x7B26;</span>
+    ...
+    <span class="hljs-keyword">if</span> (copy_files(clone_flags, p))
+        <span class="hljs-keyword">goto</span> bad_fork_cleanup;
+    <span class="hljs-keyword">if</span> (copy_fs(clone_flags, p))
+        <span class="hljs-keyword">goto</span> bad_fork_cleanup_files;
+    <span class="hljs-keyword">if</span> (copy_sighand(clone_flags, p))
+        <span class="hljs-keyword">goto</span> bad_fork_cleanup_fs;
+    <span class="hljs-keyword">if</span> (copy_mm(clone_flags, p))
+        <span class="hljs-keyword">goto</span> bad_fork_cleanup_sighand;
+    <span class="hljs-keyword">if</span> (copy_namespace(clone_flags, p))
+        <span class="hljs-keyword">goto</span> bad_fork_cleanup_mm;
+    retval = copy_thread(<span class="hljs-number">0</span>, clone_flags, stack_start, stack_size, p, regs);
+    ...
+    wake_up_process(p);
+    ...
+}
+</code></pre>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;do_fork() &#x8FD8;&#x8C03;&#x7528;&#x4E86; copy_thread() &#x8FD9;&#x4E2A;&#x51FD;&#x6570;, copy_thread()&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x8FDB;&#x7A0B;&#x7684;CPU&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587; <code>struct thread_struct</code> &#x7ED3;&#x6784;.  &#x4EE3;&#x7801;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">copy_thread</span><span class="hljs-params">(<span class="hljs-keyword">int</span> nr, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> clone_flags, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> esp,
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> unused,
+    <span class="hljs-keyword">struct</span> task_struct * p, <span class="hljs-keyword">struct</span> pt_regs * regs)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> pt_regs * childregs;
+
+    <span class="hljs-comment">// &#x6307;&#x5411;&#x6808;&#x9876;(&#x89C1;&#x56FE;2)</span>
+    childregs = ((<span class="hljs-keyword">struct</span> pt_regs *) (THREAD_SIZE + (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) p)) - <span class="hljs-number">1</span>;
+    struct_cpy(childregs, regs);  <span class="hljs-comment">// &#x590D;&#x5236;&#x7236;&#x8FDB;&#x7A0B;&#x7684;&#x6808;&#x4FE1;&#x606F;</span>
+    childregs-&gt;eax = <span class="hljs-number">0</span>;   <span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x662F;&#x5B50;&#x8FDB;&#x7A0B;&#x8C03;&#x7528;fork()&#x4E4B;&#x540E;&#x7684;&#x8FD4;&#x56DE;&#x503C;, &#x4E5F;&#x5C31;&#x662F;0</span>
+    childregs-&gt;esp = esp; <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x65B0;&#x7684;&#x6808;&#x7A7A;&#x95F4;</span>
+
+    p-&gt;thread.esp = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) childregs;      <span class="hljs-comment">// &#x5B50;&#x8FDB;&#x7A0B;&#x5F53;&#x524D;&#x7684;&#x6808;&#x5730;&#x5740;, &#x8C03;&#x7528;switch_to()&#x7684;&#x65F6;&#x5019;esp&#x8BBE;&#x7F6E;&#x4E3A;&#x8FD9;&#x4E2A;&#x5730;&#x5740;</span>
+    p-&gt;thread.esp0 = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) (childregs+<span class="hljs-number">1</span>); <span class="hljs-comment">// &#x5B50;&#x8FDB;&#x7A0B;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x6808;&#x5730;&#x5740;</span>
+
+    p-&gt;thread.eip = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) ret_from_fork;  <span class="hljs-comment">// &#x5B50;&#x8FDB;&#x7A0B;&#x5C06;&#x8981;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x5730;&#x5740;</span>
+
+    savesegment(fs,p-&gt;thread.fs);
+    savesegment(gs,p-&gt;thread.gs);
+
+    unlazy_fpu(current);
+    struct_cpy(&amp;p-&gt;thread.i387, &amp;current-&gt;thread.i387);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>do_fork() &#x51FD;&#x6570;&#x6700;&#x540E;&#x8C03;&#x7528; wake_up_process() &#x51FD;&#x6570;&#x5524;&#x9192;&#x5B50;&#x8FDB;&#x7A0B;, &#x8BA9;&#x5B50;&#x8FDB;&#x7A0B;&#x8FDB;&#x5165;&#x8FD0;&#x884C;&#x72B6;&#x6001;.</p>
+<h3 id="&#x5185;&#x6838;&#x7EBF;&#x7A0B;">&#x5185;&#x6838;&#x7EBF;&#x7A0B;</h3>
+<p>Linux&#x5185;&#x6838;&#x6709;&#x5F88;&#x591A;&#x4EFB;&#x52A1;&#x9700;&#x8981;&#x53BB;&#x505A;, &#x4F8B;&#x5982;&#x5B9A;&#x65F6;&#x628A;&#x7F13;&#x51B2;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5237;&#x5230;&#x786C;&#x76D8;, &#x5F53;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x5185;&#x5B58;&#x7684;&#x56DE;&#x6536;&#x7B49;, &#x8FD9;&#x4E9B;&#x5DE5;&#x4F5C;&#x90FD;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x6765;&#x5B8C;&#x6210;. &#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x4E0E;&#x666E;&#x901A;&#x8FDB;&#x7A0B;&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x5C31;&#x662F;: &#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x6CA1;&#x6709;&#x81EA;&#x5DF1;&#x7684; <code>&#x865A;&#x62DF;&#x7A7A;&#x95F4;&#x7ED3;&#x6784;(struct mm)</code>, &#x6BCF;&#x6B21;&#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x662F;&#x501F;&#x52A9;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x8FDB;&#x7A0B;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x7ED3;&#x6784;&#x6765;&#x8FD0;&#x884C;, &#x56E0;&#x4E3A;&#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x53EA;&#x4F1A;&#x8FD0;&#x884C;&#x5728;&#x5185;&#x6838;&#x6001;, &#x800C;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x5185;&#x6838;&#x6001;&#x7A7A;&#x95F4;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;, &#x6240;&#x4EE5;&#x501F;&#x52A9;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x7ED3;&#x6784;&#x6765;&#x8FD0;&#x884C;&#x662F;&#x5B8C;&#x6210;&#x53EF;&#x884C;&#x7684;.</p>
+<p>&#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528; <code>kernel_thread()</code> &#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;, &#x4EE3;&#x7801;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-cpp">int kernel_thread(int (*fn)(void *), void * arg, unsigned long flags)
+{
+    long retval, d0;
+
+    __asm__ __volatile__(
+        &quot;movl %%esp,%%esi\n\t&quot;
+        &quot;int $0x80\n\t&quot;        /* Linux/i386 system call */
+        &quot;cmpl %%esp,%%esi\n\t&quot;    /* child or parent? */
+        &quot;je 1f\n\t&quot;        /* parent - jump */
+        /* Load the argument into eax, and push it.  That way, it does
+         * not matter whether the called function is compiled with
+         * -mregparm or not.  */
+        &quot;movl %4,%%eax\n\t&quot;
+        &quot;pushl %%eax\n\t&quot;        
+        &quot;call *%5\n\t&quot;        /* call fn */
+        &quot;movl %3,%0\n\t&quot;    /* exit */
+        &quot;int $0x80\n&quot;
+        &quot;1:\t&quot;
+        :&quot;=&amp;a&quot; (retval), &quot;=&amp;S&quot; (d0)
+        :&quot;0&quot; (__NR_clone), &quot;i&quot; (__NR_exit),
+         &quot;r&quot; (arg), &quot;r&quot; (fn),
+         &quot;b&quot; (flags | CLONE_VM)
+        : &quot;memory&quot;);
+    return retval;
+}
+</code></pre>
+<p>&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5F0F;&#x4F7F;&#x7528;&#x5D4C;&#x5165;&#x6C47;&#x7F16;&#x6765;&#x5B9E;&#x73B0;&#x7684;, &#x6240;&#x4EE5;&#x6709;&#x70B9;&#x96BE;&#x61C2;, &#x4E0D;&#x8FC7;&#x4E3B;&#x8981;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>_clone()</code>&#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8FDB;&#x7A0B;, &#x800C;&#x521B;&#x5EFA;&#x8FDB;&#x7A0B;&#x662F;&#x901A;&#x8FC7;&#x4F20;&#x5165; <code>CLONE_VM</code> &#x6807;&#x5FD7;&#x6765;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x501F;&#x7528;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x7ED3;&#x6784;.</p>
+<pre><code>&#x7279;&#x522B;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#xFF1A;`d0` &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x4E3A;&#x4E86;&#x5728;&#x521B;&#x5EFA;&#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x65F6;&#x4FDD;&#x8BC1; `struct pt_regs` &#x7ED3;&#x6784;&#x7684;&#x5B8C;&#x6574;&#xFF0C;
+&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x521B;&#x5EFA;&#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x662F;&#x5728;&#x5185;&#x6838;&#x6001;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5185;&#x6838;&#x6001;&#x8C03;&#x7528;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x662F;&#x4E0D;&#x4F1A;&#x538B;&#x5165; `ss` &#x548C; `esp` &#x5BC4;&#x5B58;&#x5668;&#x7684;&#xFF0C;
+&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684; `struct pt_regs` &#x53C2;&#x6570;&#x4FE1;&#x606F;&#x4E0D;&#x5B8C;&#x6574;&#xFF0C;
+&#x6240;&#x4EE5; `kernel_thread()` &#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A; `d0` &#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x662F;&#x4E3A;&#x4E86;&#x8865;&#x5145;&#x6CA1;&#x538B;&#x6808;&#x7684; `ss` &#x548C; `esp` &#x7684;&#x3002;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="process-schedule.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 进程调度">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"进程管理","level":"1.2.1","depth":2,"next":{"title":"进程调度","level":"1.2.2","depth":2,"path":"process-schedule.md","ref":"process-schedule.md","articles":[]},"previous":{"title":"进程管理","level":"1.2","depth":1,"ref":"","articles":[{"title":"进程管理","level":"1.2.1","depth":2,"path":"process-management.md","ref":"process-management.md","articles":[]},{"title":"进程调度","level":"1.2.2","depth":2,"path":"process-schedule.md","ref":"process-schedule.md","articles":[]},{"title":"并发同步","level":"1.2.3","depth":2,"path":"concurrency-synchronize.md","ref":"concurrency-synchronize.md","articles":[]},{"title":"等待队列","level":"1.2.4","depth":2,"path":"waitqueue.md","ref":"waitqueue.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"process-management.md","mtime":"2019-11-18T10:27:14.225Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T03:48:37.225Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

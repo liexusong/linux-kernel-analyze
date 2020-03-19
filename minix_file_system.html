@@ -1,0 +1,819 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MINIX文件系统 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="virtual_file_system.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="process-management.html">
+            
+                <a href="process-management.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="process-schedule.html">
+            
+                <a href="process-schedule.html">
+            
+                    
+                    进程调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="concurrency-synchronize.html">
+            
+                <a href="concurrency-synchronize.html">
+            
+                    
+                    并发同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="waitqueue.html">
+            
+                <a href="waitqueue.html">
+            
+                    
+                    等待队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    内存管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="physical-memory-managemen-1.html">
+            
+                <a href="physical-memory-managemen-1.html">
+            
+                    
+                    物理内存管理(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="physical-memory-managemen-2.html">
+            
+                <a href="physical-memory-managemen-2.html">
+            
+                    
+                    物理内存管理(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="physical-memory-managemen-3.html">
+            
+                <a href="physical-memory-managemen-3.html">
+            
+                    
+                    物理内存管理(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="virtual_memory_address_manager.html">
+            
+                <a href="virtual_memory_address_manager.html">
+            
+                    
+                    虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="memory_mmap.html">
+            
+                <a href="memory_mmap.html">
+            
+                    
+                    mmap完全剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="memory_swap.html">
+            
+                <a href="memory_swap.html">
+            
+                    
+                    内存交换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    中断机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="interrupt_hardware.html">
+            
+                <a href="interrupt_hardware.html">
+            
+                    
+                    硬件相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="interrupt_softward.html">
+            
+                <a href="interrupt_softward.html">
+            
+                    
+                    中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    系统调用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="syscall.html">
+            
+                <a href="syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="virtual_file_system.html">
+            
+                <a href="virtual_file_system.html">
+            
+                    
+                    虚拟文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2" data-path="minix_file_system.html">
+            
+                <a href="minix_file_system.html">
+            
+                    
+                    MINIX文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    进程间通信
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="signal.html">
+            
+                <a href="signal.html">
+            
+                    
+                    信号处理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ipc-shm.html">
+            
+                <a href="ipc-shm.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="socket_interface.html">
+            
+                <a href="socket_interface.html">
+            
+                    
+                    Socket接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="unix-domain-sockets.html">
+            
+                <a href="unix-domain-sockets.html">
+            
+                    
+                    Unix Domain Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="kernel-timer.html">
+            
+                <a href="kernel-timer.html">
+            
+                    
+                    定时器实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="multiplexing-io.html">
+            
+                <a href="multiplexing-io.html">
+            
+                    
+                    多路复用I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    docker实现原理之 - namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    2.6+内核分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="epoll-principle.html">
+            
+                <a href="epoll-principle.html">
+            
+                    
+                    Epoll原理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >MINIX文件系统</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="minix&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5206;&#x6790;">MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5206;&#x6790;</h2>
+<p>&#x786C;&#x76D8;&#x662F;&#x7528;&#x6765;&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x786C;&#x4EF6;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x786C;&#x76D8;&#x5206;&#x4E3A;&#x78C1;&#x76D8;&#x548C;&#x56FA;&#x6001;&#x786C;&#x76D8;&#xFF0C;&#x4F46;&#x8FD9;&#x91CC;&#x5E76;&#x4E0D;&#x4F1A;&#x4ECB;&#x7ECD;&#x592A;&#x591A;&#x5173;&#x4E8E;&#x786C;&#x4EF6;&#x65B9;&#x9762;&#x7684;&#x77E5;&#x8BC6;&#xFF0C;&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD; <code>MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x7684;&#x539F;&#x7406;&#x548C;&#x73B0;&#x5B9E;&#x3002;</p>
+<h3 id="&#x4EC0;&#x4E48;&#x662F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;">&#x4EC0;&#x4E48;&#x662F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</h3>
+<p>&#x786C;&#x76D8;&#x5C5E;&#x4E8E; <code>&#x5757;&#x8BBE;&#x5907;</code> &#x786C;&#x4EF6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5BF9;&#x786C;&#x76D8;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x5757;&#x6765;&#x8FDB;&#x884C;&#x7684;&#x3002;&#x5BF9;&#x4E8E;&#x4E00;&#x822C;&#x7684;&#x78C1;&#x76D8;&#x6765;&#x8BF4;&#xFF0C;&#x4E00;&#x4E2A;&#x5757;&#x4E3A;512&#x5B57;&#x8282;&#xFF08;&#x79F0;&#x4E3A;&#x6247;&#x533A;&#xFF09;&#x3002;&#x786C;&#x76D8;&#x5C31;&#x662F;&#x6309;&#x7167;&#x5757;&#x5927;&#x5C0F;&#x6765;&#x5212;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x5757;&#xFF0C;&#x6BCF;&#x4E2A;&#x5757;&#x90FD;&#x6709;&#x552F;&#x4E00;&#x7684;&#x7F16;&#x53F7;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x4EBA;&#x7C7B;&#x6765;&#x8BF4;&#xFF0C;&#x901A;&#x8FC7;&#x5757;&#x6765;&#x64CD;&#x4F5C;&#x786C;&#x76D8;&#x662F;&#x975E;&#x5E38;&#x4E0D;&#x65B9;&#x4FBF;&#x7684;&#xFF0C;&#x8B6C;&#x5982;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x5757;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x88AB;&#x4F7F;&#x7528;&#xFF08;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x6570;&#x636E;&#x5757;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x8BB0;&#x5F55;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#xFF09;&#xFF0C;&#x800C;&#x4E14;&#x4F60;&#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x5757;&#x4FDD;&#x5B58;&#x4E86;&#x4EC0;&#x4E48;&#x6570;&#x636E;&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x9700;&#x8981; <code>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x6765;&#x5E2E;&#x52A9;&#x7BA1;&#x7406;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x4EC0;&#x4E48;&#x662F; <code>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x5462;&#xFF1F;</p>
+<blockquote>
+<p>&#x767E;&#x79D1;&#x4E0A;&#x7684;&#x5B9A;&#x4E49;&#xFF1A; <code>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x662F;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7528;&#x4E8E;&#x660E;&#x786E;&#x78C1;&#x76D8;&#x6216;&#x5206;&#x533A;&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5373;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#x7EC4;&#x7EC7;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+</blockquote>
+<p>&#x524D;&#x9762;&#x8BF4;&#x8FC7;&#xFF0C;&#x5185;&#x5B58;&#x901A;&#x8FC7;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x6240;&#x4EE5;&#x786C;&#x76D8;&#x4E5F;&#x9700;&#x8981;&#x786C;&#x76D8;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x6765;&#x7BA1;&#x7406;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; <code>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code>&#x3002;<code>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x7BA1;&#x7406;&#x786C;&#x76D8;&#x4E0A;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x7ED9;&#x7528;&#x6237;&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x7684;API&#xFF08;&#x5982; <code>read()</code> &#x548C; <code>write()</code> &#x7B49;&#x63A5;&#x53E3;&#xFF09;&#x6765;&#x64CD;&#x4F5C;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x3002;</p>
+<h3 id="&#x4EC0;&#x4E48;&#x662F;minix&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;">&#x4EC0;&#x4E48;&#x662F;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</h3>
+<p><code>MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x662F;&#x4ECE;MINIX&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x79FB;&#x690D;&#x5230;Linux&#x7684;&#xFF0C;&#x5176;&#x4F18;&#x70B9;&#x662F;&#x7B80;&#x5355;&#x6E05;&#x6670;&#xFF0C;&#x9002;&#x5408;&#x7528;&#x4E8E;&#x6559;&#x5B66;&#x4F7F;&#x7528;&#x3002;&#x4F46;&#x7F3A;&#x70B9;&#x662F;&#x8FC7;&#x4E8E;&#x7B80;&#x5355;&#xFF0C;&#x4E0D;&#x9002;&#x5408;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4F7F;&#x7528;&#x3002;&#x4E0D;&#x8FC7;&#x901A;&#x8FC7;&#x5BF9;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x5206;&#x6790;&#xFF0C;&#x6709;&#x52A9;&#x4E8E;&#x7406;&#x89E3;&#x5176;&#x4ED6;&#x590D;&#x6742;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</p>
+<h3 id="minix&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;">MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7ED3;&#x6784;</h3>
+<p>&#x5728;&#x5206;&#x6790;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5B9E;&#x73B0;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5728;&#x786C;&#x76D8;&#x7684;&#x7ED3;&#x6784;&#x7EC4;&#x7EC7;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/minix_filesystem.png" alt="minix_filesystem"></p>
+<p>&#x53EF;&#x4EE5;&#x628A;&#x786C;&#x76D8;&#x5F53;&#x6210;&#x4E00;&#x4E2A;&#x7531;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x5757;&#x7EC4;&#x6210;&#x7684;&#x8BBE;&#x5907;&#xFF08;&#x5BF9;&#x4E8E;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5757;&#x7684;&#x5927;&#x5C0F;&#x4E3A;1024&#x5B57;&#x8282;&#xFF09;&#xFF0C;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5C31;&#x662F;&#x7EC4;&#x7EC7;&#x548C;&#x7BA1;&#x7406;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x5757;&#x7684;&#x4E00;&#x79CD;&#x7B97;&#x6CD5;&#x3002;&#x4E0B;&#x9762;&#x6765;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x4E0A;&#x56FE;&#x4E2D;&#x5404;&#x4E2A;&#x90E8;&#x5206;&#x7684;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ul>
+<li><code>&#x8D85;&#x7EA7;&#x5757;</code>&#xFF1A;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;inode&#x7684;&#x6570;&#x91CF;&#x548C;inode&#x4F4D;&#x56FE;&#x5360;&#x7528;&#x7684;&#x6570;&#x636E;&#x5757;&#x6570;&#x91CF;&#x7B49;&#x3002;</li>
+<li><code>inode&#x4F4D;&#x56FE;</code>&#xFF1A;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;inode&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF0C;&#x6BCF;&#x4E2A;&#x4F4D;&#x4EE3;&#x8868;inode&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF0C;1&#x8868;&#x793A;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#xFF0C;0&#x4EE3;&#x8868;&#x7A7A;&#x95F2;&#x3002;</li>
+<li><code>&#x903B;&#x8F91;&#x5757;&#x4F4D;&#x56FE;</code>&#xFF1A;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF0C;&#x6BCF;&#x4E2A;&#x4F4D;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF0C;1&#x8868;&#x793A;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#xFF0C;0&#x4EE3;&#x8868;&#x7A7A;&#x95F2;&#x3002;</li>
+<li><code>inode&#x8868;</code>&#xFF1A;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x6240;&#x6709;inode&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6BCF;&#x4E2A;&#x8BB0;&#x5F55;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;inode&#x3002;</li>
+<li><code>&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;</code>&#xFF1A;&#x771F;&#x6B63;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x6570;&#x636E;&#x5757;&#x3002;</li>
+</ul>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4ECB;&#x7ECD;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x7ED3;&#x6784;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5206;&#x6790;&#x4E00;&#x4E0B;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+<h3 id="minix&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x6570;&#x636E;&#x7ED3;&#x6784;">MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x6570;&#x636E;&#x7ED3;&#x6784;</h3>
+<p>&#x5728;&#x5206;&#x6790;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x5B9E;&#x73B0;&#x524D;&#xFF0C;&#x5148;&#x6765;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x4E24;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1A;<code>minix_super_block</code> &#x548C; <code>minix2_inode</code>&#xFF0C;<code>minix_super_block</code> &#x5BF9;&#x5E94;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x8D85;&#x7EA7;&#x5757;&#xFF0C;&#x800C; <code>minix_super_block</code> &#x5219;&#x5BF9;&#x5E94;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;inode&#x8282;&#x70B9;&#x3002;</p>
+<h4 id="minixsuperblock&#x7ED3;&#x6784;">minix_super_block&#x7ED3;&#x6784;</h4>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> minix_super_block {
+    __u16 s_ninodes;       <span class="hljs-comment">// inode&#x7684;&#x4E2A;&#x6570;</span>
+    __u16 s_nzones;        <span class="hljs-comment">// &#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x4E2A;&#x6570;(v1&#x7248;)</span>
+    __u16 s_imap_blocks;   <span class="hljs-comment">// inode&#x4F4D;&#x56FE;&#x5360;&#x7528;&#x7684;&#x6570;&#x636E;&#x5757;&#x6570;&#x91CF;</span>
+    __u16 s_zmap_blocks;   <span class="hljs-comment">// &#x6570;&#x636E;&#x5757;&#x4F4D;&#x56FE;&#x5360;&#x7528;&#x7684;&#x6570;&#x636E;&#x5757;&#x6570;&#x91CF;</span>
+    __u16 s_firstdatazone; <span class="hljs-comment">// &#x7B2C;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x8D77;&#x59CB;&#x53F7;</span>
+    __u16 s_log_zone_size; <span class="hljs-comment">// &#x4F7F;&#x7528;2&#x4E3A;&#x5E95;&#x7684;&#x5BF9;&#x6570;&#x8868;&#x793A;&#x7684;&#x6BCF;&#x4E2A;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x5305;&#x542B;&#x7684;&#x78C1;&#x76D8;&#x5757;&#x6570;</span>
+    __u32 s_max_size;      <span class="hljs-comment">// &#x6587;&#x4EF6;&#x6700;&#x5927;&#x5C3A;&#x5BF8;</span>
+    __u16 s_magic;         <span class="hljs-comment">// &#x9B54;&#x6570;</span>
+    __u16 s_state;         <span class="hljs-comment">// &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x72B6;&#x6001;</span>
+    __u32 s_zones;         <span class="hljs-comment">// &#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x4E2A;&#x6570;(v2&#x7248;)</span>
+};
+</code></pre>
+<h4 id="minix2inode&#x7ED3;&#x6784;">minix2_inode&#x7ED3;&#x6784;</h4>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> minix2_inode {
+    __u16 i_mode;     <span class="hljs-comment">// &#x6587;&#x4EF6;&#x6A21;&#x5F0F;</span>
+    __u16 i_nlinks;   <span class="hljs-comment">// &#x94FE;&#x63A5;&#x6570;</span>
+    __u16 i_uid;      <span class="hljs-comment">// &#x6240;&#x5C5E;&#x7528;&#x6237;ID</span>
+    __u16 i_gid;      <span class="hljs-comment">// &#x6240;&#x5C5E;&#x7EC4;ID</span>
+    __u32 i_size;     <span class="hljs-comment">// &#x6587;&#x4EF6;&#x5927;&#x5C0F;</span>
+    __u32 i_atime;    <span class="hljs-comment">// &#x8BBF;&#x95EE;&#x65F6;&#x95F4;</span>
+    __u32 i_mtime;    <span class="hljs-comment">// &#x4FEE;&#x6539;&#x65F6;&#x95F4;</span>
+    __u32 i_ctime;    <span class="hljs-comment">// &#x521B;&#x5EFA;&#x65F6;&#x95F4;</span>
+    __u32 i_zone[<span class="hljs-number">10</span>]; <span class="hljs-comment">// &#x6587;&#x4EF6;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x7F16;&#x53F7;</span>
+};
+</code></pre>
+<p><code>minix2_inode</code> &#x7684; <code>i_zone</code> &#x5B57;&#x6BB5;&#x8BB0;&#x5F55;&#x4E86;&#x6587;&#x4EF6;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x54EA;&#x4E9B;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230; <code>i_zone</code> &#x5B57;&#x6BB5;&#x662F;&#x4E00;&#x4E2A;&#x6709;10&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x524D;7&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x76F4;&#x63A5;&#x6307;&#x5411;&#x7684;&#x6570;&#x636E;&#x5757;&#xFF0C;&#x5C31;&#x662F;&#x6570;&#x636E;&#x4F1A;&#x76F4;&#x63A5;&#x5B58;&#x50A8;&#x5728;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x5757;&#x4E0A;&#x3002;&#x800C;&#x7B2C;8&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x4E00;&#x7EA7;&#x95F4;&#x63A5;&#x6307;&#x5411;&#xFF0C;&#x7B2C;9&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x4E8C;&#x7EA7;&#x95F4;&#x63A5;&#x6307;&#x5411;&#xFF0C;&#x7B2C;10&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x4E09;&#x7EA7;&#x95F4;&#x63A5;&#x6307;&#x5411;&#xFF0C;&#x539F;&#x7406;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/minix_filesystem_inode.jpg" alt="minix_filesystem_inode"></p>
+<h3 id="minix&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5B9E;&#x73B0;">MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5B9E;&#x73B0;</h3>
+<p>&#x8981;&#x5728;&#x4E00;&#x4E2A;&#x786C;&#x76D8;&#x6216;&#x8005;&#x5206;&#x533A;&#x5B89;&#x88C5;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x5BF9;&#x786C;&#x76D8;&#x6216;&#x8005;&#x5206;&#x533A;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;&#x64CD;&#x4F5C;&#xFF0C;Linux&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>mkfs</code> &#x547D;&#x4EE4;&#x5BF9;&#x786C;&#x76D8;&#x6216;&#x8005;&#x5206;&#x533A;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;&#xFF0C;&#x4F8B;&#x5982;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x5BF9;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;&#xFF1A;</p>
+<pre><code class="lang-shell">$ mkfs -t ext4 -b 4096 /dev/sdb5
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x628A;&#x8BBE;&#x5907; <code>/dev/sdb5</code> &#x683C;&#x5F0F;&#x5316;&#x4E3A; <code>ext4</code> &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E76;&#x4E14;&#x6BCF;&#x4E2A;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x5927;&#x5C0F;&#x4E3A;4k&#x3002;&#x683C;&#x5F0F;&#x5316;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;&#x6309;&#x7167;&#x5177;&#x4F53;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6307;&#x5B9A;&#x7684;&#x7ED3;&#x6784;&#x6765;&#x7F16;&#x6392;&#x6570;&#x636E;&#xFF0C;&#x6BD4;&#x5982;&#x683C;&#x5F0F;&#x5316;&#x4E3A;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5199;&#x5165;&#x8D85;&#x7EA7;&#x5757;&#x3001;inode&#x4F4D;&#x56FE;&#x3001;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x4F4D;&#x56FE;&#x3001;inode&#x8868;&#x7B49;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</p>
+<p>&#x683C;&#x5F0F;&#x5316;&#x5B8C;&#x540E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>mount</code> &#x547D;&#x540D;&#x5C06;&#x8BBE;&#x5907;&#x6302;&#x8F7D;&#x5230;&#x67D0;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x8BBE;&#x5907;&#x4E86;&#x3002;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-shell">$ mount /dev/sdb5 /mnt/foo
+$ cd /mnt/foo
+</code></pre>
+<p>&#x6302;&#x8F7D;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;&#x8BFB;&#x5165;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x8D85;&#x7EA7;&#x5757;&#x5230;&#x5185;&#x5B58;&#xFF0C;&#x5BF9;&#x4E8E;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x8BFB;&#x5165;&#x8D85;&#x7EA7;&#x5757;&#x6570;&#x636E;&#x662F;&#x901A;&#x8FC7; <code>minix_read_super()</code> &#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">struct</span> super_block *<span class="hljs-title">minix_read_super</span><span class="hljs-params">(
+    <span class="hljs-keyword">struct</span> super_block *s, <span class="hljs-keyword">void</span> *data, <span class="hljs-keyword">int</span> silent)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> minix_super_block *ms;
+
+    ...
+    <span class="hljs-keyword">if</span> (!(bh = bread(dev,<span class="hljs-number">1</span>,BLOCK_SIZE)))
+        <span class="hljs-keyword">goto</span> out_bad_sb;
+
+    ms = (<span class="hljs-keyword">struct</span> minix_super_block *) bh-&gt;b_data;
+    ...
+
+    <span class="hljs-comment">/*
+     * &#x7533;&#x8BF7;inode&#x4F4D;&#x56FE;&#x548C;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x4F4D;&#x56FE;&#x7684;&#x5185;&#x5B58;
+     */</span>
+    i = (s-&gt;u.minix_sb.s_imap_blocks + s-&gt;u.minix_sb.s_zmap_blocks) * <span class="hljs-keyword">sizeof</span>(bh);
+    <span class="hljs-built_in">map</span> = kmalloc(i, GFP_KERNEL);
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">map</span>)
+        <span class="hljs-keyword">goto</span> out_no_map;
+    <span class="hljs-built_in">memset</span>(<span class="hljs-built_in">map</span>, <span class="hljs-number">0</span>, i);
+    s-&gt;u.minix_sb.s_imap = &amp;<span class="hljs-built_in">map</span>[<span class="hljs-number">0</span>];
+    s-&gt;u.minix_sb.s_zmap = &amp;<span class="hljs-built_in">map</span>[s-&gt;u.minix_sb.s_imap_blocks];
+
+    block=<span class="hljs-number">2</span>;
+    <span class="hljs-keyword">for</span> (i=<span class="hljs-number">0</span> ; i &lt; s-&gt;u.minix_sb.s_imap_blocks ; i++) { <span class="hljs-comment">// &#x8BFB;&#x53D6;inode&#x4F4D;&#x56FE;</span>
+        <span class="hljs-keyword">if</span> (!(s-&gt;u.minix_sb.s_imap[i]=bread(dev,block,BLOCK_SIZE)))
+            <span class="hljs-keyword">goto</span> out_no_bitmap;
+        block++;
+    }
+
+    <span class="hljs-keyword">for</span> (i=<span class="hljs-number">0</span> ; i &lt; s-&gt;u.minix_sb.s_zmap_blocks ; i++) { <span class="hljs-comment">// &#x8BFB;&#x53D6;&#x6570;&#x636E;&#x5757;&#x4F4D;&#x56FE;</span>
+        <span class="hljs-keyword">if</span> (!(s-&gt;u.minix_sb.s_zmap[i]=bread(dev,block,BLOCK_SIZE)))
+            <span class="hljs-keyword">goto</span> out_no_bitmap;
+        block++;
+    }
+
+    <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x7B2C;&#x4E00;inode&#x548C;&#x7B2C;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x4E3A;&#x5DF2;&#x88AB;&#x4F7F;&#x7528;(&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x6839;&#x76EE;&#x5F55;)</span>
+    minix_set_bit(<span class="hljs-number">0</span>,s-&gt;u.minix_sb.s_imap[<span class="hljs-number">0</span>]-&gt;b_data);
+    minix_set_bit(<span class="hljs-number">0</span>,s-&gt;u.minix_sb.s_zmap[<span class="hljs-number">0</span>]-&gt;b_data);
+
+    s-&gt;s_op = &amp;minix_sops;
+    root_inode = iget(s, MINIX_ROOT_INO);
+    <span class="hljs-keyword">if</span> (!root_inode)
+        <span class="hljs-keyword">goto</span> out_no_root;
+
+    <span class="hljs-comment">// &#x8BFB;&#x53D6;&#x6839;&#x76EE;&#x5F55;inode&#x8282;&#x70B9;</span>
+    s-&gt;s_root = d_alloc_root(root_inode);
+    <span class="hljs-keyword">if</span> (!s-&gt;s_root)
+        <span class="hljs-keyword">goto</span> out_iput;
+
+    s-&gt;s_root-&gt;d_op = &amp;minix_dentry_operations;
+
+    ...
+    <span class="hljs-keyword">return</span> s;
+    ...
+}
+</code></pre>
+<p><code>minix_read_super()</code> &#x51FD;&#x6570;&#x9996;&#x5148;&#x901A;&#x8FC7; <code>bread()</code> &#x8BFB;&#x53D6;&#x8BBE;&#x5907;&#x7684;&#x7B2C;2&#x4E2A;&#x6570;&#x636E;&#x5757;&#xFF08;&#x7B2C;1&#x4E2A;&#x6570;&#x636E;&#x5757;&#x662F;&#x5F15;&#x5BFC;&#x533A;&#xFF09;&#xFF0C;&#x8D85;&#x7EA7;&#x5757;&#x5C31;&#x4FDD;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x5757;&#x4E2D;&#x3002;&#x7136;&#x540E;&#x6839;&#x636E;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x8D85;&#x7EA7;&#x5757;&#x6570;&#x636E;&#x8BBE;&#x7F6E;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF08;VFS&#xFF09;&#x7684;&#x8D85;&#x7EA7;&#x5757;&#xFF0C;&#x63A5;&#x7740;&#x4E3A;inode&#x4F4D;&#x56FE;&#x548C;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x4F4D;&#x56FE;&#x7533;&#x8BF7;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x4E14;&#x8BFB;&#x5165;&#x8BBE;&#x5907;&#x4E2D;&#x7684;inode&#x4F4D;&#x56FE;&#x548C;&#x903B;&#x8F91;&#x6570;&#x636E;&#x5757;&#x4F4D;&#x56FE;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#x3002;&#x6700;&#x540E;&#x8BFB;&#x53D6;&#x6839;&#x76EE;&#x5F55;&#x7684;inode&#x8282;&#x70B9;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x4FDD;&#x5B58;&#x5230;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x8D85;&#x7EA7;&#x5757;&#x7684; <code>s_root</code> &#x5B57;&#x6BB5;&#x4E2D;&#x3002;</p>
+<h4 id="&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x6570;&#x636E;">&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x6570;&#x636E;</h4>
+<p>&#x8BFB;&#x53D6;MINIX&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x6587;&#x4EF6;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/minix-filesystem-read.jpg" alt="minix-filesystem-read"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="virtual_file_system.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 虚拟文件系统">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MINIX文件系统","level":"1.6.2","depth":2,"next":{"title":"进程间通信","level":"1.7","depth":1,"ref":"","articles":[{"title":"信号处理机制","level":"1.7.1","depth":2,"path":"signal.md","ref":"signal.md","articles":[]},{"title":"共享内存","level":"1.7.2","depth":2,"path":"ipc-shm.md","ref":"ipc-shm.md","articles":[]}]},"previous":{"title":"虚拟文件系统","level":"1.6.1","depth":2,"path":"virtual_file_system.md","ref":"virtual_file_system.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"minix_file_system.md","mtime":"2020-01-19T03:52:00.362Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T03:48:37.225Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

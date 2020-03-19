@@ -1,0 +1,1162 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>虚拟文件系统 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="minix_file_system.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    进程管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="process-management.html">
+            
+                <a href="process-management.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="process-schedule.html">
+            
+                <a href="process-schedule.html">
+            
+                    
+                    进程调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="concurrency-synchronize.html">
+            
+                <a href="concurrency-synchronize.html">
+            
+                    
+                    并发同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="waitqueue.html">
+            
+                <a href="waitqueue.html">
+            
+                    
+                    等待队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    内存管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="physical-memory-managemen-1.html">
+            
+                <a href="physical-memory-managemen-1.html">
+            
+                    
+                    物理内存管理(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="physical-memory-managemen-2.html">
+            
+                <a href="physical-memory-managemen-2.html">
+            
+                    
+                    物理内存管理(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="physical-memory-managemen-3.html">
+            
+                <a href="physical-memory-managemen-3.html">
+            
+                    
+                    物理内存管理(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="virtual_memory_address_manager.html">
+            
+                <a href="virtual_memory_address_manager.html">
+            
+                    
+                    虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="memory_mmap.html">
+            
+                <a href="memory_mmap.html">
+            
+                    
+                    mmap完全剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="memory_swap.html">
+            
+                <a href="memory_swap.html">
+            
+                    
+                    内存交换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    中断机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="interrupt_hardware.html">
+            
+                <a href="interrupt_hardware.html">
+            
+                    
+                    硬件相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="interrupt_softward.html">
+            
+                <a href="interrupt_softward.html">
+            
+                    
+                    中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    系统调用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="syscall.html">
+            
+                <a href="syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    文件系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="virtual_file_system.html">
+            
+                <a href="virtual_file_system.html">
+            
+                    
+                    虚拟文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="minix_file_system.html">
+            
+                <a href="minix_file_system.html">
+            
+                    
+                    MINIX文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    进程间通信
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="signal.html">
+            
+                <a href="signal.html">
+            
+                    
+                    信号处理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ipc-shm.html">
+            
+                <a href="ipc-shm.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="socket_interface.html">
+            
+                <a href="socket_interface.html">
+            
+                    
+                    Socket接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="unix-domain-sockets.html">
+            
+                <a href="unix-domain-sockets.html">
+            
+                    
+                    Unix Domain Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="kernel-timer.html">
+            
+                <a href="kernel-timer.html">
+            
+                    
+                    定时器实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="multiplexing-io.html">
+            
+                <a href="multiplexing-io.html">
+            
+                    
+                    多路复用I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    docker实现原理之 - namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    2.6+内核分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="epoll-principle.html">
+            
+                <a href="epoll-principle.html">
+            
+                    
+                    Epoll原理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >虚拟文件系统</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;">&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</h1>
+<p>&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x78C1;&#x76D8;&#x548C;&#x5149;&#x76D8;&#x90FD;&#x5C5E;&#x4E8E;&#x5757;&#x8BBE;&#x5907;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5B83;&#x4EEC;&#x90FD;&#x662F;&#x6309;&#x7167; <code>&#x6570;&#x636E;&#x5757;</code> &#x6765;&#x8FDB;&#x884C;&#x8BFB;&#x5199;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x78C1;&#x76D8;&#x548C;&#x5149;&#x76D8;&#x60F3;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x7531;&#x6570;&#x636E;&#x5757;&#x7EC4;&#x6210;&#x7684;&#x5DE8;&#x5927;&#x6570;&#x7EC4;&#x3002;&#x4F46;&#x8FD9;&#x6837;&#x7684;&#x8BFB;&#x5199;&#x65B9;&#x5F0F;&#x5BF9;&#x4E8E;&#x4EBA;&#x7C7B;&#x6765;&#x8BF4;&#x4E0D;&#x592A;&#x53CB;&#x597D;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x8981;&#x5728;&#x78C1;&#x76D8;&#x6216;&#x8005;&#x5149;&#x76D8;&#x4E0A;&#x9762;&#x6302;&#x8F7D; <code>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x624D;&#x80FD;&#x4F7F;&#x7528;&#x3002;&#x90A3;&#x4E48;&#x4EC0;&#x4E48;&#x662F; <code>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x5462;&#xFF1F; <code>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x662F;&#x4E00;&#x79CD;&#x5B58;&#x50A8;&#x548C;&#x7EC4;&#x7EC7;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x4F7F;&#x5F97;&#x5BF9;&#x5176;&#x8BBF;&#x95EE;&#x548C;&#x67E5;&#x627E;&#x53D8;&#x5F97;&#x5BB9;&#x6613;&#x3002;&#x901A;&#x8FC7;&#x6302;&#x8F7D;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982; <code>/home/docs/test.txt</code> &#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8BBF;&#x95EE;&#x78C1;&#x76D8;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5757;&#x7F16;&#x53F7;&#x6765;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x3002;</p>
+<p>&#x5728;Linux&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x79CD;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6765;&#x6302;&#x8F7D;&#x4E0D;&#x540C;&#x7684;&#x8BBE;&#x5907;&#xFF0C;&#x5982; ext2&#x3001;ext3&#x3001;nfs&#x7B49;&#x7B49;&#x3002;&#x4F46;&#x63D0;&#x4F9B;&#x7ED9;&#x7528;&#x6237;&#x7684;&#x6587;&#x4EF6;&#x5904;&#x7406;&#x63A5;&#x53E3;&#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x4E0D;&#x7BA1;&#x4F7F;&#x7528; ext2 &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x8FD8;&#x662F;&#x4F7F;&#x7528; ext3 &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x7684;&#x63A5;&#x53E3;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x7528;&#x6237;&#x4E0D;&#x7528;&#x5173;&#x5FC3;&#x4F7F;&#x7528;&#x4E86;&#x4EC0;&#x4E48;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7EDF;&#x4E00;&#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x5373;&#x53EF;&#x3002;&#x90A3;&#x4E48;Linux&#x662F;&#x5982;&#x4F55;&#x505A;&#x5230;&#x7684;&#x5462;&#xFF1F;&#x8FD9;&#x5C31;&#x5F97;&#x76CA;&#x4E8E; <code>&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;(Virtual File System&#xFF0C;&#x7B80;&#x79F0; VFS)</code>&#x3002;</p>
+<p><code>&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x5957;&#x89C4;&#x8303;&#xFF0C;&#x5404;&#x4E2A;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5FC5;&#x987B;&#x6309;&#x7167; <code>&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x89C4;&#x8303;</code> &#x7F16;&#x5199;&#x624D;&#x80FD;&#x63A5;&#x5165;&#x5230; <code>&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x4E2D;&#x3002;&#x8FD9;&#x6709;&#x70B9;&#x50CF;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BED;&#x8A00;&#x91CC;&#x9762;&#x7684; <code>&#x63A5;&#x53E3;</code>&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x7C7B;&#x5B9E;&#x73B0;&#x4E86;&#x67D0;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x4FBF;&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E2A;&#x7C7B;&#x5F53;&#x505A;&#x6210;&#x6B64;&#x63A5;&#x53E3;&#x3002;VFS &#x4E3B;&#x8981;&#x4E3A;&#x7528;&#x6237;&#x548C;&#x5185;&#x6838;&#x67B6;&#x8D77;&#x4E00;&#x9053;&#x6865;&#x6881;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; VFS &#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;&#x8BBF;&#x95EE;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;
+<img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/vfs.jpg" alt="vfs"></p>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x5206;&#x6790; <code>&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</code> &#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x3002;</p>
+<h2 id="&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x62BD;&#x8C61;&#x6570;&#x636E;&#x7ED3;&#x6784;">&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x62BD;&#x8C61;&#x6570;&#x636E;&#x7ED3;&#x6784;</h2>
+<p>Linux&#x5949;&#x884C;&#x4E86;Unix&#x7684;&#x7406;&#x5FF5;&#xFF1A;<code>&#x4E00;&#x5207;&#x7686;&#x6587;&#x4EF6;</code>&#xFF0C;&#x6BD4;&#x5982;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x662F;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x4E2A;&#x8BBE;&#x5907;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7B49;&#xFF0C;&#x56E0;&#x800C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5728;Linux&#x4E2D;&#x5360;&#x6709;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x5730;&#x4F4D;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x8981;&#x4E3A;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5B9A;&#x4E49;&#x7EDF;&#x4E00;&#x7684;&#x63A5;&#x53E3;&#x5C42;&#xFF0C;&#x6240;&#x4EE5; VFS &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x89C4;&#x8303;&#xFF0C;&#x771F;&#x5B9E;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5FC5;&#x73B0;&#x6309;&#x7167; VFS &#x7684;&#x89C4;&#x8303;&#x6765;&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#x3002;VFS &#x62BD;&#x8C61;&#x4E86;&#x51E0;&#x4E2A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6765;&#x7EC4;&#x7EC7;&#x548C;&#x7BA1;&#x7406;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5206;&#x522B;&#x4E3A;&#xFF1A;<code>&#x8D85;&#x7EA7;&#x5757;&#xFF08;super_block&#xFF09;</code>&#x3001;<code>&#x7D22;&#x5F15;&#x8282;&#x70B9;&#xFF08;inode&#xFF09;</code>&#x3001;<code>&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF08;dentry&#xFF09;</code> &#x548C; <code>&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#xFF08;file&#xFF09;</code>&#xFF0C;&#x8981;&#x7406;&#x89E3; VFS &#x5C31;&#x5FC5;&#x987B;&#x5148;&#x4E86;&#x89E3;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x4F5C;&#x7528;&#x3002;</p>
+<h3 id="&#x8D85;&#x7EA7;&#x5757;super-block">&#x8D85;&#x7EA7;&#x5757;(super block)</h3>
+<p>&#x56E0;&#x4E3A;Linux&#x652F;&#x6301;&#x591A;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5185;&#x6838;&#x4E2D;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6765;&#x63CF;&#x8FF0;&#x5177;&#x4F53;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x4FE1;&#x606F;&#x548C;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x7B49;&#xFF0C;VFS &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>&#x8D85;&#x7EA7;&#x5757;&#xFF08;super_block&#xFF09;</code> &#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6765;&#x63CF;&#x8FF0;&#x5177;&#x4F53;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5185;&#x6838;&#x662F;&#x901A;&#x8FC7;&#x8D85;&#x7EA7;&#x5757;&#x6765;&#x8BA4;&#x77E5;&#x5177;&#x4F53;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#xFF0C;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4F1A;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x8D85;&#x7EA7;&#x5757;&#x7ED3;&#x6784;&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF08;&#x7531;&#x4E8E;super_block&#x7684;&#x6210;&#x5458;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x53EA;&#x5217;&#x51FA;&#x90E8;&#x5206;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> file_system_type {
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *name;
+    <span class="hljs-keyword">int</span> fs_flags;
+    <span class="hljs-keyword">struct</span> super_block *(*read_super) (<span class="hljs-keyword">struct</span> super_block *, <span class="hljs-keyword">void</span> *, <span class="hljs-keyword">int</span>); <span class="hljs-comment">// &#x8BFB;&#x53D6;&#x8BBE;&#x5907;&#x4E2D;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x8D85;&#x7EA7;&#x5757;&#x7684;&#x65B9;&#x6CD5;</span>
+    ...
+};
+
+<span class="hljs-keyword">struct</span> super_operations {
+    <span class="hljs-keyword">void</span> (*read_inode) (<span class="hljs-keyword">struct</span> inode *);        <span class="hljs-comment">// &#x628A;&#x78C1;&#x76D8;&#x4E2D;&#x7684;inode&#x6570;&#x636E;&#x8BFB;&#x53D6;&#x5165;&#x5230;&#x5185;&#x5B58;&#x4E2D;</span>
+    <span class="hljs-keyword">void</span> (*write_inode) (<span class="hljs-keyword">struct</span> inode *, <span class="hljs-keyword">int</span>);  <span class="hljs-comment">// &#x628A;inode&#x7684;&#x6570;&#x636E;&#x5199;&#x5165;&#x5230;&#x78C1;&#x76D8;&#x4E2D;</span>
+    <span class="hljs-keyword">void</span> (*put_inode) (<span class="hljs-keyword">struct</span> inode *);         <span class="hljs-comment">// &#x91CA;&#x653E;inode&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;</span>
+    <span class="hljs-keyword">void</span> (*delete_inode) (<span class="hljs-keyword">struct</span> inode *);      <span class="hljs-comment">// &#x5220;&#x9664;&#x78C1;&#x76D8;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;inode</span>
+    <span class="hljs-keyword">void</span> (*put_super) (<span class="hljs-keyword">struct</span> super_block *);   <span class="hljs-comment">// &#x91CA;&#x653E;&#x8D85;&#x7EA7;&#x5757;&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;</span>
+    <span class="hljs-keyword">void</span> (*write_super) (<span class="hljs-keyword">struct</span> super_block *); <span class="hljs-comment">// &#x628A;&#x8D85;&#x7EA7;&#x5757;&#x5199;&#x5165;&#x5230;&#x78C1;&#x76D8;&#x4E2D;</span>
+    ...
+};
+
+<span class="hljs-keyword">struct</span> super_block {
+    <span class="hljs-keyword">struct</span> list_head    s_list;     <span class="hljs-comment">/* Keep this first */</span>
+    <span class="hljs-keyword">kdev_t</span>              s_dev;         <span class="hljs-comment">// &#x8BBE;&#x5907;&#x53F7;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>       s_blocksize;   <span class="hljs-comment">// &#x6570;&#x636E;&#x5757;&#x5927;&#x5C0F;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span>       s_blocksize_bits;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span>       s_lock;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span>       s_dirt;       <span class="hljs-comment">// &#x662F;&#x5426;&#x810F;</span>
+    <span class="hljs-keyword">struct</span> file_system_type *s_type;  <span class="hljs-comment">// &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7C7B;&#x578B;</span>
+    <span class="hljs-keyword">struct</span> super_operations *s_op;    <span class="hljs-comment">// &#x8D85;&#x7EA7;&#x5757;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x5217;&#x8868;</span>
+    <span class="hljs-keyword">struct</span> dquot_operations *dq_op;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>       s_flags;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>       s_magic;
+    <span class="hljs-keyword">struct</span> dentry       *s_root;      <span class="hljs-comment">// &#x6302;&#x8F7D;&#x7684;&#x6839;&#x76EE;&#x5F55;</span>
+    <span class="hljs-keyword">wait_queue_head_t</span>   s_wait;
+
+    <span class="hljs-keyword">struct</span> list_head    s_dirty;    <span class="hljs-comment">/* dirty inodes */</span>
+    <span class="hljs-keyword">struct</span> list_head    s_files;
+
+    <span class="hljs-keyword">struct</span> block_device *s_bdev;
+    <span class="hljs-keyword">struct</span> list_head    s_mounts;
+    <span class="hljs-keyword">struct</span> quota_mount_options s_dquot;
+
+    <span class="hljs-keyword">union</span> {
+        <span class="hljs-keyword">struct</span> minix_sb_info    minix_sb;
+        <span class="hljs-keyword">struct</span> ext2_sb_info ext2_sb;
+        ...
+    } u;
+    ...
+};
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x4E00;&#x4E9B;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x6210;&#x5458;&#xFF1A;</p>
+<ul>
+<li>s_dev&#xFF1A;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x8BBE;&#x5907;&#x7684;&#x8BBE;&#x5907;&#x53F7;</li>
+<li>s_blocksize&#xFF1A;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x6570;&#x636E;&#x5757;&#x5927;&#x5C0F;&#xFF08;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x662F;&#x4EE5;&#x6570;&#x636E;&#x5757;&#x4E3A;&#x5355;&#x4F4D;&#x7684;&#xFF09;</li>
+<li>s_type&#xFF1A;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x7C7B;&#x578B;&#xFF08;&#x63D0;&#x4F9B;&#x4E86;&#x8BFB;&#x53D6;&#x8BBE;&#x5907;&#x4E2D;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x8D85;&#x7EA7;&#x5757;&#x7684;&#x65B9;&#x6CD5;&#xFF09;</li>
+<li>s_op&#xFF1A;&#x8D85;&#x7EA7;&#x5757;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x5217;&#x8868;</li>
+<li>s_root&#xFF1A;&#x6302;&#x8F7D;&#x7684;&#x6839;&#x76EE;&#x5F55;</li>
+</ul>
+<h3 id="&#x7D22;&#x5F15;&#x8282;&#x70B9;&#xFF08;inode&#xFF09;">&#x7D22;&#x5F15;&#x8282;&#x70B9;&#xFF08;inode&#xFF09;</h3>
+<p><code>&#x7D22;&#x5F15;&#x8282;&#x70B9;&#xFF08;inode&#xFF09;</code> &#x662F; VFS &#x4E2D;&#x6700;&#x4E3A;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#xFF0C;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7684;meta&#xFF08;&#x5143;&#xFF09;&#x4FE1;&#x606F;&#xFF0C;&#x5176;&#x5305;&#x542B;&#x7684;&#x662F;&#x8BF8;&#x5982;&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;&#x3001;&#x62E5;&#x6709;&#x8005;&#x3001;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&#x3001;&#x78C1;&#x76D8;&#x4F4D;&#x7F6E;&#x7B49;&#x548C;&#x6587;&#x4EF6;&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684; <code>inode</code> &#x7ED3;&#x6784;&#x3002;<code>inode</code> &#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF08;&#x7531;&#x4E8E;inode&#x7684;&#x6210;&#x5458;&#x4E5F;&#x662F;&#x975E;&#x5E38;&#x591A;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x4E5F;&#x53EA;&#x5217;&#x51FA;&#x90E8;&#x5206;&#x6210;&#x5458;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x53C2;&#x8003;Linux&#x6E90;&#x7801;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> inode_operations {
+    <span class="hljs-keyword">int</span> (*create) (<span class="hljs-keyword">struct</span> inode *,<span class="hljs-keyword">struct</span> dentry *,<span class="hljs-keyword">int</span>);
+    <span class="hljs-keyword">struct</span> dentry * (*lookup) (<span class="hljs-keyword">struct</span> inode *,<span class="hljs-keyword">struct</span> dentry *);
+    <span class="hljs-keyword">int</span> (*link) (<span class="hljs-keyword">struct</span> dentry *,<span class="hljs-keyword">struct</span> inode *,<span class="hljs-keyword">struct</span> dentry *);
+    <span class="hljs-keyword">int</span> (*unlink) (<span class="hljs-keyword">struct</span> inode *,<span class="hljs-keyword">struct</span> dentry *);
+    <span class="hljs-keyword">int</span> (*symlink) (<span class="hljs-keyword">struct</span> inode *,<span class="hljs-keyword">struct</span> dentry *,<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *);
+    ...
+};
+
+<span class="hljs-keyword">struct</span> file_operations {
+    <span class="hljs-keyword">struct</span> module *owner;
+    <span class="hljs-keyword">loff_t</span> (*llseek) (<span class="hljs-keyword">struct</span> file *, <span class="hljs-keyword">loff_t</span>, <span class="hljs-keyword">int</span>);
+    <span class="hljs-keyword">ssize_t</span> (*read) (<span class="hljs-keyword">struct</span> file *, <span class="hljs-keyword">char</span> *, <span class="hljs-keyword">size_t</span>, <span class="hljs-keyword">loff_t</span> *);
+    <span class="hljs-keyword">ssize_t</span> (*write) (<span class="hljs-keyword">struct</span> file *, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *, <span class="hljs-keyword">size_t</span>, <span class="hljs-keyword">loff_t</span> *);
+    ...
+};
+
+<span class="hljs-keyword">struct</span> inode {
+    ...
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>       i_ino;
+    <span class="hljs-keyword">atomic_t</span>            i_count;
+    <span class="hljs-keyword">kdev_t</span>              i_dev;
+    <span class="hljs-keyword">umode_t</span>             i_mode;
+    <span class="hljs-keyword">nlink_t</span>             i_nlink;
+    <span class="hljs-keyword">uid_t</span>               i_uid;
+    <span class="hljs-keyword">gid_t</span>               i_gid;
+    <span class="hljs-keyword">kdev_t</span>              i_rdev;
+    <span class="hljs-keyword">loff_t</span>              i_size;
+    <span class="hljs-keyword">time_t</span>              i_atime;
+    <span class="hljs-keyword">time_t</span>              i_mtime;
+    <span class="hljs-keyword">time_t</span>              i_ctime;
+    ...
+    <span class="hljs-keyword">struct</span> inode_operations *i_op;
+    <span class="hljs-keyword">struct</span> file_operations  *i_fop;
+    <span class="hljs-keyword">struct</span> super_block      *i_sb;
+    ...
+    <span class="hljs-keyword">union</span> {
+        <span class="hljs-keyword">struct</span> minix_inode_info     minix_i;
+        <span class="hljs-keyword">struct</span> ext2_inode_info      ext2_i;
+        ...
+    } u;
+};
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x4E5F;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B; <code>inode</code> &#x4E2D;&#x51E0;&#x4E2A;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x6210;&#x5458;&#xFF1A;</p>
+<ul>
+<li>i_uid&#xFF1A;&#x6587;&#x4EF6;&#x6240;&#x5C5E;&#x7684;&#x7528;&#x6237;</li>
+<li>i_gid&#xFF1A;&#x6587;&#x4EF6;&#x6240;&#x5C5E;&#x7684;&#x7EC4;</li>
+<li>i_rdev&#xFF1A;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x8BBE;&#x5907;&#x53F7;</li>
+<li>i_size&#xFF1A;&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;</li>
+<li>i_atime&#xFF1A;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x540E;&#x8BBF;&#x95EE;&#x65F6;&#x95F4;</li>
+<li>i_mtime&#xFF1A;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;</li>
+<li>i_ctime&#xFF1A;&#x6587;&#x4EF6;&#x7684;&#x521B;&#x5EFA;&#x65F6;&#x95F4;</li>
+<li>i_op&#xFF1A;inode&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x5217;&#x8868;</li>
+<li>i_fop&#xFF1A;&#x6587;&#x4EF6;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x5217;&#x8868;</li>
+<li>i_sb&#xFF1A;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x8D85;&#x7EA7;&#x5757;</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x91CD;&#x70B9;&#x5173;&#x6CE8; <code>i_op</code> &#x548C; <code>i_fop</code> &#x8FD9;&#x4E24;&#x4E2A;&#x6210;&#x5458;&#x3002;<code>i_op</code> &#x6210;&#x5458;&#x5B9A;&#x4E49;&#x5BF9;&#x76EE;&#x5F55;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF0C;&#x8B6C;&#x5982; <code>mkdir()</code>&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x4F1A;&#x89E6;&#x53D1; <code>inode-&gt;i_op-&gt;mkdir()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x800C; <code>link()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x4F1A;&#x89E6;&#x53D1; <code>inode-&gt;i_op-&gt;link()</code> &#x65B9;&#x6CD5;&#x3002;&#x800C; <code>i_fop</code> &#x6210;&#x5458;&#x5219;&#x5B9A;&#x4E49;&#x4E86;&#x5BF9;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x540E;&#x5BF9;&#x6587;&#x4EF6;&#x7684;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF0C;&#x8B6C;&#x5982; <code>read()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x4F1A;&#x89E6;&#x53D1; <code>inode-&gt;i_fop-&gt;read()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x800C; <code>write()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x4F1A;&#x89E6;&#x53D1; <code>inode-&gt;i_fop-&gt;write()</code> &#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x76EE;&#x5F55;&#x9879;&#xFF08;dentry&#xFF09;">&#x76EE;&#x5F55;&#x9879;&#xFF08;dentry&#xFF09;</h3>
+<p>&#x76EE;&#x5F55;&#x9879;&#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x65B9;&#x4FBF;&#x67E5;&#x627E;&#x6587;&#x4EF6;&#x3002;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;&#x7684;&#x5404;&#x4E2A;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;&#x76EE;&#x5F55;&#x8FD8;&#x662F;&#x666E;&#x901A;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x9879;&#x5BF9;&#x8C61;&#x3002;&#x5982;&#xFF0C;&#x5728;&#x8DEF;&#x5F84; <code>/home/liexusong/example.c</code> &#x4E2D;&#xFF0C;&#x76EE;&#x5F55; <code>/</code>, <code>home/</code>, <code>liexusong/</code> &#x548C;&#x6587;&#x4EF6; <code>example.c</code> &#x90FD;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x9879;&#x5BF9;&#x8C61;&#x3002;&#x4E0D;&#x540C;&#x4E8E;&#x524D;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x76EE;&#x5F55;&#x9879;&#x5BF9;&#x8C61;&#x6CA1;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x78C1;&#x76D8;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;VFS &#x5728;&#x904D;&#x5386;&#x8DEF;&#x5F84;&#x540D;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x73B0;&#x573A;&#x5C06;&#x5B83;&#x4EEC;&#x9010;&#x4E2A;&#x5730;&#x89E3;&#x6790;&#x6210;&#x76EE;&#x5F55;&#x9879;&#x5BF9;&#x8C61;&#x3002;&#x5176;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> dentry_operations {
+    <span class="hljs-keyword">int</span> (*d_revalidate)(<span class="hljs-keyword">struct</span> dentry *, <span class="hljs-keyword">int</span>);
+    <span class="hljs-keyword">int</span> (*d_hash) (<span class="hljs-keyword">struct</span> dentry *, <span class="hljs-keyword">struct</span> qstr *);
+    <span class="hljs-keyword">int</span> (*d_compare) (<span class="hljs-keyword">struct</span> dentry *, <span class="hljs-keyword">struct</span> qstr *, <span class="hljs-keyword">struct</span> qstr *);
+    <span class="hljs-keyword">int</span> (*d_delete)(<span class="hljs-keyword">struct</span> dentry *);
+    <span class="hljs-keyword">void</span> (*d_release)(<span class="hljs-keyword">struct</span> dentry *);
+    <span class="hljs-keyword">void</span> (*d_iput)(<span class="hljs-keyword">struct</span> dentry *, <span class="hljs-keyword">struct</span> inode *);
+};
+
+<span class="hljs-keyword">struct</span> dentry {
+    ...
+    <span class="hljs-keyword">struct</span> inode  * d_inode;    <span class="hljs-comment">// &#x76EE;&#x5F55;&#x9879;&#x5BF9;&#x5E94;&#x7684;inode</span>
+    <span class="hljs-keyword">struct</span> dentry * d_parent;   <span class="hljs-comment">// &#x5F53;&#x524D;&#x76EE;&#x5F55;&#x9879;&#x5BF9;&#x5E94;&#x7684;&#x7236;&#x76EE;&#x5F55;</span>
+    ...
+    <span class="hljs-keyword">struct</span> qstr d_name;         <span class="hljs-comment">// &#x76EE;&#x5F55;&#x7684;&#x540D;&#x5B57;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> d_time;
+    <span class="hljs-keyword">struct</span> dentry_operations  *d_op; <span class="hljs-comment">// &#x76EE;&#x5F55;&#x9879;&#x7684;&#x8F85;&#x52A9;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-keyword">struct</span> super_block * d_sb;       <span class="hljs-comment">// &#x6240;&#x5728;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x8D85;&#x7EA7;&#x5757;&#x5BF9;&#x8C61;</span>
+    ...
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> d_iname[DNAME_INLINE_LEN]; <span class="hljs-comment">// &#x5F53;&#x76EE;&#x5F55;&#x540D;&#x4E0D;&#x8D85;&#x8FC7;16&#x4E2A;&#x5B57;&#x7B26;&#x65F6;&#x4F7F;&#x7528;</span>
+};
+</code></pre>
+<h3 id="&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#xFF08;file&#xFF09;">&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#xFF08;file&#xFF09;</h3>
+<p>&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x5DF2;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x5305;&#x542B;&#x6587;&#x4EF6;&#x5F53;&#x524D;&#x7684;&#x8BFB;&#x5199;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x6A21;&#x5F0F;&#x548C;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x51FD;&#x6570;&#x5217;&#x8868;&#x7B49;&#xFF0C;&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> file {
+    <span class="hljs-keyword">struct</span> list_head         f_list;
+    <span class="hljs-keyword">struct</span> dentry           *f_dentry;  <span class="hljs-comment">// &#x6587;&#x4EF6;&#x6240;&#x5C5E;&#x7684;dentry&#x7ED3;&#x6784;</span>
+    <span class="hljs-keyword">struct</span> file_operations  *f_op;      <span class="hljs-comment">// &#x6587;&#x4EF6;&#x7684;&#x64CD;&#x4F5C;&#x5217;&#x8868;</span>
+    <span class="hljs-keyword">atomic_t</span>                 f_count;   <span class="hljs-comment">// &#x8BA1;&#x6570;&#x5668;&#xFF08;&#x8868;&#x793A;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x7528;&#x6237;&#x6253;&#x5F00;&#x6B64;&#x6587;&#x4EF6;&#xFF09;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span>             f_flags;   <span class="hljs-comment">// &#x6807;&#x8BC6;&#x4F4D;  </span>
+    <span class="hljs-keyword">mode_t</span>                   f_mode;    <span class="hljs-comment">// &#x6253;&#x5F00;&#x6A21;&#x5F0F;</span>
+    <span class="hljs-keyword">loff_t</span>                   f_pos;     <span class="hljs-comment">// &#x8BFB;&#x5199;&#x504F;&#x79FB;&#x91CF;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>            f_reada, f_ramax, f_raend, f_ralen, f_rawin;
+    <span class="hljs-keyword">struct</span> fown_struct       f_owner;   <span class="hljs-comment">// &#x6240;&#x5C5E;&#x8005;&#x4FE1;&#x606F;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span>             f_uid, f_gid;  <span class="hljs-comment">// &#x6253;&#x5F00;&#x7684;&#x7528;&#x6237;id&#x548C;&#x7EC4;id</span>
+    <span class="hljs-keyword">int</span>                      f_error;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>            f_version;
+
+    <span class="hljs-comment">/* needed for tty driver, and maybe others */</span>
+    <span class="hljs-keyword">void</span>                    *private_data;
+};
+</code></pre>
+<p>&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;&#x5404;&#x4E2A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF1A;
+<img src="https://raw.githubusercontent.com/liexusong/linux-source-code-analyze/master/images/vfs-struct.jpg" alt="vfs-struct"></p>
+<h2 id="&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x5B9E;&#x73B0;">&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x5B9E;&#x73B0;</h2>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+<h3 id="&#x6CE8;&#x518C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;">&#x6CE8;&#x518C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</h3>
+<p>Linux&#x4E3A;&#x4E86;&#x652F;&#x6301;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x800C;&#x521B;&#x9020;&#x4E86;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x66F4;&#x50CF;&#x4E00;&#x4E2A;&#x89C4;&#x8303;(&#x6216;&#x8005;&#x8BF4;&#x63A5;&#x53E3;)&#xFF0C;&#x771F;&#x5B9E;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x89C4;&#x8303;(&#x63A5;&#x53E3;)&#x624D;&#x80FD;&#x63A5;&#x5165;&#x5230;Linux&#x5185;&#x6838;&#x4E2D;&#x3002;</p>
+<p>&#x8981;&#x8BA9;Linux&#x5185;&#x6838;&#x80FD;&#x591F;&#x53D1;&#x73B0;&#x771F;&#x5B9E;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x90A3;&#x4E48;&#x5FC5;&#x987B;&#x5148;&#x4F7F;&#x7528; <code>register_filesystem()</code> &#x51FD;&#x6570;&#x6CE8;&#x518C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;<code>register_filesystem()</code> &#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">register_filesystem</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> file_system_type * fs)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> file_system_type ** tmp;
+
+    <span class="hljs-keyword">if</span> (!fs)
+        <span class="hljs-keyword">return</span> -EINVAL;
+    <span class="hljs-keyword">if</span> (fs-&gt;next)
+        <span class="hljs-keyword">return</span> -EBUSY;
+    tmp = &amp;file_systems;
+    <span class="hljs-keyword">while</span> (*tmp) {
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>((*tmp)-&gt;name, fs-&gt;name) == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> -EBUSY;
+        tmp = &amp;(*tmp)-&gt;next;
+    }
+    *tmp = fs;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p><code>register_filesystem()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x628A;&#x7C7B;&#x578B;&#x4E3A; <code>struct file_system_type</code> &#x7684; <code>fs</code> &#x6DFB;&#x52A0;&#x5230; <code>file_systems</code> &#x5168;&#x5C40;&#x94FE;&#x8868;&#x4E2D;&#x3002;<code>struct file_system_type</code> &#x7ED3;&#x6784;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> file_system_type {
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *name;
+    <span class="hljs-keyword">int</span> fs_flags;
+    <span class="hljs-keyword">struct</span> super_block *(*read_super) (<span class="hljs-keyword">struct</span> super_block *, <span class="hljs-keyword">void</span> *, <span class="hljs-keyword">int</span>);
+    <span class="hljs-keyword">struct</span> file_system_type * next;
+};
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x5B57;&#x6BB5;&#x662F; <code>read_super</code>&#xFF0C;&#x7528;&#x4E8E;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x8D85;&#x7EA7;&#x5757;&#x7ED3;&#x6784;&#x3002;&#x5728;Linux&#x521D;&#x59CB;&#x5316;&#x65F6;&#x4F1A;&#x6CE8;&#x518C;&#x5404;&#x79CD;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x6BD4;&#x5982; <code>ext2</code> &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4F1A;&#x8C03;&#x7528; <code>register_filesystem(&amp;ext2_fs_type)</code> &#x6765;&#x6CE8;&#x518C;&#x3002;</p>
+<p>&#x5F53;&#x5B89;&#x88C5;Linux&#x7CFB;&#x7EDF;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x628A;&#x78C1;&#x76D8;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5176;&#x5B9E;&#x683C;&#x5F0F;&#x5316;&#x5C31;&#x662F;&#x628A;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x8D85;&#x7EA7;&#x5757;&#x4FE1;&#x606F;&#x5199;&#x5165;&#x5230;&#x78C1;&#x76D8;&#x4E2D;&#x3002;&#x4F46;Linux&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x904D;&#x5386;&#x6240;&#x6709;&#x6CE8;&#x518C;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x5176; <code>read_super()</code> &#x63A5;&#x53E3;&#x6765;&#x5C1D;&#x8BD5;&#x8BFB;&#x53D6;&#x8D85;&#x7EA7;&#x5757;&#x4FE1;&#x606F;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x79CD;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x8D85;&#x7EA7;&#x5757;&#x90FD;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x9B54;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x8BC6;&#x522B;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x8C03;&#x7528; <code>read_super()</code> &#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x8BFB;&#x53D6;&#x8D85;&#x7EA7;&#x5757;&#x6210;&#x529F;&#xFF0C;&#x800C;&#x4E14;&#x8BC6;&#x522B;&#x51FA;&#x78C1;&#x76D8;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;&#x5177;&#x4F53;&#x8FC7;&#x7A0B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>mount_root()</code> &#x51FD;&#x6570;&#x5F97;&#x77E5;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">void</span> __<span class="hljs-function">init <span class="hljs-title">mount_root</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    ...
+
+    <span class="hljs-built_in">memset</span>(&amp;filp, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(filp));
+    d_inode = get_empty_inode(); <span class="hljs-comment">// &#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x65B0;&#x7684;inode</span>
+    d_inode-&gt;i_rdev = ROOT_DEV;
+    filp.f_dentry = <span class="hljs-literal">NULL</span>;
+    <span class="hljs-keyword">if</span> ( root_mountflags &amp; MS_RDONLY)
+        filp.f_mode = <span class="hljs-number">1</span>; <span class="hljs-comment">/* read only */</span>
+    <span class="hljs-keyword">else</span>
+        filp.f_mode = <span class="hljs-number">3</span>; <span class="hljs-comment">/* read write */</span>
+    retval = blkdev_open(d_inode, &amp;filp);
+    <span class="hljs-keyword">if</span> (retval == -EROFS) {
+        root_mountflags |= MS_RDONLY;
+        filp.f_mode = <span class="hljs-number">1</span>;
+        retval = blkdev_open(d_inode, &amp;filp);
+    }
+
+    iput(d_inode);
+
+    <span class="hljs-keyword">if</span> (retval)
+        printk(<span class="hljs-string">&quot;VFS: Cannot open root device %s\n&quot;</span>, kdevname(ROOT_DEV));
+    <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">for</span> (fs_type = file_systems ; fs_type ; fs_type = fs_type-&gt;next) { <span class="hljs-comment">// &#x8BD5;&#x63A2;&#x6027;&#x8BFB;&#x53D6;&#x8D85;&#x7EA7;&#x5757;</span>
+            <span class="hljs-keyword">if</span> (!(fs_type-&gt;fs_flags &amp; FS_REQUIRES_DEV))
+                <span class="hljs-keyword">continue</span>;
+            sb = read_super(ROOT_DEV,fs_type-&gt;name,root_mountflags,<span class="hljs-literal">NULL</span>,<span class="hljs-number">1</span>); <span class="hljs-comment">// &#x8BFB;&#x53D6;&#x8D85;&#x7EA7;&#x5757;</span>
+            <span class="hljs-keyword">if</span> (sb) {
+                sb-&gt;s_flags = root_mountflags;
+                current-&gt;fs-&gt;root = dget(sb-&gt;s_root);  <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x6839;&#x76EE;&#x5F55;</span>
+                current-&gt;fs-&gt;pwd = dget(sb-&gt;s_root);   <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</span>
+                vfsmnt = add_vfsmnt(sb, <span class="hljs-string">&quot;/dev/root&quot;</span>, <span class="hljs-string">&quot;/&quot;</span>);
+                <span class="hljs-keyword">if</span> (vfsmnt)
+                    <span class="hljs-keyword">return</span>;
+            }
+        }
+    }
+}
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;for&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x904D;&#x5386;&#x4E86;&#x6240;&#x6709;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E76;&#x4E14;&#x8C03;&#x7528;&#x5176; <code>read_super()</code> &#x63A5;&#x53E3;&#x6765;&#x5C1D;&#x8BD5;&#x8BFB;&#x53D6;&#x8D85;&#x7EA7;&#x5757;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x6210;&#x529F;&#x8868;&#x793A;&#x78C1;&#x76D8;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;&#x6210;&#x529F;&#x8BFB;&#x53D6;&#x8D85;&#x7EA7;&#x5757;&#x4FE1;&#x606F;&#x540E;&#xFF0C;&#x4F1A;&#x628A;&#x6839;&#x76EE;&#x5F55;&#x7684; <code>dentry</code> &#x7ED3;&#x6784;&#x4FDD;&#x5B58;&#x5230;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684; <code>root</code> &#x548C; <code>pwd</code> &#x5B57;&#x6BB5;&#x4E2D;&#xFF0C;<code>root</code> &#x8868;&#x793A;&#x6839;&#x76EE;&#x5F55;&#xFF0C;<code>pwd</code> &#x8868;&#x793A;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x3002;</p>
+<h3 id="&#x6253;&#x5F00;&#x6587;&#x4EF6;">&#x6253;&#x5F00;&#x6587;&#x4EF6;</h3>
+<p>&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x524D;&#x5FC5;&#x987B;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x4F7F;&#x7528; <code>open()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x800C; <code>open()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528;&#x5185;&#x6838;&#x7684; <code>sys_open()</code> &#x51FD;&#x6570;&#xFF0C;<code>sys_open()</code> &#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage <span class="hljs-keyword">long</span> <span class="hljs-title">sys_open</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * filename, <span class="hljs-keyword">int</span> flags, <span class="hljs-keyword">int</span> mode)</span>
+</span>{
+    <span class="hljs-keyword">char</span> * tmp;
+    <span class="hljs-keyword">int</span> fd, error;
+
+    tmp = getname(filename);
+    fd = PTR_ERR(tmp);
+    <span class="hljs-keyword">if</span> (!IS_ERR(tmp)) {
+        fd = get_unused_fd();
+        <span class="hljs-keyword">if</span> (fd &gt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">struct</span> file * f;
+            lock_kernel();
+            f = filp_open(tmp, flags, mode);
+            unlock_kernel();
+            error = PTR_ERR(f);
+            <span class="hljs-keyword">if</span> (IS_ERR(f))
+                <span class="hljs-keyword">goto</span> out_error;
+            fd_install(fd, f);
+        }
+out:
+        putname(tmp);
+    }
+    <span class="hljs-keyword">return</span> fd;
+
+out_error:
+    put_unused_fd(fd);
+    fd = error;
+    <span class="hljs-keyword">goto</span> out;
+}
+</code></pre>
+<p><code>sys_open()</code> &#x51FD;&#x6570;&#x7684;&#x4E3B;&#x8981;&#x6D41;&#x7A0B;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>get_unused_fd()</code> &#x51FD;&#x6570;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x7A7A;&#x95F2;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x3002;</li>
+<li>&#x8C03;&#x7528; <code>filp_open()</code> &#x51FD;&#x6570;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x8FD4;&#x56DE;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;file&#x7ED3;&#x6784;&#x3002;</li>
+<li>&#x8C03;&#x7528; <code>fd_install()</code> &#x51FD;&#x6570;&#x628A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x4E0E;file&#x7ED3;&#x6784;&#x5173;&#x8054;&#x8D77;&#x6765;&#x3002;</li>
+<li>&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; <code>open()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#x8C03;&#x7528; <code>filp_open()</code> &#x51FD;&#x6570;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;<code>filp_open()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">struct</span> file *<span class="hljs-title">filp_open</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * filename, <span class="hljs-keyword">int</span> flags, <span class="hljs-keyword">int</span> mode)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> inode * inode;
+    <span class="hljs-keyword">struct</span> dentry * dentry;
+    <span class="hljs-keyword">struct</span> file * f;
+    <span class="hljs-keyword">int</span> flag,error;
+
+    error = -ENFILE;
+    f = get_empty_filp(); <span class="hljs-comment">// &#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x7A7A;&#x95F2;&#x7684;file&#x7ED3;&#x6784;</span>
+    ...
+    dentry = open_namei(filename,flag,mode); <span class="hljs-comment">// &#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x6253;&#x5F00;&#x6587;&#x4EF6;</span>
+    inode = dentry-&gt;d_inode;
+    ...
+    f-&gt;f_dentry = dentry; <span class="hljs-comment">// &#x8BBE;&#x7F6E;file&#x7ED3;&#x6784;&#x7684;f_dentry&#x5B57;&#x6BB5;&#x4E3A;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;dentry&#x7ED3;&#x6784;</span>
+    f-&gt;f_pos = <span class="hljs-number">0</span>;
+    f-&gt;f_reada = <span class="hljs-number">0</span>;
+    f-&gt;f_op = <span class="hljs-literal">NULL</span>;
+    <span class="hljs-keyword">if</span> (inode-&gt;i_op)
+        f-&gt;f_op = inode-&gt;i_op-&gt;default_file_ops; <span class="hljs-comment">// &#x628A;&#x6587;&#x4EF6;&#x7684;&#x64CD;&#x4F5C;&#x51FD;&#x6570;&#x5217;&#x8868;&#x4ECE;inode&#x7ED3;&#x6784;&#x590D;&#x5236;&#x5230;file&#x7ED3;&#x6784;&#x4E2D;</span>
+    <span class="hljs-keyword">if</span> (inode-&gt;i_sb)
+        file_move(f, &amp;inode-&gt;i_sb-&gt;s_files);
+    <span class="hljs-keyword">if</span> (f-&gt;f_op &amp;&amp; f-&gt;f_op-&gt;open) {
+        error = f-&gt;f_op-&gt;open(inode,f);
+        <span class="hljs-keyword">if</span> (error)
+            <span class="hljs-keyword">goto</span> cleanup_all;
+    }
+    f-&gt;f_flags &amp;= ~(O_CREAT | O_EXCL | O_NOCTTY | O_TRUNC);
+
+    <span class="hljs-keyword">return</span> f;
+    ...
+}
+</code></pre>
+<p><code>filp_open()</code> &#x51FD;&#x6570;&#x9996;&#x5148;&#x8C03;&#x7528; <code>get_empty_filp()</code> &#x51FD;&#x6570;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x7A7A;&#x95F2;&#x7684;file&#x7ED3;&#x6784;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; <code>open_namei()</code> &#x51FD;&#x6570;&#x6765;&#x6253;&#x5F00;&#x5BF9;&#x5E94;&#x8DEF;&#x5F84;&#x7684;&#x6587;&#x4EF6;&#x3002;<code>open_namei()</code> &#x51FD;&#x6570;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>dentry&#x7ED3;&#x6784;</code>&#xFF0C;&#x5C31;&#x662F;&#x5BF9;&#x5E94;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x7684; <code>dentry&#x7ED3;&#x6784;</code>&#x3002;&#x6240;&#x4EE5; <code>open_namei()</code> &#x51FD;&#x6570;&#x624D;&#x662F;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">struct</span> dentry * <span class="hljs-title">open_namei</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * pathname, <span class="hljs-keyword">int</span> flag, <span class="hljs-keyword">int</span> mode)</span>
+</span>{
+    <span class="hljs-keyword">int</span> acc_mode, error;
+    <span class="hljs-keyword">struct</span> inode *inode;
+    <span class="hljs-keyword">struct</span> dentry *dentry;
+
+    mode &amp;= S_IALLUGO &amp; ~current-&gt;fs-&gt;umask;
+    mode |= S_IFREG;
+
+    dentry = lookup_dentry(pathname, <span class="hljs-literal">NULL</span>, lookup_flags(flag)); <span class="hljs-comment">// &#x901A;&#x8FC7;&#x8DEF;&#x5F84;&#x4E00;&#x7EA7;&#x4E00;&#x7EA7;&#x7684;&#x67E5;&#x627E;&#x5BF9;&#x5E94;&#x7684;dentry</span>
+    <span class="hljs-keyword">if</span> (IS_ERR(dentry))
+        <span class="hljs-keyword">return</span> dentry;
+
+    acc_mode = ACC_MODE(flag);
+    <span class="hljs-keyword">if</span> (flag &amp; O_CREAT) {  <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x521B;&#x5EFA;&#x6587;&#x4EF6;</span>
+        <span class="hljs-keyword">struct</span> dentry *dir;
+
+        <span class="hljs-keyword">if</span> (dentry-&gt;d_inode) {
+            <span class="hljs-keyword">if</span> (!(flag &amp; O_EXCL))
+                <span class="hljs-keyword">goto</span> nocreate;
+            error = -EEXIST;  <span class="hljs-comment">// &#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;</span>
+            <span class="hljs-keyword">goto</span> <span class="hljs-built_in">exit</span>;
+        }
+
+        ...
+
+        <span class="hljs-keyword">if</span> (dentry-&gt;d_inode) {
+            error = <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">if</span> (flag &amp; O_EXCL)
+                error = -EEXIST;
+        } <span class="hljs-keyword">else</span> { <span class="hljs-comment">// &#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;</span>
+            error = vfs_create(dir-&gt;d_inode, dentry,mode); <span class="hljs-comment">// &#x521B;&#x5EFA;&#x6587;&#x4EF6;</span>
+            ...
+        }
+        ...
+    }
+
+    ...
+
+    <span class="hljs-keyword">return</span> dentry;
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x53BB;&#x6389;&#x4E86;&#x5F88;&#x591A;&#x6743;&#x9650;&#x9A8C;&#x8BC1;&#x7684;&#x4EE3;&#x7801;&#xFF0C;<code>open_namei()</code> &#x51FD;&#x6570;&#x9996;&#x5148;&#x4F1A;&#x8C03;&#x7528; <code>lookup_dentry()</code> &#x51FD;&#x6570;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x5E76;&#x83B7;&#x5F97;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x540E;&#x7684; <code>dentry&#x7ED3;&#x6784;</code>&#xFF0C;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x8BBE;&#x7F6E;&#x4E86; <code>O_CREAT</code> &#x6807;&#x5FD7;&#x4F4D;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8C03;&#x7528; <code>vfs_create()</code> &#x51FD;&#x6570;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x3002;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x770B; <code>vfs_create()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">vfs_create</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> inode *dir, <span class="hljs-keyword">struct</span> dentry *dentry, <span class="hljs-keyword">int</span> mode)</span>
+</span>{
+    <span class="hljs-keyword">int</span> error;
+
+    error = may_create(dir, dentry);
+    <span class="hljs-keyword">if</span> (error)
+        <span class="hljs-keyword">goto</span> exit_lock;
+
+    error = -EACCES;    <span class="hljs-comment">/* shouldn&apos;t it be ENOSYS? */</span>
+    <span class="hljs-keyword">if</span> (!dir-&gt;i_op || !dir-&gt;i_op-&gt;create)
+        <span class="hljs-keyword">goto</span> exit_lock;
+
+    DQUOT_INIT(dir);
+    error = dir-&gt;i_op-&gt;create(dir, dentry, mode);
+exit_lock:
+    <span class="hljs-keyword">return</span> error;
+}
+</code></pre>
+<p>&#x4ECE; <code>vfs_create()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x53EF;&#x77E5;&#xFF0C;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528; <code>inode&#x7ED3;&#x6784;</code> &#x7684; <code>create()</code> &#x65B9;&#x6CD5;&#x6765;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7531;&#x771F;&#x5B9E;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#xFF0C;&#x6240;&#x4EE5;&#x771F;&#x5B9E;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x53EA;&#x9700;&#x8981;&#x628A;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x6302;&#x8F7D;&#x5230; <code>inode&#x7ED3;&#x6784;</code> &#x4E0A;&#x5373;&#x53EF;&#xFF0C;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E0D;&#x9700;&#x8981;&#x77E5;&#x9053;&#x771F;&#x5B9E;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x591A;&#x79CD;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x771F;&#x6B63;&#x539F;&#x56E0;&#x3002;</p>
+<p>&#x800C; <code>lookup_dentry()</code> &#x51FD;&#x6570;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528; <code>real_lookup()</code> &#x51FD;&#x6570;&#x6765;&#x9010;&#x7EA7;&#x76EE;&#x5F55;&#x67E5;&#x627E;&#x5E76;&#x6253;&#x5F00;&#x3002;<code>real_lookup()</code> &#x51FD;&#x6570;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">struct</span> dentry * <span class="hljs-title">real_lookup</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> dentry * parent, <span class="hljs-keyword">struct</span> qstr * name, <span class="hljs-keyword">int</span> flags)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> dentry * result;
+    <span class="hljs-keyword">struct</span> inode *dir = parent-&gt;d_inode;
+
+    down(&amp;dir-&gt;i_sem);
+    result = d_lookup(parent, name);
+    <span class="hljs-keyword">if</span> (!result) {
+        <span class="hljs-keyword">struct</span> dentry * dentry = d_alloc(parent, name);
+        result = ERR_PTR(-ENOMEM);
+        <span class="hljs-keyword">if</span> (dentry) {
+            result = dir-&gt;i_op-&gt;lookup(dir, dentry);
+            <span class="hljs-keyword">if</span> (result)
+                dput(dentry);
+            <span class="hljs-keyword">else</span>
+                result = dentry;
+        }
+        up(&amp;dir-&gt;i_sem);
+        <span class="hljs-keyword">return</span> result;
+    }
+    up(&amp;dir-&gt;i_sem);
+    <span class="hljs-keyword">if</span> (result-&gt;d_op &amp;&amp; result-&gt;d_op-&gt;d_revalidate)
+        result-&gt;d_op-&gt;d_revalidate(result, flags);
+    <span class="hljs-keyword">return</span> result;
+}
+</code></pre>
+<p>&#x53C2;&#x6570; <code>parent</code> &#x662F;&#x7236;&#x76EE;&#x5F55;&#x7684; <code>dentry&#x7ED3;&#x6784;</code>&#xFF0C;&#x800C;&#x53C2;&#x6570; <code>name</code> &#x662F;&#x8981;&#x6253;&#x5F00;&#x7684;&#x76EE;&#x5F55;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#x3002;<code>real_lookup()</code> &#x51FD;&#x6570;&#x6700;&#x7EC8;&#x4E5F;&#x4F1A;&#x8C03;&#x7528;&#x7236;&#x76EE;&#x5F55;&#x7684; <code>inode&#x7ED3;&#x6784;</code> &#x7684; <code>lookup()</code> &#x65B9;&#x6CD5;&#x6765;&#x67E5;&#x627E;&#x5E76;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x6253;&#x5F00;&#x540E;&#x7684;&#x5B50;&#x76EE;&#x5F55;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x7684; <code>dentry&#x7ED3;&#x6784;</code>&#x3002;<code>lookup()</code> &#x65B9;&#x6CD5;&#x9700;&#x8981;&#x628A;&#x8981;&#x6253;&#x5F00;&#x7684;&#x76EE;&#x5F55;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x7684; <code>inode&#x7ED3;&#x6784;</code> &#x4ECE;&#x78C1;&#x76D8;&#x4E2D;&#x8BFB;&#x5165;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#xFF08;&#x5982;&#x679C;&#x76EE;&#x5F55;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x5B58;&#x5728;&#x7684;&#x8BDD;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x628A;&#x5176; <code>inode&#x7ED3;&#x6784;</code> &#x4FDD;&#x5B58;&#x5230; <code>dentry&#x7ED3;&#x6784;</code> &#x7684; <code>d_inode</code> &#x5B57;&#x6BB5;&#x4E2D;&#x3002;</p>
+<p><code>filp_open()</code> &#x51FD;&#x6570;&#x4F1A;&#x628A; <code>inode&#x7ED3;&#x6784;</code> &#x7684;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x51FD;&#x6570;&#x5217;&#x8868;&#x590D;&#x5236;&#x5230; <code>file&#x7ED3;&#x6784;</code> &#x4E2D;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">struct</span> file *<span class="hljs-title">filp_open</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * filename, <span class="hljs-keyword">int</span> flags, <span class="hljs-keyword">int</span> mode)</span>
+</span>{
+    ...
+    f-&gt;f_op = inode-&gt;i_op-&gt;default_file_ops;
+    ...
+}
+</code></pre>
+<p>&#x8FD9;&#x6837;&#xFF0C;<code>file&#x7ED3;&#x6784;</code> &#x5C31;&#x6709;&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x51FD;&#x6570;&#x5217;&#x8868;&#x3002;</p>
+<h3 id="&#x8BFB;&#x5199;&#x6587;&#x4EF6;">&#x8BFB;&#x5199;&#x6587;&#x4EF6;</h3>
+<p>&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x901A;&#x8FC7; <code>read()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x5B8C;&#x6210;&#xFF0C;&#x800C; <code>read()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528; <code>sys_read()</code> &#x5185;&#x6838;&#x51FD;&#x6570;&#xFF0C;<code>sys_read()</code> &#x5185;&#x6838;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage ssize_t <span class="hljs-title">sys_read</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">char</span> * buf, size_t count)</span>
+</span>{
+    <span class="hljs-keyword">ssize_t</span> ret;
+    <span class="hljs-keyword">struct</span> file * file;
+
+    ret = -EBADF;
+    file = fget(fd);
+    <span class="hljs-keyword">if</span> (file) {
+        <span class="hljs-keyword">if</span> (file-&gt;f_mode &amp; FMODE_READ) {
+            ret = locks_verify_area(FLOCK_VERIFY_READ, file-&gt;f_dentry-&gt;d_inode,
+                        file, file-&gt;f_pos, count);
+            <span class="hljs-keyword">if</span> (!ret) {
+                <span class="hljs-keyword">ssize_t</span> (*read)(<span class="hljs-keyword">struct</span> file *, <span class="hljs-keyword">char</span> *, <span class="hljs-keyword">size_t</span>, <span class="hljs-keyword">loff_t</span> *);
+                ret = -EINVAL;
+                <span class="hljs-keyword">if</span> (file-&gt;f_op &amp;&amp; (read = file-&gt;f_op-&gt;read) != <span class="hljs-literal">NULL</span>)
+                    ret = read(file, buf, count, &amp;file-&gt;f_pos);
+            }
+        }
+        fput(file);
+    }
+    <span class="hljs-keyword">return</span> ret;
+}
+</code></pre>
+<p><code>sys_read()</code> &#x51FD;&#x6570;&#x9996;&#x5148;&#x4F1A;&#x8C03;&#x7528; <code>fget()</code> &#x51FD;&#x6570;&#x628A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x8F6C;&#x6362;&#x6210; <code>file&#x7ED3;&#x6784;</code>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>file&#x7ED3;&#x6784;</code> &#x7684; <code>read()</code> &#x65B9;&#x6CD5;&#x6765;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;<code>read()</code> &#x65B9;&#x6CD5;&#x662F;&#x7531;&#x771F;&#x5B9E;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x7EC8;&#x7684;&#x8FC7;&#x7A0B;&#x4F1A;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x800C;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;ext2&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528; <code>generic_file_read()</code> &#x51FD;&#x6570;&#x6765;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x628A;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x662F;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>write()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x5B9E;&#x73B0;&#xFF0C;&#x800C; <code>write()</code> &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528; <code>sys_write()</code> &#x5185;&#x6838;&#x51FD;&#x6570;&#xFF0C;<code>sys_write()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">asmlinkage ssize_t <span class="hljs-title">sys_write</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * buf, size_t count)</span>
+</span>{
+    <span class="hljs-keyword">ssize_t</span> ret;
+    <span class="hljs-keyword">struct</span> file * file;
+
+    ret = -EBADF;
+    file = fget(fd);
+    <span class="hljs-keyword">if</span> (file) {
+        <span class="hljs-keyword">if</span> (file-&gt;f_mode &amp; FMODE_WRITE) {
+            <span class="hljs-keyword">struct</span> inode *inode = file-&gt;f_dentry-&gt;d_inode;
+            ret = locks_verify_area(FLOCK_VERIFY_WRITE, inode, file,
+                file-&gt;f_pos, count);
+            <span class="hljs-keyword">if</span> (!ret) {
+                <span class="hljs-keyword">ssize_t</span> (*write)(<span class="hljs-keyword">struct</span> file *, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *, <span class="hljs-keyword">size_t</span>, <span class="hljs-keyword">loff_t</span> *);
+                ret = -EINVAL;
+                <span class="hljs-keyword">if</span> (file-&gt;f_op &amp;&amp; (write = file-&gt;f_op-&gt;write) != <span class="hljs-literal">NULL</span>)
+                    ret = write(file, buf, count, &amp;file-&gt;f_pos);
+            }
+        }
+        fput(file);
+    }
+    <span class="hljs-keyword">return</span> ret;
+}
+</code></pre>
+<p><code>sys_write()</code> &#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x4E0E; <code>sys_read()</code> &#x7C7B;&#x4F3C;&#xFF0C;&#x9996;&#x5148;&#x4F1A;&#x8C03;&#x7528; <code>fget()</code> &#x51FD;&#x6570;&#x628A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x8F6C;&#x6362;&#x6210; <code>file&#x7ED3;&#x6784;</code>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>file&#x7ED3;&#x6784;</code> &#x7684; <code>write()</code> &#x65B9;&#x6CD5;&#x6765;&#x628A;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;ext2&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;<code>write()</code> &#x65B9;&#x6CD5;&#x5BF9;&#x5E94;&#x7684;&#x662F; <code>ext2_file_write()</code> &#x51FD;&#x6570;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="minix_file_system.html" class="navigation navigation-next navigation-unique" aria-label="Next page: MINIX文件系统">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"虚拟文件系统","level":"1.6.1","depth":2,"next":{"title":"MINIX文件系统","level":"1.6.2","depth":2,"path":"minix_file_system.md","ref":"minix_file_system.md","articles":[]},"previous":{"title":"文件系统","level":"1.6","depth":1,"ref":"","articles":[{"title":"虚拟文件系统","level":"1.6.1","depth":2,"path":"virtual_file_system.md","ref":"virtual_file_system.md","articles":[]},{"title":"MINIX文件系统","level":"1.6.2","depth":2,"path":"minix_file_system.md","ref":"minix_file_system.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"virtual_file_system.md","mtime":"2019-11-18T10:27:14.228Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T03:48:37.225Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
